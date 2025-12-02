@@ -1,0 +1,34 @@
+[H[2J[3J
+[1m Multithreading tool for LAN SSID-SVID compared test, version: 1.1.0[0m
+Real Time: 2022-12-05 08:52:01              Start: 2022-12-05 08:51:33 
+  Elapsed: [33m00:00:28   [0mTotal: 00:06:00   Remaining: [1;33m00:05:32           [0m
+   Items#: 2      Test Mode: byitem  Dispaly Mode: Commandline        
+   Config: ./Config/ssidsvid_c.conf                                   
+      XML: /TestAP/Config/MS-S3121.xml                                
+[1mNo.     Test Items                         Cycle(OK/NG)        Result [0m
+----------------------------------------------------------------------
+[1] /TestAP/LAN/ssidsvid_c1.sh               0([1;32m  0[0m/[1;31m0  [0m)        [1;30mCycling[0m
+[2] /TestAP/LAN/ssidsvid_c2.sh               0([1;32m  0[0m/[1;31m0  [0m)        [1;30mCycling[0m
+----------------------------------------------------------------------
+[1;33mWarning !! Please do not interrupt these processing ...[0m
+[1;33mPress the key [X/x] to interrupt if necessary.[0m
+[1;33mPress the key [1-2] to view the test log.[0m
+=======================================================================================================================
+
+Multithreading test tool for LAN SSID-SVID compared test, all test logs
+==========================================
+ 1/2 /TestAP/LAN/ssidsvid_c1.sh
+==========================================
+ssidsvid_c1.sh start to run in: 2022-12-05 08:51:33  +0800
+[1;32m Compare LAN1 SSID-SVID(FFFF-0000)[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+/TestAP/LAN/ssidsvid_c1.sh test pass in: 2022-12-05 08:52:02 CST
+----------------------------------------------------------------------
+==========================================
+ 2/2 /TestAP/LAN/ssidsvid_c2.sh
+==========================================
+ssidsvid_c2.sh start to run in: 2022-12-05 08:51:33  +0800
+[1;32m Compare LAN2 SSID-SVID(FFFF-0000)[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+/TestAP/LAN/ssidsvid_c2.sh test pass in: 2022-12-05 08:52:02 CST
+----------------------------------------------------------------------

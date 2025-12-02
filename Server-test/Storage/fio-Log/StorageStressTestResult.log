@@ -1,0 +1,8 @@
+nvme0|/dev/nvme0n1|null|n/a|K1|3236MB/s|1087MB/s
+nvme1|/dev/nvme1n1|null|n/a|K2|3380MB/s|987MB/s
+nvme2|/dev/nvme2n1|null|n/a|K3|1964MB/s|1019MB/s
+nvme3|/dev/nvme3n1|null|n/a|K4|3287MB/s|996MB/s
+nvme4|/dev/nvme4n1|null|n/a|K5|2666MB/s|1027MB/s
+nvme5|/dev/nvme5n1|null|n/a|K6|3238MB/s|1009MB/s
+nvme6|/dev/nvme6n1|null|n/a|K7|2162MB/s|1002MB/s
+nvme7|/dev/nvme7n1|null|n/a|K8|3243MB/s|992MB/s

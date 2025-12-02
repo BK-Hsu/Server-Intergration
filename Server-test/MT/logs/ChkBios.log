@@ -1,0 +1,20 @@
+ChkBios.sh start to run in: 2025-06-04 05:49:52  +0800
+==============================
+ Current BIOS Information
+==============================
+Bios Vendor       : American Megatrends International, LLC.               
+Bios Version      : ES381ARB.202                                          
+Bios Release Date : 04/17/2025                                            
+Address           : 0xF0000                                               
+Runtime Size      : 64 kB                                                 
+ROM Size          : 32 MB                                                 
+Bios Revision     : 5.35                                                  
+Firmware Revision :NULL                                                   
+
+[  [1;32mOK[0m  ]  Verify BIOS version (standard: ES381ARB.202)                
+[  [1;32mOK[0m  ]  Verify BIOS release date(match standard: 04/17/2025)        
+[  [1;32mOK[0m  ]  Verify DST status(current: 2) ...                           
+[1;32m Check the BIOS version and release date[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+/TestAP/Bios/ChkBios.sh test pass in: 2025-06-04 05:49:52 CST
+----------------------------------------------------------------------

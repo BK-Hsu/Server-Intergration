@@ -1,0 +1,7 @@
+CPLD_ver_check.py start to run in: 2025-06-04 05:49:52  +0800
+[1;32m[  OK  ][0m  hpm_ver version: 1d 00 01 38
+[1;32m[  OK  ][0m  scm_ver version: 20 00 8d 36
+[1;32m[  OK  ][0m  pwr_ver version: 13 00 0a 38
+[1;32mCPLD version check ---------------------------------------------------- [ PASS ][0m
+/TestAP/HW/CPLD_ver_check.py test pass in: 2025-06-04 05:49:52 CST
+----------------------------------------------------------------------

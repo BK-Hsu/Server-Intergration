@@ -1,0 +1,50 @@
+ChkBmcVer.sh start to run in: 2025-06-04 05:49:52  +0800
+Device ID                 : 32
+Device Revision           : 1
+Firmware Revision         : 1.26
+IPMI Version              : 2.0
+Manufacturer ID           : 9091
+Manufacturer Name         : Unknown (0x2383)
+Product ID                : 897 (0x0381)
+Product Name              : Unknown (0x381)
+Device Available          : yes
+Provides Device SDRs      : yes
+Additional Device Support :
+    Sensor Device
+    SDR Repository Device
+    SEL Device
+    FRU Inventory Device
+    IPMB Event Receiver
+    IPMB Event Generator
+    Chassis Device
+Aux Firmware Rev Info     : 
+    0xf5
+    0xab
+    0x1e
+    0x00
+[1;32m Current BMC FW version(1.26) is match, verify[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+[  [1;32mOK[0m  ]  mc selftest                                                 
+[1;32m Current system_fw_version(ES381ARB.202) is match, verify[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+FRU Device Description : Builtin FRU Device (ID 0)
+ Chassis Type          : Rack Mount Chassis
+ Chassis Part Number   : 309-S381104-H76
+ Chassis Serial        : S381-A202560300013
+ Chassis Extra         : 2U
+ Board Mfg Date        : Wed Jun  4 08:00:00 2025
+ Board Mfg             : Micro-Star International Co., Ltd.
+ Board Product         : D4051-RBX
+ Board Serial          : S380120 P41B941047
+ Board Part Number     : 609-S3801-02S
+ Board Extra           :   
+ Product Manufacturer  : Micro-Star International Co., Ltd.
+ Product Name          : CD270-S4051-X2
+ Product Part Number   : S4051D270RAE8-X2-RBX
+ Product Version       : 709-S381-08S
+ Product Serial        : P5E0000153-1
+ Product Asset Tag     :   
+ Product Extra         :   
+
+/TestAP/BMC/ChkBmcVer.sh test pass in: 2025-06-04 05:49:55 CST
+----------------------------------------------------------------------

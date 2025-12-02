@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MSITEST>
+	<!--For Linux programs  -->
+	<!--實體內容中包含"&"符號的，請使用"&amp;"代替-->
+	<!--Do not change following parameters name without AE approval -->
+	<!--You can modify the value of parameters -->
+	<!--These are all test items --> 
+	<!--for Ignore.sh 程式 -->
+	<!--測試程式|適用機種名稱|....-->
+	<!--程式按index值從小到大依序運行，多線程時將序號設置為相同即可，值必須是大於零的連續自然數-->
+	<!--xml&log上傳程式Pass.sh不需要添加在如下清單內-->
+	
+	<Programs>
+		<Item index="ok">/TestAP/Scan/ScanOPID.sh</Item>
+		<Item index="ok">/TestAP/Scan/ScanFixID.sh</Item>
+		<Item index="ok">/TestAP/Scan/ScanMAC.sh</Item>
+		<Item index="OK">/TestAP/Bios/ChkBios.sh</Item>	
+		<!--Item index="off-line">/TestAP/LAN/eeprom_w.sh</Item-->
+		<Item index="ok">/TestAP/LAN/eeprom_c.sh</Item>
+		<Item index="ok">/TestAP/LAN/lan_w.sh</Item>
+		<Item index="ok">/TestAP/LAN/lan_c.sh</Item>
+		<Item index="ok">/TestAP/LAN/ssidsvid_c.sh</Item>
+		<Item index="ok">/TestAP/LAN/lan_int_t.sh</Item>
+		<Item index="ok">/TestAP/LAN/lan_ext_t.sh</Item>
+		<Item index="OK">/TestAP/LAN/PingServer.sh</Item>
+
+		<Item index="#">/TestAP/Storage/Sata.sh</Item>
+		<Item index="#">/TestAP/Storage/M2Sata.sh</Item>
+		<Item index="#">/TestAP/LED/UncontrollableLED.sh</Item>
+
+		<Item index="OK">/TestAP/Storage/ChkPCIESSD258K.sh</Item>
+		<Item index="OK">/TestAP/Storage/SATA_258K.sh</Item>
+		<Item index="OK">/TestAP/Storage/SATA_ONB.sh</Item>
+		<Item index="ok">/TestAP/usb/usb2030.sh</Item>
+		<Item index="ok">/TestAP/COM/COMRS232.sh</Item>
+		<Item index="ok">/TestAP/HW/ChkCPU.sh</Item>
+		<Item index="ok">/TestAP/HW/ChkMemory.sh</Item>
+		<Item index="ok">/TestAP/TPM/TPM.sh</Item>
+		<Item index="ok">/TestAP/LED/DebugLED.sh</Item>
+		<Item index="OK">/TestAP/LED/FP_LED1.sh</Item>
+		<Item index="OK">/TestAP/LED/LED3.sh</Item>
+		<Item index="OK">/TestAP/LED/IDBTN_LED.sh</Item>
+		<Item index="OK">/TestAP/LED/SWLED2.sh</Item>
+		<Item index="OK">/TestAP/LED/NetLed.sh</Item>
+		<Item index="OK">/TestAP/LED/JVROC_T.sh</Item>
+		<Item index="OK">/TestAP/LED/ONBoardLED.sh</Item>
+		<Item index="OK">/TestAP/LED/HDDLED.sh</Item>
+
+		<Item index="OK">/TestAP/mp297x/mps_w.sh</Item>
+		<Item index="OK">/TestAP/mp297x/mps_ch.sh</Item>
+		<Item index="OK">/TestAP/mp2940b/mps_w.sh</Item>
+		<Item index="OK">/TestAP/mp2940b/mps_ch.sh</Item>
+		<Item index="ok">/TestAP/Firmware/ChkME_efi.sh</Item>
+		<Item index="OK">/TestAP/HW/hwmon.sh</Item>
+		<Item index="ok">/TestAP/PCIE/ChkPcie-ONB.sh</Item>
+		<Item index="ok">/TestAP/PCIE/ChkPcie-258K.sh</Item>
+		<Item index="ok">/TestAP/PCIE/ChkPcie-258B.sh</Item>
+		<Item index="ok">/TestAP/PCIE/ChkPcie-258A.sh</Item>
+		<Item index="ok">/TestAP/PCIE/ChkPcie-258C.sh</Item>
+		<Item index="ok">/TestAP/PCIE/ChkPcie-258E.sh</Item>
+		<Item index="#">/TestAP/BMC/ClrBmcMac.sh</Item>
+		<Item index="OK">/TestAP/BMC/ChkBmcVer.sh</Item>
+		<Item index="NG">/TestAP/BMC/NCSITest.sh</Item>
+		<Item index="ok">/TestAP/BMC/BMCMAC_w.sh</Item>
+		<Item index="ok">/TestAP/BMC/BMCMAC_c.sh</Item>
+		<Item index="Channel1-NG">/TestAP/BMC/GetBmcIP.sh</Item>
+		<Item index="OK">/TestAP/BMC/BmcReset.sh</Item>
+		<Item index="OK">/TestAP/BMC/ID_BTN.sh</Item>
+		<Item index="OK">/TestAP/BMC/JFP1_SWLED2.sh</Item>
+		<Item index="OK">/TestAP/Stream/stream.sh</Item>
+		<Item index="OK">/TestAP/GetPrdctInfo/GetMDL.sh</Item>
+				
+		<Item index="#">/TestAP/Jumper/JBIOS_RCV.sh</Item>
+		<Item index="#">/TestAP/Jumper/JME_RCV.sh</Item>
+		<Item index="ok">/TestAP/Jumper/JSDO_Enable.sh</Item>
+		<Item index="ok">/TestAP/Button/ChkCase.sh</Item>
+		<Item index="#">/TestAP/Button/PwrSwitch.sh</Item>
+		<Item index="#">/TestAP/Button/RstSwitch.sh</Item>
+		<Item index="#">/TestAP/CamRGB/RgbTest.sh</Item>
+		<Item index="#">/TestAP/SwitchDP/EDID.sh</Item>
+		<Item index="ok">/TestAP/SwitchDP/ChkEDID_efi.sh</Item>
+		<Item index="ok">/TestAP/SetBoot/go2EFI.sh</Item>
+		<Item index="ok">/TestAP/SetBoot/go2Linux.sh</Item>
+		<Item index="OK">/TestAP/CmosTime/CmosTime.sh</Item>
+		<Item index="#">/TestAP/LoadDefault/LoadDefault.sh</Item>
+		<Item index="ok">/TestAP/DelLog/DelLog.sh</Item>
+	</Programs>	
+	
+	<!-- These are all test arguments --> 
+	<Argument>
+		<MainProg>
+			<!-- For TestAP.sh -->
+			<ProgramName>TestAP</ProgramName>
+			
+			<ModelInfo>
+				<!--機種測試信息-->
+				<ModelName>609-S2581-B01</ModelName>
+				<BiosFile>ES258IMS.BSA</BiosFile>
+				<BmcFile>S258K111.ima</BmcFile>
+				<EepromFile>II210PKG.BIN</EepromFile>
+				<MpsFW>Config.csv</MpsFW>
+			</ModelInfo>
+	
+			<ReleaseInfo>
+				<!--PTE和PE信息,程式版本信息-->
+				<PTEName>Halen</PTEName>
+				<ReleaseDate>2020/08/08</ReleaseDate>
+				
+				<PEName>rongwei</PEName>
+				<Update>2020/08/08</Update>
+				
+				<APVersion>V5.0.0.0</APVersion>
+			</ReleaseInfo>
+			
+			<Pretest>
+				<Encrypt>
+					<!-- Enable/Disable -->
+					<InUse>disable</InUse>
+					<Password>abcf314e470e139bf3c06c859761d560</Password>
+				</Encrypt>
+				
+				<!-- Enable/Disable -->
+				<CheckLogic>Enable</CheckLogic>
+				
+				<FailLockAndUpload>
+					<!--如下三個參數依次是：fail鎖定開關，fail上傳MES開關(FAIL 鎖定和上傳只能任選其一)，程式運行前完整性檢查-->
+					<!-- While some item(s) fail more than 3/4/5 time ,the test status will be locked, -->
+					<!-- enable: import the locking status, -->
+					<!-- disable: don't import anything,normal mode -->
+					<!-- FAIL鎖定Enable/Disable 超過4次fail鎖定-->
+					<FailLocking>Enable</FailLocking>
+					
+					<!-- Fail上傳Enable/Disable，超過4次fail上傳MES -->
+					<FailUpload>Enable</FailUpload>
+					<UrlAddress>
+						<IndexInUse>1</IndexInUse>
+						<NgLock index="1">http://20.40.1.40/EPS-Web/TestFail/GetInfo.ashx</NgLock>
+						<NgLock index="2">http://172.17.7.101/EPS-Web/TestFail/GetInfo.ashx</NgLock>
+						<MesWeb index="1">http://20.40.1.40/eps-web/upload/uploadservice.asmx</MesWeb>
+						<MesWeb index="2">http://172.17.7.101/eps-web/upload/uploadservice.asmx</MesWeb>
+					</UrlAddress>
+			
+					<!--如果你不瞭解以下內容，請不要擅自修改-->
+					<!--ChkStatus.sh/FailLocking.sh; Warning: For Failure locking or upload , do not modify this content-->
+					<Components>
+						<!-- For Fail 鎖定和上傳，不需要修改-->
+						<KeyWord>FAIL TPVER</KeyWord>
+						<FileList>FAILITEM.TXT TPVER.TXT</FileList>
+					</Components>
+				</FailLockAndUpload>
+					
+				<PowerOnSelfTest>	
+					<InUse>Enable</InUse>
+					<!-- POST.sh: 開機自檢是否有如下報錯 -->
+					<Item>PCIe BUS Error</Item>
+					<Item>ATA BUS Error</Item>
+				</PowerOnSelfTest>
+			</Pretest>
+			
+			<Multithreading>
+				<TestCase>
+					<ProgramName>Multithreading</ProgramName>
+					
+					<!--Multithreading.sh: 多線程測試配置信息-->
+					<!--OSDisplayMode: Commandline(C)/Xserver(G)-->
+					<OSDisplayMode>Commandline</OSDisplayMode>
+					
+					<!--TestMethod: ByItem/ByCT(default: 360s)-->
+					<TestMethod>ByItem</TestMethod>
+					
+					<!--List of shell file指定同時測試的程式清單-->			
+					<ConfigFile>/TestAP/MT/Config/MT.conf</ConfigFile>
+				</TestCase>
+			</Multithreading>
+			
+			<UpLoad>
+				<ProgramName>upload</ProgramName>
+				<!--測試記錄資料的存放路徑，無特別就不需要修改-->
+				<FileListPath>/TestAP/PPID</FileListPath>
+				<UrlAddress>
+					<!-- 上傳網址和Fail鎖定網址 -->
+					<IndexInUse>1</IndexInUse>
+					<MesWeb index="1">http://20.40.1.40/eps-web/upload/uploadservice.asmx</MesWeb>
+					<MesWeb index="2">http://172.17.7.101/eps-web/upload/uploadservice.asmx</MesWeb>		
+				</UrlAddress>
+				<!-- for Pass.sh and upload.sh --> 
+				<!-- Test Station code --> 
+				<!--	 1528 : Function Test --> 
+				<!--	 2415 : EBT,Burn in in Test after function test --> 
+				<!--	 2597 : SCSI,AC OFF/ON,DC OFF/ON --> 
+				<!--	 2937 : FT2,Function Test2 --> 
+				<!--	 2015 : High Voltage Test --> 
+				<!--	 1543 : Pretest --> 
+				<!--	 1547 : Burn In Test --> 
+				<!--	 1545 : After test --> 
+				<!--	 1655 : OQA CHECK --> 
+				<!--	 1855 : ASSY OQA --> 
+				<!--	 2515 : Pack Test -->
+				<!-- 站別代碼，請參考以上註釋，以上代碼外的程式已經設置限制無法上傳 -->			
+				<StationCode>1528</StationCode>		
+
+				<!-- FT service commonly used key words,match case!! --> 
+				<!-- MAC		 : LAN MAC --> 
+				<!-- BMC		 : BMC MAC --> 
+				<!-- MODEL		 : Model name,e.g.: 609-S1681-010 --> 
+				<!-- BIOS		 : BIOS version,e.g.:ES168IMS.100 --> 
+				<!-- BMC_REV1	 : Revision of BMC,e.g.: S165K131.ima --> 
+				<!-- BMC_REV2	 : Revision of BMC --> 
+				<!-- TPVER		 : TestAP version,e.g.:V4.1.0.0sl --> 
+				<!-- SSID		 : Service Set Identifier --> 
+				<!-- SVID		 : Subsystem Vendor ID --> 
+				<!-- SAS		 : SAS Address --> 
+				<!-- REV		 : Revision of others --> 
+				<!-- IFB_MAC	 : UID MAC address,like S125B --> 
+				<!-- MBPPID		 : Mother Board PPID --> 
+				<!-- SYS_REV	 : Revision of System  --> 
+				<!-- SDR_REV	 : Revision of SDR -->
+				<!-- EMM_GROUPNO : Equipment group number -->
+				<!--  上傳節點名稱（關鍵字）請參考上述註釋，未定義的節點名稱無法通過程式檢查 -->
+				<!--  文件名稱要準確，忽略大小寫，文件順序要和上傳節點順序相一致 -->
+				<!--ForModel: 程式通過此值檢索上傳內容,此部份必須填寫和MES相一致的機種名稱-->	
+				<Model>
+					<ForModel>609-S25801-01S</ForModel>
+					<KeyWord>TPVER MODEL</KeyWord>
+					<FileList>TPVER.TXT MODEL.TXT</FileList>
+				</Model>
+				
+				<Model>
+					<ForModel>609-S258B-01S</ForModel>
+					<KeyWord>BIOS TPVER MODEL</KeyWord>
+					<FileList>BIOSVER.TXT TPVER.TXT MODEL.TXT</FileList>
+				</Model>
+				
+				<Model>
+					<ForModel>609-S258K-01S</ForModel>
+					<KeyWord>REV TPVER MODEL</KeyWord>
+					<FileList>S.TXT TPVER.TXT MODEL.TXT</FileList>
+				</Model>
+			</UpLoad>
+		</MainProg>
+		
+		<Scan>
+			<!--掃描程式配置文件-->	
+			<ScanCode>
+				<ProgramName>ScanSNs</ProgramName>
+				
+				<!--ScanSNs.sh: 批量測試時-->
+				<ModelName>S2581</ModelName>
+				<!--ModelName>S258A</ModelName>
+				<ModelName>S258B</ModelName>
+				<ModelName>S258K</ModelName-->
+				
+				
+				<!-- While the value file $pcb.proc are great than AutoScanProcVal,the PPID will auto scan in -->
+				<!-- AutoScanProcVal == 0 ,scan PPID by manual, you can also input a shell name instead,eg.: lan_c.sh -->
+				<!--設置自動掃描開始項目，可以填寫數字或測試項目-->
+				<AutoScanProcVal>lan_c.sh</AutoScanProcVal>
+				
+				<!-- ScanPPID.sh: Length=0表示no limited -->
+				<Length>10</Length>
+				<FormatType>PCBA</FormatType>
+				<SavePath>/TestAP/PPID</SavePath>				
+			</ScanCode>
+			
+			<ScanCode>
+				<ProgramName>ScanOPID</ProgramName>
+				
+				<!-- ScanOPID.sh: Length=0表示no limited -->
+				<Length>8</Length>
+				<SavePath>/TestAP/PPID</SavePath>
+			</ScanCode>
+			
+			<ScanCode>
+				<ProgramName>ScanFixID</ProgramName>
+				<!-- ScanFixID.sh: Length=0表示no limited -->
+				<Length>6</Length>
+				<SavePath>/TestAP/PPID</SavePath>
+				
+				<!-- A: 20Bit,EPS_Bur_b33_01-01-01 -->
+				<!-- B: 6Bit,B3Dxxx,B3Cxxx,B3xxxx,Sxxxxx,e.g.:B3D001,B33001 -->
+				<!-- C: 6bit,B3D001,123123 -->
+				<!-- D: no-limited,auto input HDD SN -->
+				<FormatType>D</FormatType>
+			</ScanCode>
+		
+			<ScanCode>
+				<ProgramName>ScanMAC</ProgramName>
+				
+				<!-- ScanMAC.sh: LAN 和BMC MAC的掃描程式 -->
+				<!--可以用於批量測試，設置不同的ProgramName="ScanMAC"即可,例如S1401+S140A-->
+				<!-- Compare: enable表示掃描后再次掃描首尾MAC比對; disable：僅掃描一次，不做比對 -->
+				<Compare>enable</Compare>
+				<SavePath>/TestAP/Scan</SavePath>
+				
+				<!-- ProgramName="ScanMAC" 對應的程式是: ScanMAC.sh -->
+				<!-- BMC2LAN is the relation between BMC MAC and LAN MAC -->
+				<!-- GT: BMC MAC great than LAN MACs-->
+				<!-- LT: BMC MAC less than LAN MACs -->
+				<!-- NA: BMC MAC not the same as LAN MACs-->
+				<BMC2LAN>NA</BMC2LAN>
+				
+				<WhichModel>S2581</WhichModel>	
+				
+				<LAN>
+					<!--MAC的數量,沒有則填0-->
+					<Amount>1</Amount>
+					<!--起始號，默認1，即MAC1.txt-->
+					<StartNumber>1</StartNumber>
+					<!-- Define the first MAC address is  ODD (1), Even (0), Un-limit(U) --> 
+					<FirstMAC>U</FirstMAC>
+					<!-- First 6 digits of MAC address. If is 'FFFFFF', ignore to check. -->
+					<First6Bit>FFFFFF</First6Bit>
+					
+					<!--范圍控制,無需控制範圍則置空,格式是 309C82000000-309C82FFFFFF-->
+					<Range></Range>
+				</LAN>
+
+				<BMC>
+					<!--BMC MAC的數量,沒有則填0-->
+					<Amount>2</Amount>
+					<!--起始號，默認1，即BMCMAC1.txt-->
+					<StartNumber>1</StartNumber>
+					<!-- Define the first MAC address is  ODD (1), Even (0), Un-limit(U) --> 
+					<FirstMAC>U</FirstMAC>
+					<!--  First 6 digits of MAC address. If is 'FFFFFF', ignore to check. -->
+					<First6Bit>FFFFFF</First6Bit>
+					
+					<!--范圍控制,無需控制範圍則置空,格式是 309C82000000-309C82FFFFFF-->
+					<Range></Range>
+				</BMC>
+			</ScanCode>
+		</Scan>
+		
+		<BIOS>
+			<TestCase>
+				<ProgramName>ChkBios</ProgramName>
+				<ErrorCode>NXF02|Check BIOS version fail</ErrorCode>
+				
+				<!-- ChkBios.sh: for Check BIOS版本和發行日期 --> 
+				<Version>5.19</Version>
+				<ReleaseDate>07/17/2020</ReleaseDate>
+				<!-- 置空DST則不再測試,但會顯示在屏幕上 --> 
+				<DST>2</DST>
+				
+				<!--文件存檔如下-->
+				<SaveData>/TestAP/PPID/BIOSVER.TXT</SaveData>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>ChkDMI</ProgramName>
+				<ErrorCode>NXF11|BIOS DMI TEST FAIL</ErrorCode>
+				
+				<!--Name: 作為程式的索引名稱-->
+				<!--StringOrFile: 填寫為字符串時直接比較，填寫文件(TXT)的絕對路徑則從文件從讀取；可以當DMI_c.sh使用-->
+				<Type>
+					<Number>1</Number>
+					<Item>
+						<Name>Serial Number</Name>
+						<StringOrFile>/TestAP/PPID/PPID.TXT</StringOrFile>
+					</Item>
+					
+					<Item>
+						<Name>UUID</Name>
+						<StringOrFile>/TestAP/PPID/UUID.TXT</StringOrFile>
+					</Item>
+					
+					<Item>
+						<Name>Product Name</Name>
+						<StringOrFile>AWINTA3</StringOrFile>
+					</Item>
+				</Type>
+
+				<Type>
+					<Number>2</Number>
+					<Item>
+						<Name>Manufacturer</Name>
+						<StringOrFile>MS-98N2 Diebold Nixdorf</StringOrFile>
+					</Item>
+				</Type>
+			</TestCase>	
+		</BIOS>
+		
+		<Firmware>
+			<ME>
+				<TestCase>
+					<ProgramName>ChkMEVer</ProgramName>
+					<ErrorCode>TXP15|PSU FIRMWARE CHECK NG</ErrorCode>
+					<!-- ChkMEVer.sh: ME firmware -->
+					<Tool>spsManufLinux64</Tool>
+					<Version>4.4.3.125</Version>
+				</TestCase>
+
+				<TestCase>
+					<ProgramName>ChkME_efi</ProgramName>
+					<ErrorCode>TXP15|PSU FIRMWARE CHECK NG</ErrorCode>
+					<!-- ChkME_efi.sh: ME firmware -->
+					<Tool>spsInfo.efi</Tool>
+					<!--Log文件的路徑/文件名稱，程式將遍歷所有的分區，確認有找到ME.log即可，必須是/mnt下-->
+					<LogPathFile>/mnt/ChkME_efi.log</LogPathFile>
+					<Version>4.4.3.125</Version>
+				</TestCase>
+			</ME>
+			
+			<MPS>
+				<TestCase>
+					<ProgramName>MPSFW_w</ProgramName>
+					<ProgramName>MPSFW_c</ProgramName>
+					<ErrorCode>TXP15|PSU FIRMWARE CHECK NG</ErrorCode>
+					<!-- MPSFW_w.sh & MPSFW_c.sh-->
+					<!-- Flash and compare tool-->
+					<Tool>MPSRW</Tool>
+					
+					<!--MPSCode is the code of MPS firmware-->
+					<MPSCode>Config.csv</MPSCode>
+					
+					<!--MD5File is the MD5SUM of MPS firmware-->
+					<MD5File>checksum</MD5File>
+					
+					<!--CPUAmount is the needed install the amount of physical CPU, when MPS firmware is flashed -->
+					<CPUAmount>2</CPUAmount>
+				</TestCase>
+			</MPS>
+		</Firmware>
+		
+		<Sleep>
+			<TestCase>
+				<ProgramName>Sleep</ProgramName>
+				<ErrorCode>NXP07|System Cant Enter Sleep Mode,S3/S4</ErrorCode>
+				<!--待制作-->
+			</TestCase>
+		</Sleep>
+		
+		<NetCard>		
+			<!-- for Network module --> 
+			<!--	eeprom_w.sh		: eeprom燒錄程式          -->   
+			<!--	eeprom_c.sh		: eeprom版本比對程式      -->
+			<!--	lan_w.sh		: 網絡號燒錄程式          -->
+			<!--	lan_c.sh		: 網絡號比對程式          -->
+			<!--	lan_int_t.sh	: 網卡內部回路測試        -->
+			<!--	lan_ext_t.sh	: 網卡外部回路測試        -->
+			<!--	PingServer.sh	: Ping丟包率測試          -->
+			<!--	ChkPXE.sh		: PXE功能確認 		      -->
+			<TestCase>			
+				<ProgramName>eeprom_w</ProgramName>
+				<ProgramName>eeprom_c</ProgramName>
+				<ProgramName>lan_w</ProgramName>
+				<ProgramName>lan_c</ProgramName>
+				<ProgramName>ssidsvid_c</ProgramName>
+				<ErrorCode>EXF17|LAN function test fail</ErrorCode>
+				<!--範例說明
+					此部份配置信息for eeprom_w.sh/eeprom_c.sh/lan_w.sh/lan_c.sh/ChkPXE.sh
+					<NicIndex>1:不接任何網卡時其Nic號</NicIndex>
+					<Chipset>I354</Chipset>
+					<EepromFile>I3540101.eep：在線燒錄時填寫，無則一定要填寫NULL</EepromFile>
+					<CheckSum>0cd0 ChkSum值</CheckSum>
+					<EepromVer>1.8</EepromVer>
+					<SSIDSVID>FFFF-0000,忽略請填寫NULL</SSIDSVID>
+					<MacAddrFile>/TestAP/Scan/MAC1.TXT</MacAddrFile>
+					<PXE>Enable或disable</PXE>
+					<WoL>Yes或No</WoL>
+				-->
+				
+
+				<!-- enable: EEPROM file/MAC address can flash more than twice if necessary; disable: Only flash one time -->
+				<DoubleFlash>disable</DoubleFlash>
+				<Password>abcf314e470e139bf3c06c859761d560</Password>
+				
+				<!-- Define the first MAC address is ODD , Even , Un-limit --> 
+				<FirstMAC></FirstMAC>
+
+				<!--  First 6 digits of MAC address. If is 'FFFFFF', ignore to check. -->
+				<First6Bit></First6Bit>
+	
+				<Card>
+					<NicIndex>1</NicIndex>
+					<Chipset>I210</Chipset>
+					<EepromFile>II210PKG.BIN</EepromFile>
+					<CheckSum>8270</CheckSum>
+					<EepromVer>3.20</EepromVer>
+					<SSIDSVID>FFFF-0000</SSIDSVID>
+					<MacAddrFile>/TestAP/Scan/MAC1.TXT</MacAddrFile>
+				</Card>
+
+				<Card>
+					<NicIndex>2</NicIndex>
+					<Chipset>I210</Chipset>
+					<EepromFile>II210PKG.BIN</EepromFile>
+					<CheckSum>8270</CheckSum>
+					<EepromVer>3.20</EepromVer>
+					<SSIDSVID>FFFF-0000</SSIDSVID>
+					<MacAddrFile>/TestAP/Scan/MAC2.TXT</MacAddrFile>
+				</Card>	
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>lan_int_t</ProgramName>
+				<ProgramName>lan_ext_t</ProgramName>
+				<ErrorCode>EXF05|LAN test fail</ErrorCode>
+				<!--內部、外部回路測試的配置信息-->
+				<!-- Type 1: ./celo64e /sendresp 1 2 -->
+				<!-- Type 2: ./celo64e /nic=index /extlb 10 100 1000 10000-->			
+				<!-- 程式根據Loopback內網卡的數量來確認使用哪種方式做回路測試 -->
+				<!-- BmcShareLan: BMC和LAN共用,Y-共用且測試前需要load default; N-不需要做任何檢測，直接回路測試  -->
+				
+				<BmcShareLan>N</BmcShareLan>
+				
+				<Loopback>
+					<Pair>1</Pair>
+					<Card>
+						<NicIndex>1</NicIndex>
+						<Chipset>I210</Chipset>
+					</Card>
+					
+					<Card>
+						<NicIndex>2</NicIndex>
+						<Chipset>I210</Chipset>
+					</Card>					
+				</Loopback>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>PingServer</ProgramName>
+				<ErrorCode>NXI23|CANT CONNECT TO INTERNET WITH INTERNAL LAN JACK</ErrorCode>
+				<!--PingServer.sh-->
+				<!--Test Port-->
+				<Card>
+					<!--通過MAC地址定位網卡-->
+					<NicIndex>1</NicIndex>
+					<MacAddrFile>/TestAP/PPID/MAC1.TXT</MacAddrFile>
+				</Card>			
+				<!-- minPacketLossRate is Minimum packet loss rate -->
+				<ServerIpAddr>20.40.1.40</ServerIpAddr>
+				<Packet>10240</Packet>
+				
+				<PacketLossRate>10%</PacketLossRate>
+				<!-- MaxSpeed is the Max support link mode speed -->
+				<MaxSpeed>1000</MaxSpeed>
+			</TestCase>		
+		</NetCard>
+		
+		<Storage>
+			<!--除U盤外所有的儲存功能接口讀寫測試程式-->
+			<!-- Amount			: 接口/設備數量                   -->
+			<!-- LowBoundSpeed	: 最低速率                        -->
+			<!-- Location		: 絲印名稱                        -->
+			<!-- Generation		: 第n代硬盤,Gen1.0,Gen2.0,Gen3.0  -->
+			
+			<!--DRDY ERROR 檢查開關-->
+			<CheckDrdyBus>disable</CheckDrdyBus>		
+	
+			<TestCase>
+				<ProgramName>ChkPCIESSD258K</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByAddr</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>R</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber></ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>40</Case>
+						<Case>60</Case>
+						<Case>80</Case>
+						<Case>128</Case>
+						<Case>160</Case>
+						<Case>320</Case>
+						<Case>500</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>MSIK-TL39610-001</Case>
+						<Case>ST[3,5][0-5]0.*</Case>
+						<Case>WD.*</Case>
+						<Case>HGST.*</Case>
+						<Case>ADATA*</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+				<Port>nvme0|Gen3.0|400|K1</Port>
+				<Port>nvme1|Gen3.0|400|K2</Port>
+				<Port>nvme2|Gen3.0|400|K3</Port>
+				<Port>nvme3|Gen3.0|400|K4</Port>
+				<Port>nvme4|Gen3.0|400|K5</Port>
+				<Port>nvme5|Gen3.0|400|K6</Port>
+				<Port>nvme6|Gen3.0|400|K7</Port>
+				<Port>nvme7|Gen3.0|400|K8</Port>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>SATA-258K</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByAddr</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>R</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber></ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>40</Case>
+						<Case>60</Case>
+						<Case>80</Case>
+						<Case>128</Case>
+						<Case>160</Case>
+						<Case>320</Case>
+						<Case>500</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>MSIK-TL39610-001</Case>
+						<Case>ST[3,5][0-5]0.*</Case>
+						<Case>WD.*</Case>
+						<Case>HGST.*</Case>
+						<Case>ADATA*</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+				<Port>ata7|Gen3.0|200|U2_SASC1</Port>
+				<Port>ata12|Gen3.0|200|U2_SASC4</Port>
+				<Port>ata13|Gen3.0|200|U2_SASC5</Port>
+				<Port>ata4|Gen3.0|200|U2_SASC8</Port>
+				<Port>ata8|Gen3.0|200|U2_SASC2</Port>
+				<Port>ata11|Gen3.0|200|U2_SASC3</Port>
+				<Port>ata14|Gen3.0|200|U2_SASC6</Port>
+				<Port>ata3|Gen3.0|200|U2_SASC7</Port>
+				<Port>ata9|Gen3.0|200|SASC1</Port>
+				<Port>ata10|Gen3.0|200|SASC2</Port>
+				<Port>ata1|Gen3.0|200|SASC3</Port>
+				<Port>ata2|Gen3.0|200|SASC4</Port>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>SATA_ONB</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByModel</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>R</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber></ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>2011</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>SATADOM</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+				<!--Port>ata6|Gen3.0|20|SSATA2</Port-->
+				<Port>ata5|Gen3.0|30|SSATA1</Port>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>M2Sata</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試 -->
+				<TestMethod>ByModel</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>RW</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber>5</ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>M2</Module>				
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<Capacity>
+						<Case>32</Case>
+						<Case>256</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>KINGSTON.*</Case>
+						<Case>TS32GMTS400</Case>
+					</Model>
+				</ModelData>
+				
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<Capacity>
+						<Case>1967</Case>
+						<Case>3965</Case>
+						<Case>8068</Case>
+					</Capacity>
+					
+					<Model>
+						<Case></Case>
+					</Model>
+				</ModelData>
+				
+				<Amount>1</Amount>				
+				<!--LowBoundSpeed Unit: MB/s-->
+				<LowBoundSpeed>20</LowBoundSpeed>
+				<Location>M2_SATA1</Location>				
+			</TestCase>
+		
+			<TestCase>
+				<ProgramName>SDCard</ProgramName>
+				<ErrorCode>TXC02|SD/MS/CF Card test fail</ErrorCode>
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試 -->
+				<TestMethod>ByModel</TestMethod>
+
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>RW</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber>5</ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SDCARD</Module>				
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<Capacity>
+						<Case>8012</Case>
+					</Capacity>
+					
+					<Model>
+						<Case></Case>
+					</Model>
+				</ModelData>
+				
+				<!-- DefineFunc=(0 3), SD card-->
+				<Amount>1</Amount>
+				<!--LowBoundSpeed Unit: MB/s-->
+				<LowBoundSpeed>20</LowBoundSpeed>
+				<Location>SD1</Location>				
+			</TestCase>	
+			
+			<TestCase>
+				<ProgramName>StorageStress</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				
+				<!--超時提前退出,單位: 秒-->
+				<TimeOut>180</TimeOut>
+				
+				<FioParameter>
+					<!--global-->
+					<!--IO引擎: 異步libaio， 同步psync/sync-->
+					<ioengine>psync</ioengine>
+					<!--文件上I/O模块的数量，注意大于1的iodepth对于同步io来说是没用的的-->
+					<iodepth>1</iodepth>
+					<!--1:測試過程繞過機器自帶的buffer,使測試結果更真實-->
+					<direct>1</direct>
+					<!--只对异步I/O引擎有用-->
+					<thread>16</thread>
+					<!--本次測試線程,置空則為2的CPU的核心數量次方-->
+					<numjobs>128</numjobs>
+					<!--預運行時間-->
+					<ramp_time>1</ramp_time>
+					<!--rw: 讀寫模式請填寫: randwread|randwrite, randrw, read|write, rw-->
+					<rw>read|write</rw>
+					<!--單次IO的塊文件大小: 4k/16k/32k-->
+					<bs>4M</bs>
+					
+					<!--測試時間,和size不能同時設置,同时设置以runtime為準-->
+					<runtime>2</runtime>			
+					<!--本次測試文件的大小,和runtime不能同時設置-->
+					<size>1G</size>
+				</FioParameter>
+				
+				<Test>
+					<!--Speed:填写1.5/3.0/6.0，单位为Gbps，不需要填写单位-->
+					<!--ReadBW/WriteBW讀寫帶寬: 單位是MB/s,測試過程讀到KB/s級別的判fail;不測試則填寫null-->
+					<!--Address|Speed|ReadBW|WriteBW|Location-->
+					<Port>nvme0|NULL|100|100|K1</Port>
+					<Port>nvme1|NULL|100|100|K2</Port>
+					<Port>nvme2|NULL|100|100|K3</Port>
+					<Port>nvme3|NULL|100|100|K4</Port>
+					<Port>nvme4|NULL|100|100|K5</Port>
+					<Port>nvme5|NULL|100|100|K6</Port>
+					<Port>nvme6|NULL|100|100|K7</Port>
+					<Port>nvme7|NULL|100|100|K8</Port>					
+				</Test>
+			</TestCase>			
+		</Storage>
+		
+		<USB>
+			<TestCase>
+				<ProgramName>ChkUsbKMS</ProgramName>
+				<ErrorCode>TXUS2|USB test fail</ErrorCode>
+				<!--ChkUsbKMS.sh,指定USB接口接鍵盤和掃碼或鼠標-->
+				<!--PortID/PCB Marking-->
+				<PortID>Port1|USB1-A</PortID>
+				<PortID>Port2|USB1-B</PortID>
+				<VendorName>Mouse keyboard SiGma Dell Metrologic Symbol</VendorName>
+			</TestCase>
+						
+			<TestCase>
+				<ProgramName>usb2030</ProgramName>
+				<ErrorCode>TXUS2|USB test fail</ErrorCode>
+				<!--使用TL587-03S/04S小卡測試-->
+				<!--某接口僅沒有USB2.0/USB3.0功能的時候，其address置NULL-->
+				<!--usb2030.sh USB2.0 & USB3.0 detect test together-->
+				<!-- usb2.0 address | usb3.0 address | pcb marking -->
+				<PortID>1-1|2-1|USB1</PortID>	
+				<PortID>1-2|2-2|USB2</PortID>			
+				<PortID>1-11|2-5|JUSB3</PortID>
+				<PortID>1-4|2-4|JUSB5_USB3.0</PortID>
+			</TestCase>
+		</USB>
+		
+		<COM>
+			<!--COM RS23/RS422/RS485測試程式，程式依據ProgramName="COMRS232"定位配置檔-->
+			<!--COM RS232中部份信號沒有接出來，因此需要分為不同的情形,可以分步（按不同的程式）測試-->
+			<TestCase>
+				<ProgramName>COMRS232</ProgramName>
+				<ErrorCode>TXC11|COM function fail</ErrorCode>
+				<!-- RS-232 -->
+				<TestItems>
+				<!-- 1: 測試該信號, other: 不測試該信號 -->
+				<TxRx>1</TxRx>
+				<RI>0</RI>
+				<DSR>1</DSR>
+				<CTS>1</CTS>
+				<DCD>0</DCD>
+				<RTS>1</RTS>
+				<DTR>1</DTR>
+				</TestItems>
+				<!-- PCB標誌com pcb marking | 設備名稱dev_path -->
+				<Port>COM1|/dev/ttyS0</Port>
+			</TestCase>
+		</COM>
+		
+		<GPIO>
+			<TestCase>
+				<ProgramName>GPIO</ProgramName>
+				<ErrorCode>AK437|GPIO function fail</ErrorCode>
+				<!--GPIO.sh-->
+				<!-- loopback -c S158.conf -->
+				<!-- JGPIO -->
+				<!--Tool如loopback需要和脚本放在相同路径下-->
+				<TestCommand>loopback -c S158.conf</TestCommand>
+				
+				<!-- # DON NOT MODIFY THIS HEADER -->
+				<!-- # First line: chipset base_address -->
+				<!-- # Second line: numbers of GPIO -->
+				<!-- # Third line: GPIO number ..., separate with space -->
+				<!-- NCT6106D 2E -->
+				<!-- 8 -->
+				<!-- 20 24 21 25 22 26 23 27 -->
+				<ChipsetBaseAddress>NCT6106D 2E</ChipsetBaseAddress>
+				<NumbersOfGPIO>8</NumbersOfGPIO>
+				<IoPort>20 24 21 25 22 26 23 27</IoPort>
+			</TestCase>
+		</GPIO>
+		
+		<HW>
+			<TestCase>
+				<ProgramName>ChkCPU</ProgramName>
+				<ErrorCode>TXCP2|Check the speed of CPU fail</ErrorCode>
+				<!--ChkCPU.sh: CPU型號信息等檢測-->
+				<!--Model: 用於區分板載不同的CPU測試,以防錯料-->
+				<!--Frequency: 當前最小頻率-->
+				<!--Stepping(僅針對SOC有效)/L#Cache缺省時不測試-->
+				<Case>
+					<Model></Model>
+					<Model>609-S2581-010</Model>
+					<Name>Genuine Intel(R) CPU $0000%@</Name>
+					<Cores>56</Cores>
+					<Frequency>2000 MHz</Frequency>
+					<Stepping></Stepping>
+					<L1Cache>80 KB</L1Cache>
+					<L2Cache>1280 KB</L2Cache>
+					<L3Cache>21504 KB</L3Cache>
+				</Case>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>CpuStress</ProgramName>
+				<ErrorCode>TXCP2|Check the speed of CPU fail</ErrorCode>
+
+				<!--计算到2的多少次方位数,需填写不大于26的正整数-->
+				<NumBitsPI>26</NumBitsPI>
+				<!--最大耗时,单位为秒-->
+				<MaxRealTime>80</MaxRealTime>
+				<!--超過這個時間(秒)則終止計算-->
+				<TimeOut>120</TimeOut>
+				<!--运行多少个程式-->
+				<Copies>56</Copies>
+			</TestCase>
+		  
+			<TestCase>
+				<ProgramName>ChkMemory</ProgramName>
+				<ErrorCode>TXVIC|memory test fail</ErrorCode>
+				<!-- ChkMemory.sh: 內存槽功能測試-->
+				<!-- 填寫DDR2~4 -->
+				<Generation>DDR4</Generation>
+				
+				<Specify>
+					<!--以下定義後,程式將檢測實際所用的是否和定義的一致,不一致的判Fail;多種規格的使用空格分開-->
+					<!--Capacity單位是MB;Frequency單位是MHz.不需要填寫單位-->
+					<Capacity></Capacity>
+					<Frequency></Frequency>
+					<Manufacturer></Manufacturer>
+				</Specify>
+				<!--Locator=BIOS或dmidecode設置的名稱, PCB Marking=[PCB絲印名稱]缺省的時候顯示dmidecode設置的名稱-->
+				<!--Locator|PcbMarking-->
+				<DimmSlot>
+					<LocatorPcbMarking>CPU0_DIMM_01|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_02|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_03|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_04|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_05|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_06|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_07|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_08|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_09|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_10|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_11|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_12|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_13|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_14|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_15|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU0_DIMM_16|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_01|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_02|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_03|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_04|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_05|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_06|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_07|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_08|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_09|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_10|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_11|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_12|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_13|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_14|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_15|</LocatorPcbMarking>
+					<LocatorPcbMarking>CPU1_DIMM_16|</LocatorPcbMarking>
+				</DimmSlot>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>MemStress</ProgramName>
+				<ErrorCode>TXVIC|memory test fail</ErrorCode>
+				
+				<!--測試內存的容量大小,單位M或G,請勿使用全部內存測試否則可能造成宕機或FAIL；也可以填寫百分比如60%-->
+				<Size>50%</Size>
+				<!--測試循環次數，Loop和CycleTime只能任選其一，同時填寫Loop有效；置空CycleTime有效-->
+				<Loop>1</Loop>
+				<!--CycleTime:測試時間，h/m/s: 小時/分鐘/秒，Loop和CycleTime只能任選其一，同時填寫Loop有效-->
+				<CycleTime>1m</CycleTime>
+				
+				<!--運行多少個memtester,建議填寫為CPU核心個數值的約數值,置空則自動使用CPU最大核心數量-->
+				<Copies></Copies>
+				<FunctionList>
+					<!--memtester自定義功能測試列表; 1:表示該項目測試; 0: 不測試-->
+					<StuckAddress>0</StuckAddress>
+					<RandomValue>1</RandomValue>
+					<CompareXOR>1</CompareXOR>
+					<CompareSUB>1</CompareSUB>
+					<CompareMUL>1</CompareMUL>
+					<CompareDIV>1</CompareDIV>
+					<CompareOR>1</CompareOR>
+					<CompareAND>1</CompareAND>
+					<SequentialIncrement>0</SequentialIncrement>
+					<SolidBits>0</SolidBits>
+					<BlockSequential>0</BlockSequential>
+					<Checkerboard>0</Checkerboard>
+					<BitSpread>0</BitSpread>
+					<BitFlip>0</BitFlip>
+					<WalkingOnes>0</WalkingOnes>
+					<WalkingZeroes>0</WalkingZeroes>
+					<_8bitWrites>1</_8bitWrites>
+					<_16bitWrites>1</_16bitWrites>
+				</FunctionList>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>hwmon</ProgramName>
+				<ErrorCode>CXSAF|Hardware Monitor test fail</ErrorCode>				
+				<!--hwmon.sh： HardWareMonitor 測試-->
+				<!-- 支持SuperIO/AST1300/AST1400,ipmitool(AST2300/AST2400/AST2500) -->
+				<!-- TestTool is the tool read the Fan speed ,temperature,and voltage from registers -->
+				<!--測試工具從如下選項中選擇TestTool=AST1300FW/AST1400FW/HWM/ipmitool(internal command) and so on -->
+				<TestTool>ipmitool</TestTool>
+				
+				<!--忽略的測試選項清單-->
+				<IgnoreItem></IgnoreItem>
+				<IgnoreItem></IgnoreItem>
+			</TestCase>
+		</HW>
+		
+		<PCIE>
+			<!-- CheckPcie.sh: PCIE Slot 功能測試-->
+			<!-- 程式依據ShellName="CheckOcuLink"定位配置檔-->
+			<!-- 支持多個配置檔測試（多種情形）-->
+			<!--	Bus, Dev.Fun ID of PCI Card -->
+			<!--	Vendor, Device ID of PCI Card -->
+			<!--	PCI Express Speed of PCI-e Card -->
+			<!--	PCI Express Width of PCI-e Card -->
+			<!--	PCI-E_Num|Bus|Vendor|Speed|Width -->
+			<!--	Vendor填寫 Unlimited 則不限定VenderID -->
+			
+			<!--依據下面的索引值填寫，index索引不能重複，否則不能正確的檢索到-->
+			<TestCase>
+				<ProgramName>ChkPcie-ONB</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>				
+				<Case index="1">
+					<Card>PCI_E1|01:00.0|144d:a808|8GT/s|x4</Card>
+				</Case>
+			</TestCase>
+			<TestCase>
+				<ProgramName>ChkPcie-258K</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>				
+				<Case index="1">
+					<Card>PCI_E1|65:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|66:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|67:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|68:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|e3:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|e4:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|e5:00.0|8086:0953|8GT/s|x4</Card>
+					<Card>PCI_E1|e6:00.0|8086:0953|8GT/s|x4</Card>
+				</Case>
+			</TestCase>
+			<TestCase>
+				<ProgramName>ChkPcie-258B</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>				
+				<Case index="1">
+					<Card>PCI_E1|4b:00.0|1000:005d|8GT/s|x8</Card>
+					<Card>PCI_E1|4c:00.0|1000:005d|8GT/s|x8</Card>
+					<Card>PCI_E1|31:00.0|1002:6778|2.5GT/s|x16</Card>
+				</Case>
+			</TestCase>
+			<TestCase>
+				<ProgramName>ChkPcie-258A</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>				
+				<Case index="1">
+					<Card>PCI_E1|b1:00.0|1000:005d|8GT/s|x8</Card>
+					<Card>PCI_E1|b2:00.0|1000:005d|8GT/s|x8</Card>
+					<Card>PCI_E1|ca:00.0|10b5:8747|5GT/s|x16</Card>
+				</Case>
+			</TestCase>	
+			<TestCase>
+				<ProgramName>ChkPcie-258C</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>				
+				<Case index="1">
+					<Card>PCI_E1|98:00.0|1000:005d|8GT/s|x8</Card>
+					<Card>PCI_E1|99:00.0|1000:005d|8GT/s|x8</Card>
+				</Case>
+			</TestCase>
+			<TestCase>
+				<ProgramName>ChkPcie-258E</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>				
+				<Case index="1">
+					<Card>PCI_E1|17:00.0|8086:1572|8GT/s|x2</Card>
+					<Card>PCI_E1|17:00.1|8086:1572|8GT/s|x2</Card>
+					<Card>PCI_E1|17:00.2|8086:1572|8GT/s|x2</Card>
+					<Card>PCI_E1|17:00.3|8086:1572|8GT/s|x2</Card>
+				</Case>
+				<Case index="2">
+					<Card>PCI_E1|17:00.0|8086:1572|8GT/s|x8</Card>
+					<Card>PCI_E1|17:00.1|8086:1572|8GT/s|x8</Card>
+					<Card>PCI_E1|17:00.2|8086:1572|8GT/s|x8</Card>
+					<Card>PCI_E1|17:00.3|8086:1572|8GT/s|x8</Card>
+				</Case>
+			</TestCase>
+			<TestCase>
+				<ProgramName>ChkPciBus</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<!--ErrorCode>TXS2H|PCI TEST FAIL</ErrorCode-->	
+				<!--此程式和上述有區別，無PCB Marking-->
+				<!--CheckPciBus.sh: 主板所有的PCIE設備校驗-->
+				<!--	Vendor填寫 Unlimited 則不限定VenderID -->
+				<!--	PCIE BusID|VerndorID|Speed|Width|Stepping -->			
+				<Case index="1">
+					<Card>01:00.0|8086:1e25|5GT/s|x4|09</Card>
+					<Card>0b:00.0|8086:1f25|5GT/s|x4|09</Card>
+					<Card>0c:00.0|8086:1e27|5GT/s|x4|09</Card>
+				</Case>
+
+				<Case index="2">
+					<Card>01:00.0|8086:1e25|5GT/s|x4|09</Card>
+					<Card>0b:00.0|8086:1f25|5GT/s|x4|09</Card>
+					<Card>0c:00.0|8086:1e27|5GT/s|x4|09</Card>
+				</Case>
+			</TestCase>			
+		</PCIE>
+
+		<BMC>	
+			<!--	ClrBmcMac.sh: 初始化BMC MAC address -->
+			<!--	ChkBmcVer.sh: 檢查BMC版本           -->
+			<!--	NCSITest.sh	: NCSI 測試             -->
+			<!--	BMCMAC_w.sh	: 燒錄BMC MAC address   -->
+			<!--	BMCMAC_c.sh	: 比對BMC MAC地址       -->
+			<!--	GetBmcIP.sh	: 獲取BMC IP address    -->
+			
+			<TestCase>
+				<ProgramName>ClrBmcMac</ProgramName>
+				<ProgramName>ChkBmcVer</ProgramName>
+				<ErrorCode></ErrorCode>	
+
+				<!-- ClrBmcMac.sh: for Clear BMC MAC -->
+				<File>S258K111.ima</File>
+				<!--FirmwareFile的CheckSum后4位，務必填寫準確-->
+				<CheckSum>2980</CheckSum>
+				
+				<!--ChkBmcVer.sh: BMC Firmware version -->
+				<Version>1.11</Version>
+				<ReadVersionTool>ipmitool</ReadVersionTool>
+				<SavePath>/TestAP/PPID</SavePath>
+
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>ClrBmcMac</ProgramName>				
+				<ClearType>
+					<!-- Do not modify the type code -->
+					<!--ClearTypeIndex為1,2或3，選擇初始化的方式-->
+					<!--
+						1==> socflash_x64 if=S143K120.ima count=0x40000 cs=0 flashtype=2
+						2==> socflash_x64 if=S135K101.ima option=f
+						3==> socflash_x64 if=S165K131.ima count=0x50000
+					-->
+					<!-- 關鍵指令;ChooseType has two options,you can choose any one only -->
+					<ClearCommand>socflash_x64 if=S258K111.ima count=0x50000</ClearCommand>
+				</ClearType>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>NCSITest</ProgramName>
+				<ErrorCode></ErrorCode>	
+				<!--NCSITest.sh-->
+				<!-- NCSITEST  mac  package  channel  function  margin                           			-->
+				<!--	Default value: package = 1, channel = 2, function = 0, margin = 5.       			-->
+				<!--		mac = 0: Using the MAC#1 to run the tool.                            			-->
+				<!--		mac = 1: Using the MAC#2 to run the tool.                            			-->
+				<!--		package: Total numbers of the shared NIC                             			-->
+				<!--		channel: Total numbers of the channel of the shared NIC.             			-->
+				<!--		function = 0: Check the status of the shared NIC                     			-->
+				<!--		function = 6: IO timing margin block qualification                   			-->
+				<!--		margin = 5: Check SCU48 with a 5x1(RMII) solid margin block.         			-->
+				<!--		margin = 3: Check SCU48 with a 3x1(RMII) solid margin block.         			-->
+				<!--		margin = 0: Check SCU48 with a 1x1 solid margin block.               			-->
+
+				<NCSITool>slt2500_x64</NCSITool>
+				<!--類似於S1651的NCSI測試，插和不插S165B（8086:37d2）測試的配置檔案信息是有差異的-->
+				<!--配置信息|網卡ID（由於lspci -n或eeupdate64e可讀取到）|網卡（PCIE BUS ID）數量-->
+				<!--當滿足指定網卡ID數量的時候則使用其對應的配置信息,網卡ID和網卡數量可缺省-->
+				<NCSIConfig>
+					<Card>8086:1572\|8086:1521</Card>
+					<CardAmount>0</CardAmount>
+					<Config>ncsitest 0 1 1 7 5</Config>
+				</NCSIConfig>
+			</TestCase>				
+			
+			<TestCase>				
+				<ProgramName>BMCMAC_w</ProgramName>
+				<ProgramName>BMCMAC_c</ProgramName>
+				<ProgramName>GetBmcIP</ProgramName>
+				<ErrorCode></ErrorCode>	
+				
+				<FlashMacAddr>
+					<!-- BMCMAC_w.sh/BMCMAC_c.sh -->
+					<!-- enable: 必要的時候可以二次燒錄; disable: 禁止二次燒錄 -->
+					<DoubleFlash>enable</DoubleFlash>
+					<Password>abcf314e470e139bf3c06c859761d560</Password>
+					<!--  Channel # | Path of BMC Mac address-->
+					<BmcMacAddr>
+						<Channel>1</Channel>
+						<MacFile>/TestAP/Scan/BMCMAC1.TXT</MacFile>
+					</BmcMacAddr>
+
+					<BmcMacAddr>
+						<Channel>8</Channel>
+						<MacFile>/TestAP/Scan/BMCMAC2.TXT</MacFile>
+					</BmcMacAddr>
+					
+					<!--兩個BMC燒錄的間隔時間（單位：秒） -->
+					<!--While the BMC channel amount is great than 2, Time Interval is needed. Unit: seconds,default: 100s -->
+					<TimeInterval>110</TimeInterval>
+					<SavePath>/TestAP/PPID</SavePath>
+				</FlashMacAddr>
+			</TestCase>
+			
+			<TestCase>
+				<!--BMC 復位按鈕測試程式-->
+				<ProgramName>BmcReset</ProgramName>
+				<ErrorCode></ErrorCode>	
+				
+				<BmcRest>
+					<Location>ID_BTB,J1_5(Set to Pin2-3)</Location>
+				</BmcRest>
+			</TestCase>
+
+			<TestCase>
+				<!--BMC 按鈕測試程式-->
+				<ProgramName>ID_BTN</ProgramName>
+				<ErrorCode/>
+				<Button>
+				<DeteteCmd>ipmitool raw 0x38 0x12 0x84</DeteteCmd>
+				<Short>00</Short>
+				<Location>ID_BTN,J1_5(Set to Pin1-2)</Location>
+				</Button>
+			</TestCase>
+
+			<TestCase>
+				<!--BMC 按鈕測試程式-->
+				<ProgramName>JFP1_SWLED2</ProgramName>
+				<ErrorCode/>
+				<Button>
+				<DeteteCmd>ipmitool raw 0x38 0x12 0x24</DeteteCmd>
+				<Short>00</Short>
+				<Location>JFP1_SWLED2</Location>
+				</Button>
+			</TestCase>
+		</BMC>
+		
+		<Stream>
+			<TestCase>
+				<ProgramName>stream</ProgramName>
+				<ErrorCode></ErrorCode>		
+				<!--stream.sh: Performance測試，注意內存和CPU會影響到-->
+				<!--MinBaseRate:最低分值；MaxBaseRate:最高分值-->
+				<MinBaseRate>190000</MinBaseRate>
+				<MaxBaseRate>250000</MaxBaseRate>
+			</TestCase>
+		</Stream>
+		
+		<TPM>
+			<TestCase>
+				<ProgramName>TPM</ProgramName>
+				<ErrorCode>TXS37|TPM test fail</ErrorCode>
+				<!-- TPM.sh -->
+				<!-- Version 1.0,1.2,or 2.0,S165F-->
+				<!-- If the version of TPM is newer than 2.0, the OS should newer than Linux 7.3-->
+				<Version>2.0</Version>
+				
+				<!--If the version of TPM is lower than 2.0, then set the TestTool null -->
+				<TestTool>eltt2</TestTool>
+			</TestCase>
+			
+			<TestCase>
+				<!--在UEFI下测试,OS下检查结果-->
+				<ProgramName>ChkTPM</ProgramName>
+				<ErrorCode>TXS37|TPM test fail</ErrorCode>
+				<!--log应该在根目录下-->
+				<LogPath>/dev/sda1</LogPath>
+				<Version>5.62</Version>
+			</TestCase>
+		</TPM>	
+	
+
+		
+		<Audio>
+			<TestCase>
+				<ProgramName>beep</ProgramName>
+				<ErrorCode>TXA29|beep test fail</ErrorCode>
+				<!--beep.sh: 蜂鳴器測試；Enable: 100/200/400Hz各測試一次，800/1600/3200Hz抽測1~3次; Disable: 僅默認頻率測試-->
+				<CoverFrequency>Enable</CoverFrequency>
+				<!-- pcb marking -->
+				<Location>JSPK1</Location>
+				<!--機台自動測試，響5秒 -->			
+				<AutoTest>Disable</AutoTest>
+			</TestCase>
+		</Audio>
+		
+		<AmiDMI>
+			<!--DMI: Desktop Management Interface-->
+			<!--SMBIOS: System Management BIOS-->
+			<TestCase>
+				<ProgramName>DMI_w</ProgramName>
+				<ProgramName>DMI_c</ProgramName>
+				<ErrorCode>NXF11|BIOS DMI TEST FAIL</ErrorCode>
+				<!--enable:允許二次燒錄;disable:不允許二次燒錄-->
+				<DoubleFlash>disable</DoubleFlash>
+				<!--二次烧录密码的MD5SUM,不含回车,必须是32位-->
+				<Password>abcf314e470e139bf3c06c859761d560</Password>
+				<!--StringInFile置空后不再比對,比對的原理是讀取值和文件存的值一致-->
+				<!--如下配置Parameter參數務必準確,不需要更新的部份請刪除或註釋掉相應的參數；固定的值比對也可以使用ChkDMI.sh進行比對-->
+				<!--Parameter:燒錄的類型和位置,需全部使用大寫-->
+				<!--Describe:燒錄的類型描述-->
+				<!--StringOrFile:更新后的字符串，必須使用TXT的文件類型，否則程式將按文本來燒錄，即此位置既可以填指定的文本也可是要燒錄的字符串-->
+				<!--DefaultString:更新前的字符串; 不固定的情形下請使用DoubleFlash=enable;在DoubleFlash=disable的時候，若讀出的值不是default值則不再燒錄，其該值為StringInfile內的值的時測試Pass-->
+				
+				<Type>
+					<Parameter>SS</Parameter>
+					<Describe>System serial number</Describe>
+					<StringOrFile>/TestAP/PPID/PPID.TXT</StringOrFile>
+					<DefaultString>To be filled by O.E.M.</DefaultString>
+				</Type>	
+			
+				<Type>
+					<Parameter>BS</Parameter>
+					<Describe>Baseboard serial number</Describe>
+					<StringOrFile>/TestAP/PPID/PCBASN.TXT</StringOrFile>
+					<DefaultString>To be filled by O.E.M.</DefaultString>
+				</Type>	
+
+				<Type>
+					<Parameter>SP</Parameter>
+					<Describe>Product</Describe>
+					<StringOrFile>MSI-S1191</StringOrFile>
+					<DefaultString>To be filled by O.E.M.</DefaultString>
+				</Type>
+				
+				<Type>
+					<Parameter>SU</Parameter>
+					<Describe>UUID</Describe>
+					<!--Version4格式： 5A6645DC-FD1C-11E8-9074-448A5BDBEBD8-->
+					<!--Auto: UUID自動生成的，燒錄后將存在如下文件中-->
+					<!-- Mac: UUID自動生成並且以第一個網卡的Mac結尾，使用此功能需要將網卡先燒錄，避開外接網卡干擾（無法燒錄），燒錄后將存在如下文件中-->
+					<!--Appoint: 指定文件StringInFile內的字符串 -->
+					<Generate>Auto</Generate>
+					<!--第13碼都會是4,代表version4的UUID產生器,填N/A不檢查-->
+					<Version>4</Version>
+					<StringOrFile>/TestAP/PPID/UUID.TXT</StringOrFile>
+					<DefaultString>03000200-0400-0500-0006-000700080009</DefaultString>
+				</Type>
+			</TestCase>			
+		</AmiDMI>
+
+		<GetPrdctInfo>
+			<UrlAddress>
+				<!--Web網的選擇: 1或2-->
+				<IndexInUse>1</IndexInUse>
+				<MesWeb index="1">http://20.40.1.40/eps-web/upload/uploadservice.asmx</MesWeb>
+				<MesWeb index="2">http://172.17.7.101/eps-web/upload/uploadservice.asmx</MesWeb>		
+			</UrlAddress>
+			
+			<TestCase>
+				<ProgramName>GetMDL</ProgramName>
+				<ErrorCode></ErrorCode>
+				<!--GetMDL.sh-->
+				<!--Get the infomation of PCBA board / BB system -->			
+				<!--Get: Model name|NestStation,并比對機種名稱-->
+				<!--需要依據以下文件（格式如上）內容才能獲取，SN_MODEL_TABLE.TXT由ScanSNs.sh創建-->
+				<MBSerialNumberPath>/TestAP/PPID/SN_MODEL_TABLE.TXT</MBSerialNumberPath>
+				
+				<!--獲取結果存在: /TestAP/PPID/PCBAProductInfo.TXT-->
+				<!--文件內容是: 主板條碼|MES的Model名稱|下一個工站代碼-->
+				<!--Station: 當前的工站代碼,如填寫則程式將檢測待測主板或小卡是否和設置的一致,多個站別使用逗號隔開;空白則不檢測-->
+				<Station>1528,0</Station>
+			</TestCase>
+		</GetPrdctInfo>
+	
+		<LED>
+			<!-- Color: 1=red紅色,2=green綠色,3=orange橙色和琥珀色,4=blue藍色 -->
+			<!--缺省時不測試顏色-->
+			
+			<TestCase>
+				<ProgramName>DebugLED</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				<!--DebugLED.sh-->
+				<Tool>DEBUGLED</Tool>
+				<Location>LED2</Location>
+			</TestCase>
+	
+			<TestCase>
+				<ProgramName>LED3</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				<!--FaultErrorLED.sh-->
+				<Location>LED3</Location>
+				<Color>1</Color>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>FP_LED1</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				<!--FaultErrorLED.sh-->
+				<Location>LED3</Location>
+				<Color>1</Color>
+			</TestCase>
+	
+			<TestCase>
+				<ProgramName>IDBTN_LED</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				
+				<!--IDLED.sh-->				
+				<Location>ID_BTN_LED</Location>
+				<Color>4</Color>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>SWLED2</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				
+				<!--IDLED.sh-->				
+				<Location>JFP1_SWLED2</Location>
+				<Color>4</Color>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>HDDLED</ProgramName>
+				<ErrorCode>NXRD4|LED fail</ErrorCode>
+				
+				<!--HDDLED.sh,多種顏色的時候使用逗號分隔-->	
+				<Location>LED4</Location>
+				<Color>3</Color>
+				
+				<!-- TestByTimes: enable: Test by lighting on times, or disable: Check it light on only -->
+				<TestByTimes>enable</TestByTimes>
+				<!--程式負責點亮此LED-->
+				<AutoTest>disable</AutoTest>
+			</TestCase>
+				
+			<TestCase>
+				<ProgramName>UncontrollableLED</ProgramName>
+				<ErrorCode>NXRD4|LED fail</ErrorCode>
+				<!--該範圍內的不受控的LED將隨機測試: 顏色、順序隨機測試-->
+				<!--UncontrollableLED.sh-->	
+				<!-- UncontrollableLed: the LED can not be controllable by command不受控的LED測試-->
+				<!-- PTE/PE can define the lable name under "UncontrollableLed" -->
+				<!-- LEDRandomTest.sh will random test all below LEDs one by one by manual -->
+				<!--Color code不能缺省 -->
+				<Member>
+					<Location>LED5</Location>
+					<Color>1</Color>		
+				</Member>
+				
+				<Member>
+					<Location>LED1</Location>
+					<Color>2</Color>
+				</Member>
+				
+				<Member>
+					<Location>LED-A</Location>
+					<Color>3</Color>
+				</Member>
+				
+				<Member>
+					<Location>LED-N</Location>
+					<Color>4</Color>
+				</Member>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>NetLed</ProgramName>
+				<ErrorCode>TXLAF|LAN led abnormal</ErrorCode>
+				
+				<!--NetLed.sh: 網孔燈測試-->
+				<!-- LAN MAC is for getting location for LAN port，按MAC獲取Port-->
+				<LanMac>/TestAP/Scan/MAC1.TXT</LanMac>
+				<LanMac>/TestAP/Scan/MAC2.TXT</LanMac>
+
+				
+				<!--  LAN LED status, Active-Speed 	-->
+				<!--  Define: 						-->
+				<!--  Led status  	   code 		-->
+				<!--  Off/Dark			0 			-->
+				<!--  Orange/amber		1 			-->
+				<!--  Green 			2 			-->
+				<Spd10Mbps>2-0</Spd10Mbps>
+				<Spd100Mbps>2-1</Spd100Mbps>
+				<Spd1000Mbps>2-2</Spd1000Mbps>
+				<Spd10Gbps></Spd10Gbps>
+			</TestCase>	
+		</LED>
+			
+		<Jumper>
+			<!--開關、跳帽測試-->
+			
+			<TestCase>
+				<ProgramName>JBIOS_RCV</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				
+				<!--JBIOS_RCV.sh-->
+				<!--Location is the marking of the jumper -->
+				<Location>JBIOS_RVC</Location>
+				
+				<!--Command is command get the status of the jumper -->
+				<Command>getRecovery</Command>
+				
+				<!--Normal/Short is command execute result code -->
+				<NormalCode>1</NormalCode>
+				<ShortCode>0</ShortCode>
+				
+				<!--TestMode is test mode, it should be NormalCode or 'NormalCode,ShortCode'  -->
+				<TestMode>1,0</TestMode>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>JME_RCV</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				<!--JME_RCV.sh-->
+				<!--Location is the marking of the jumper -->
+				<Location>JME_RVC</Location>
+				
+				<!--Command is command get the status of the jumper -->
+				<Command>getME</Command>
+				
+				<!--Normal/Short is command execute result code -->
+				<NormalCode>1</NormalCode>
+				<ShortCode>0</ShortCode>
+				
+				<!--TestMode is test mode, it should be NormalCode or 'NormalCode,ShortCode'  -->
+				<TestMode>1,0</TestMode>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>JSDO_Disable</ProgramName>
+				<ProgramName>JSDO_Enable</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				
+				<!--JSCU_Disable.sh/JSCU_enable.sh-->
+				<!-- security measures defined in the Flash Descriptor -->
+				<!--Location is the marking of the jumper -->
+				<Location>JSDO1</Location>
+				
+				<BusID>00:16.0</BusID>
+				<!--Command is command enable the device, if the system do not enable, set it NULL  -->
+				<Command>deviceEnable</Command>
+				
+				<!--Enable/Enable is command execute result code -->
+				<Enable>5</Enable>
+				<Disable>2</Disable>
+				
+				<!--TestMode is test mode, it should be Enable or 'Enable,Disable'  -->
+				<TestMode>2,5</TestMode>
+			</TestCase>
+		</Jumper>
+		
+		<Button>		
+			<TestCase>
+				<ProgramName>ChkCase</ProgramName>
+				<ErrorCode>TXT20|BUTTON FAIL</ErrorCode>
+				
+				<!--ChkCase.sh-->
+				<Tool>Case</Tool>
+				<!-- pcb marking -->
+				<Location>JCI1</Location>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>PwrSwitch</ProgramName>
+				<ErrorCode>TXT20|BUTTON FAIL</ErrorCode>
+				
+				<!--PwrSwitch.sh-->
+				<Location>JCI1</Location>
+				<MouseStatus>enable</MouseStatus>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>RstSwitch</ProgramName>
+				<ErrorCode>TXT20|BUTTON FAIL</ErrorCode>
+				
+				<!--RstSwitch.sh-->
+				<Location>JCI1</Location>
+				<MouseStatus>enable</MouseStatus>
+			</TestCase>
+		</Button>
+
+		<RGBTest>
+			<TestCase>
+				<ProgramName>RgbTest</ProgramName>
+				<ErrorCode>NXL09|RGB abnormal</ErrorCode>
+				
+				<!--CameraDevice: 攝像頭設備-->
+				<CameraDevice>/dev/video0</CameraDevice>
+				<!--ScreenDevice: 屏幕設備-->
+				<ScreenDevice>/dev/fb0</ScreenDevice>
+				<RGB>
+					<!--讀取Red/Green/Bule圖片的時候，對應如下為RGB最小值-->
+					<Colour index="R">200,100,100</Colour>
+					<Colour index="G">100,200,125</Colour>
+					<Colour index="B">100,100,200</Colour>
+				</RGB>
+				
+				<Sampling>
+					<!--採樣密度-->
+					<WidthInterval>40</WidthInterval>
+					<HeightInterval>30</HeightInterval>
+				</Sampling>
+			</TestCase>
+		</RGBTest>
+		
+		<SwitchDP>
+			<TestCase>
+				<ProgramName>SwitchDP</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--For DisplaySW.sh-->
+				
+				<!--測試模式，Auto：自動切換，Manual:手動一拔一插切換，EdidOnly：只讀EDID-->
+				<TestMode>Auto</TestMode>
+				
+				<!--讀取顯示器的EDID，Enable / disable-->
+				<EdidTest>enable</EdidTest>
+				
+				<!--四則運算，Enable / disable-->
+				<ArithmeticTest>enable</ArithmeticTest>
+				
+
+				<!--Port address | Location -->
+				<DPPort>eDP-1|JVGA1</DPPort>
+				<DPPort>HDMI-1|HDMI1</DPPort>
+				<DPPort>HDMI-2|DP1</DPPort>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>EDID</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--可同時顯示的顯示器數量-->
+				<PortsNumber>1</PortsNumber>
+				<!-- For server only, 單個顯示設置有效,多個顯示器時分開測試,如S1651/S2121-->
+				<MonitorModel></MonitorModel>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>ChkEDID_efi</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--測試PASS的條件是: 1.Manufacture Year介於1990~2099年-->
+				<!--                  2.Version和Revision必須不小於以下版本 -->
+				<EDIDTool>ShowEDID.efi</EDIDTool>
+				<EDIDVersion>0x01</EDIDVersion>
+				<EDIDRevision>0x03</EDIDRevision>
+				<LogPathFile>/mnt/edid_efi.log</LogPathFile>
+			</TestCase>			
+		</SwitchDP>
+
+		<Grub4EFI>
+			<!--Grub for EFI程式將逐個掛載分區並查找GrubMenu指定的文件，使用MenuFile覆蓋-->
+			<TestCase>
+				<ProgramName>go2EFI</ProgramName>
+				<ErrorCode></ErrorCode>
+				<MenuFile>Menu/uefi.cfg</MenuFile>
+				<GrubMenu>/mnt/boot/grub/grub-efi-64.cfg</GrubMenu>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>go2Linux</ProgramName>
+				<ErrorCode></ErrorCode>
+				<MenuFile>Menu/linux.cfg</MenuFile>
+				<GrubMenu>/mnt/boot/grub/grub-efi-64.cfg</GrubMenu>
+			</TestCase>			
+		</Grub4EFI>
+		
+		<CmosTime>
+			<TestCase>	
+				<ProgramName>CmosTime</ProgramName>
+				<ErrorCode>TXS46|CMOS time fail</ErrorCode>
+				<!--CmosTime.sh: CMOS日期時間設置、比對程式--> 
+				<!-- TimeZone is time zone --> 
+				<!-- UTC/GMT+0800 : HKT,CCT,CST(HongKong,China Standard Time) --> 
+				<!-- UTC/GMT+1000 : GST(Greenwich Sidereal Time) --> 
+				<!-- UTC/GMT+0900 : JST,KST(Japan,Korea Standard Time) --> 
+				<!-- UTC/GMT+0100 : DNT,NOR,SWT,BST,CET,FET,MET --> 
+				<!-- UTC/GMT+0000 : GMT,UT,UTC --> 
+				<!-- UTC/GMT-0400 : AST --> 
+				<!-- UTC/GMT-0500 : EST(Eastern Standard Time) --> 
+				<!-- UTC/GMT-0800 : PST(Pacific Standard Time) --> 
+				<TimeZone>+0800</TimeZone>
+				
+				<!-- NtpIpAddr: NTP server ip address -->
+				<NtpIpAddr>20.20.0.60</NtpIpAddr>
+				
+				<!-- The gap of NTP server and location time ,unit: second -->
+				<Gap>120</Gap>
+				
+				<!-- for Linux OS only -->
+				<OsDstStatus>disable</OsDstStatus>
+
+				<!-- enable: Set time function enable -->
+				<SetTime>enable</SetTime>
+			</TestCase>	
+		</CmosTime>		
+
+		<LoadDefault>
+			<TestCase>			
+				<ProgramName>LoadDefault</ProgramName>
+				<ErrorCode></ErrorCode>
+				<!--LoadDefault.sh: CMOS和OS 初始化程式，不含日期時間在內的其他選項均會初始化 -->			
+				<!--系統的時區和UTC狀態初始化-->
+				<!-- # The time zone of the system is defined by the contents of /etc/localtime. -->
+				<!-- # This file is only for evaluation by system-config-date, do not rely on its -->
+				<!-- # contents elsewhere. -->
+				<!-- ZONE="Asia/Taipei" -->
+				<!-- UTC=false -->
+				<ClockZone>Asia/Taipei</ClockZone>
+				<UTC>false</UTC>
+			</TestCase>					
+		</LoadDefault>
+		
+		<Manual>
+			<!--完全使用手動確認的測試程式，程式無法防呆測試時使用此程式-->
+			<!--例如：跳帽位置/開機Logo/開關位置等-->
+			<TestCase>
+				<ProgramName>ManualChosen</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				<!--Location is the marking of the jumper -->
+				<Location>JEC1</Location>
+				
+				<!--作業員目檢確認Jumper的位置-->
+				<!--圖片|正確位置的序號-->
+				<Case index="1">\TestAP\Manual\Pic\1.jpg|1</Case>
+				<Case index="2">\TestAP\Manual\Pic\2.jpg|2</Case>
+				<Case index="3">\TestAP\Manual\Pic\3.jpg|3</Case>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>ManualYesNo</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				<!--Location is the marking of the jumper -->
+				<Location>LOGO</Location>
+				<!--提示語-->
+				<Prompt>Is the logo right show?</Prompt>
+				<Picture>\TestAP\Manual\Pic\YN.jpg</Picture>
+				<!--Yes/No-->
+				<StddAnswer>Yes</StddAnswer>
+			</TestCase>			
+		</Manual>		
+		
+		<DeleteLog>
+			<TestCase>
+				<ProgramName>DelLog</ProgramName>
+				<ErrorCode></ErrorCode>
+				
+				<!-- DelLog.sh, will delete all logs when 'DelayTime' equal to zero -->
+				<DelayTime>9</DelayTime>
+				<!--搜索路径深度-->
+				<MaxDepth>2</MaxDepth>
+				
+				<!-- /TestAP中如下格式的文件將全部被刪除 -->
+				<FileType>txt~ log~ sh~ sh.bak txt.bak swo swp log txt proc tmp</FileType>
+			</TestCase>
+		</DeleteLog>
+	</Argument>
+</MSITEST>

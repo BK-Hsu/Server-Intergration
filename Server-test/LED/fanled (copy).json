@@ -1,0 +1,9 @@
+{
+  "on_shell": "1",
+  "off_shell": "0",
+  "auto_mode": "0",
+  "manual_mode": "1",
+  "fanled_control" : "ipmitool raw 0x28 0xa5",
+  "location": ["0", "1", "2", "3"],
+  "errorcode" : "NXRD4|LED fail"
+}

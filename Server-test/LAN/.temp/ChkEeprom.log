@@ -1,0 +1,13 @@
+
+Using: Intel (R) PRO Network Connections SDK v2.33.15
+EEUPDATE v5.33.15.02 
+Copyright (C) 1995 - 2019 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+
+Warning: No Adapter Selected
+
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+  1   6  00  00   8086-1533    Intel(R) I210 Gigabit Network Connection
+  2   7  00  00   8086-1533    Intel(R) I210 Gigabit Network Connection
+

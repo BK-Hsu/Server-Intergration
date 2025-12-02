@@ -1,0 +1,80 @@
+
+ItemName		Current		Minimum		Maximum		Result
+[1;37m-----------------------------------------------------------------------------[0m
+[33m -----  Voltages test       Unit: Volts  -----                        [0m
+P3V3             	 3.332      	 na        	 na        	PASS
+P5V              	 5.160      	 na        	 na        	PASS
+P12V_PSU         	 12.320     	 na        	 na        	PASS
+P1V8_AUX         	 1.792      	 na        	 na        	PASS
+P3V3_AUX         	 3.304      	 na        	 na        	PASS
+P5V_AUX          	 5.074      	 na        	 na        	PASS
+P12V_AUX         	 12.144     	 na        	 na        	PASS
+PVDDIO_P0        	 1.136      	 na        	 na        	PASS
+PVDDCR_SOC       	 0.912      	 na        	 na        	PASS
+PVDDCR_CPU0      	 1.072      	 na        	 na        	PASS
+PVDDCR_CPU1      	 1.072      	 na        	 na        	PASS
+PVDD11_S3_P0     	 1.136      	 na        	 na        	PASS
+PVDD18_S5_P0     	 1.840      	 na        	 na        	PASS
+PVDD33_S5        	 3.332      	 na        	 na        	PASS
+P3V_BAT          	 3.120      	 na        	 na        	PASS
+PSU0_Vin         	 212.000    	 na        	 na        	PASS
+PSU0_Vout        	 12.000     	 na        	 na        	PASS
+PSU1_Vin         	 212.000    	 na        	 na        	PASS
+PSU1_Vout        	 12.000     	 na        	 na        	PASS
+-----------------------------------------------------------------------------
+[33m -----  Current test        Unit: Amps  -----                         [0m
+PSU0_Iin         	 1.020      	 na        	 na        	PASS
+PSU0_Iout        	 17.400     	 na        	 na        	PASS
+PSU1_Iin         	 1.080      	 na        	 na        	PASS
+PSU1_Iout        	 18.560     	 na        	 na        	PASS
+-----------------------------------------------------------------------------
+[33m -----  Temperatures test   Unit: degrees  -----                      [0m
+P0_Temp          	 48.000     	 na        	 90.000    	PASS
+P0_DIM_A0        	 41.000     	 na        	 85.000    	PASS
+P0_DIM_B0        	 42.000     	 na        	 85.000    	PASS
+P0_DIM_C0        	 41.000     	 na        	 85.000    	PASS
+P0_DIM_D0        	 40.000     	 na        	 85.000    	PASS
+P0_DIM_E0        	 39.000     	 na        	 85.000    	PASS
+P0_DIM_F0        	 37.000     	 na        	 85.000    	PASS
+P0_DIM_G0        	 40.000     	 na        	 85.000    	PASS
+P0_DIM_H0        	 40.000     	 na        	 85.000    	PASS
+P0_DIM_I0        	 40.000     	 na        	 85.000    	PASS
+P0_DIM_J0        	 39.000     	 na        	 85.000    	PASS
+P0_DIM_K0        	 39.000     	 na        	 85.000    	PASS
+P0_DIM_L0        	 38.000     	 na        	 85.000    	PASS
+PSU0_AMB_Temp    	 30.000     	 na        	 na        	PASS
+PSU0_SR_Temp     	 50.000     	 na        	 na        	PASS
+PSU0_PFC_Temp    	 35.000     	 na        	 na        	PASS
+PSU1_AMB_Temp    	 32.000     	 na        	 na        	PASS
+PSU1_SR_Temp     	 41.000     	 na        	 na        	PASS
+PSU1_PFC_Temp    	 36.000     	 na        	 na        	PASS
+E1S_1_Temp       	 32.000     	 na        	 na        	PASS
+E1S_2_Temp       	 33.000     	 na        	 na        	PASS
+E1S_3_Temp       	 33.000     	 na        	 na        	PASS
+E1S_4_Temp       	 33.000     	 na        	 na        	PASS
+MB_Temp1         	 37.000     	 na        	 na        	PASS
+MB_Temp2         	 32.000     	 na        	 na        	PASS
+MID_BP_Temp1     	 32.000     	 na        	 na        	PASS
+MID_BP_Temp2     	 31.000     	 na        	 na        	PASS
+HDD_BP_Temp      	 29.000     	 na        	 na        	PASS
+DC-SCM_Temp      	 32.000     	 na        	 na        	PASS
+PVDDCR_SOC_Temp  	 38.000     	 na        	 na        	PASS
+PVDDCR_CPU0_Temp 	 41.000     	 na        	 na        	PASS
+PVDDCR_CPU1_Temp 	 37.000     	 na        	 na        	PASS
+PVDDIO_Temp      	 43.000     	 na        	 na        	PASS
+PVDD11_S3_Temp   	 34.000     	 na        	 na        	PASS
+VPDD18_S5_Temp   	 43.000     	 na        	 na        	PASS
+PVDD33_S5_Temp   	 41.000     	 na        	 na        	PASS
+-----------------------------------------------------------------------------
+[33m -----  FANs test           Unit: RPM  -----                          [0m
+PSU0_Fan         	 11800.000  	 na        	 na        	PASS
+PSU1_Fan         	 10000.000  	 na        	 na        	PASS
+SYS_FAN_1F       	 3500.000   	 1000.000  	 16200.000 	PASS
+SYS_FAN_1R       	 3700.000   	 1100.000  	 17200.000 	PASS
+SYS_FAN_2F       	 3500.000   	 1000.000  	 16200.000 	PASS
+SYS_FAN_2R       	 3700.000   	 1100.000  	 17200.000 	PASS
+SYS_FAN_3F       	 4100.000   	 1000.000  	 16200.000 	PASS
+SYS_FAN_3R       	 4400.000   	 1100.000  	 17200.000 	PASS
+SYS_FAN_4F       	 4100.000   	 1000.000  	 16200.000 	PASS
+SYS_FAN_4R       	 4400.000   	 1100.000  	 17200.000 	PASS
+-----------------------------------------------------------------------------

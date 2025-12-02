@@ -1,0 +1,17 @@
+
+Sensor Name		Current		Minimum		Maximum		Result
+[1;37m-----------------------------------------------------------------------------[0m
+[33m -----  Voltages test       Unit: Volts  -----                        [0m
+PSU0_Vin         	 221.000    	 na        	 na        	PASS
+PSU0_Vout        	 12.000     	 na        	 na        	PASS
+PSU1_Vin         	 221.000    	 na        	 na        	PASS
+PSU1_Vout        	 12.000     	 na        	 na        	PASS
+-----------------------------------------------------------------------------
+[33m -----  Current test        Unit: Amps  -----                         [0m
+PSU0_Iout        	 0.330      	 na        	 na        	PASS
+PSU1_Iout        	 1.510      	 na        	 na        	PASS
+-----------------------------------------------------------------------------
+[33m -----  FANs test           Unit: RPM  -----                          [0m
+PSU0_Fan         	 3600.000   	 na        	 na        	PASS
+PSU1_Fan         	 3600.000   	 na        	 na        	PASS
+-----------------------------------------------------------------------------

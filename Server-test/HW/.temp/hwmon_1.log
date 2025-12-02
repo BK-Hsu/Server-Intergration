@@ -1,0 +1,85 @@
+P5V              | 5.117      | Volts      | ok    | na        | 4.515     | na        | na        | 5.504     | na        
+P3V3             | 3.360      | Volts      | ok    | na        | 2.968     | na        | na        | 3.640     | na        
+P12V_PSU         | 12.320     | Volts      | ok    | na        | 11.264    | na        | na        | 12.672    | na        
+P12V_AUX         | 12.320     | Volts      | ok    | na        | 11.264    | na        | na        | 12.672    | na        
+P3V3_AUX         | 3.332      | Volts      | ok    | na        | 2.968     | na        | na        | 3.640     | na        
+P1V8_AUX         | 1.808      | Volts      | ok    | na        | 1.616     | na        | na        | 1.920     | na        
+P5V_AUX          | 5.074      | Volts      | ok    | na        | 4.515     | na        | na        | 5.504     | na        
+PVDDCR_CPU1      | 0.784      | Volts      | ok    | na        | 0.496     | na        | na        | 1.648     | na        
+PVDDIO_P0        | 1.072      | Volts      | ok    | na        | 0.816     | na        | na        | 1.328     | na        
+PVDD11_S3_P0     | 1.120      | Volts      | ok    | na        | 0.992     | na        | na        | 1.216     | na        
+PVDD33_S5        | 3.332      | Volts      | ok    | na        | 2.968     | na        | na        | 3.640     | na        
+PVDDCR_CPU0      | 0.784      | Volts      | ok    | na        | 0.496     | na        | na        | 1.648     | na        
+PVDDCR_SOC       | 0.752      | Volts      | ok    | na        | 0.672     | na        | na        | 1.328     | na        
+PVDD18_S5_P0     | 1.824      | Volts      | ok    | na        | 1.616     | na        | na        | 1.984     | na        
+P3V_BAT          | 3.024      | Volts      | ok    | na        | 2.304     | na        | na        | 3.600     | na        
+PSU0_AMB_Temp    | 21.000     | degrees C  | ok    | na        | na        | na        | na        | 62.000    | 66.000    
+PSU0_SR_Temp     | 29.000     | degrees C  | ok    | na        | na        | na        | na        | 120.000   | 125.000   
+PSU0_PFC_Temp    | 26.000     | degrees C  | ok    | na        | na        | na        | na        | 120.000   | 125.000   
+PSU0_Monitor     | 0x0        | discrete   | 0x0180| na        | na        | na        | na        | na        | na        
+PSU1_Monitor     | 0x0        | discrete   | 0x0180| na        | na        | na        | na        | na        | na        
+PSU0_Fan         | 9800.000   | RPM        | ok    | 1000.000  | 2000.000  | na        | na        | 42000.000 | 50000.000 
+PSU0_Vin         | 226.000    | Volts      | ok    | 90.000    | 90.000    | na        | na        | 264.000   | 310.000   
+PSU0_Vout        | 12.000     | Volts      | ok    | 110.000   | 114.000   | na        | na        | 128.000   | 130.000   
+PSU0_Iin         | 0.180      | Amps       | ok    | na        | na        | na        | na        | 15.000    | 15.000    
+PSU0_Iout        | 1.160      | Amps       | ok    | na        | na        | na        | na        | 290.000   | 290.000   
+PSU0_Pin         | 64.000     | Watts      | ok    | na        | na        | na        | na        | 3296.000  | 3296.000  
+PSU0_Pout        | 48.000     | Watts      | ok    | na        | na        | na        | na        | 3296.000  | 3296.000  
+PSU1_AMB_Temp    | 22.000     | degrees C  | ok    | na        | na        | na        | na        | 62.000    | 66.000    
+PSU1_SR_Temp     | 31.000     | degrees C  | ok    | na        | na        | na        | na        | 120.000   | 125.000   
+PSU1_PFC_Temp    | 27.000     | degrees C  | ok    | na        | na        | na        | na        | 120.000   | 125.000   
+PSU1_Fan         | 9800.000   | RPM        | ok    | 1000.000  | 2000.000  | na        | na        | 42000.000 | 50000.000 
+PSU1_Vin         | 226.000    | Volts      | ok    | 90.000    | 90.000    | na        | na        | 264.000   | 310.000   
+PSU1_Vout        | 12.000     | Volts      | ok    | 110.000   | 114.000   | na        | na        | 128.000   | 130.000   
+PSU1_Iin         | 0.180      | Amps       | ok    | na        | na        | na        | na        | 15.000    | 15.000    
+PSU1_Iout        | 6.960      | Amps       | ok    | na        | na        | na        | na        | 290.000   | 290.000   
+PSU1_Pin         | 64.000     | Watts      | ok    | na        | na        | na        | na        | 3296.000  | 3296.000  
+PSU1_Pout        | 64.000     | Watts      | ok    | na        | na        | na        | na        | 3296.000  | 3296.000  
+SYS_FAN_1F       | 3200.000   | RPM        | ok    | 800.000   | 900.000   | 1000.000  | 16200.000 | 16900.000 | 17600.000 
+SYS_FAN_1R       | 3400.000   | RPM        | ok    | 900.000   | 1000.000  | 1100.000  | 17200.000 | 17900.000 | 18700.000 
+SYS_FAN_2F       | 3200.000   | RPM        | ok    | 800.000   | 900.000   | 1000.000  | 16200.000 | 16900.000 | 17600.000 
+SYS_FAN_2R       | 3400.000   | RPM        | ok    | 900.000   | 1000.000  | 1100.000  | 17200.000 | 17900.000 | 18700.000 
+SYS_FAN_3F       | 2900.000   | RPM        | ok    | 800.000   | 900.000   | 1000.000  | 16200.000 | 16900.000 | 17800.000 
+SYS_FAN_3R       | 3100.000   | RPM        | ok    | 900.000   | 1000.000  | 1100.000  | 17200.000 | 17900.000 | 18700.000 
+SYS_FAN_4F       | 2900.000   | RPM        | ok    | 800.000   | 900.000   | 1000.000  | 16200.000 | 16900.000 | 17600.000 
+SYS_FAN_4R       | 3100.000   | RPM        | ok    | 900.000   | 1000.000  | 1100.000  | 17200.000 | 17900.000 | 18700.000 
+PVDDCR_CPU0_Temp | 40.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 129.000   
+PVDDCR_SOC_Temp  | 35.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 129.000   
+PVDDCR_CPU1_Temp | 31.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 129.000   
+PVDD11_S3_Temp   | 25.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 129.000   
+PVDDIO_Temp      | 39.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 129.000   
+VPDD18_S5_Temp   | 40.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 130.000   
+PVDD33_S5_Temp   | 40.000     | degrees C  | ok    | na        | na        | na        | na        | 125.000   | 130.000   
+M2_1_Temp        | na         | degrees C  | na    | na        | na        | na        | na        | 70.000    | 73.000    
+M2_2_Temp        | na         | degrees C  | na    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_1_Temp       | 24.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_2_Temp       | 25.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_3_Temp       | 25.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_4_Temp       | 22.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_5_Temp       | 25.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_6_Temp       | 25.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+HDD_BP_Temp      | 25.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 75.000    
+OCP_Amb_Temp     | na         | degrees C  | na    | na        | na        | na        | 55.000    | 60.000    | 65.000    
+OCP_Chip_Temp    | na         | degrees C  | na    | na        | na        | na        | 100.000   | 105.000   | 115.000   
+DC-SCM_Temp      | 27.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 75.000    
+MB_Temp1         | 34.000     | degrees C  | ok    | na        | na        | na        | na        | 85.000    | 90.000    
+MB_Temp2         | 23.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 75.000    
+MID_BP_Temp2     | 21.000     | degrees C  | ok    | na        | na        | na        | na        | 85.000    | 90.000    
+MID_BP_Temp1     | 23.000     | degrees C  | ok    | na        | na        | na        | na        | 85.000    | 90.000    
+CPU_Power        | 75.000     | Watts      | ok    | na        | na        | na        | na        | na        | na        
+DIMM_Power       | 3.000      | Watts      | ok    | na        | na        | na        | na        | na        | na        
+E1S_7_Temp       | 24.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+E1S_8_Temp       | 21.000     | degrees C  | ok    | na        | na        | na        | na        | 70.000    | 73.000    
+P0_Temp          | 52.000     | degrees C  | ok    | na        | na        | na        | 90.000    | 95.000    | 100.000   
+P0_CHK_DIM       | 28.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHB_DIM       | 30.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHD_DIM       | 28.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHI_DIM       | 28.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHE_DIM       | 27.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHL_DIM       | 27.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHA_DIM       | 31.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHG_DIM       | 29.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHH_DIM       | 29.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHF_DIM       | 26.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHJ_DIM       | 28.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    
+P0_CHC_DIM       | 29.000     | degrees C  | ok    | na        | na        | na        | 85.000    | 95.000    | 96.000    

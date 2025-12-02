@@ -1,0 +1,27 @@
+ChkMemory.sh start to run in: 2025-06-04 05:49:52  +0800
+[33m Get the memory infomation, please wait ...[0m
+[  [1;32mOK[0m  ]  Error Correction Type is: Multi-bit ECC, verify pass        
+指定使用的內存條容量: 96GB
+指定使用的內存條頻率: 6400MHz
+
+[1m                 Memory function test, version: 1.2.4[0m
+No  Location       Cap.(GB)  Freq.(MHz)  Width(Bits) Manufacturer      P/F 
+---------------------------------------------------------------------------
+01  P0_DIM_A1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+02  P0_DIM_B1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+03  P0_DIM_C1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+04  P0_DIM_D1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+05  P0_DIM_E1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+06  P0_DIM_F1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+07  P0_DIM_G1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+08  P0_DIM_H1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+09  P0_DIM_I1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+10  P0_DIM_J1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+11  P0_DIM_K1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+12  P0_DIM_L1        96         6400      80 / 64     Samsung          [1;32mPass[0m
+---------------------------------------------------------------------------
+Width(Bits): Total Width/Data Width
+[1;32m The memory detection check[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+/TestAP/HW/ChkMemory.sh test pass in: 2025-06-04 05:49:53 CST
+----------------------------------------------------------------------
