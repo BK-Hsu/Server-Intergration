@@ -1,8 +1,0 @@
-nvme0|/dev/nvme0n1||K1
-nvme1|/dev/nvme1n1||K2
-nvme2|/dev/nvme2n1||K3
-nvme3|/dev/nvme3n1||K4
-nvme4|/dev/nvme4n1||K5
-nvme5|/dev/nvme5n1||K6
-nvme6|/dev/nvme6n1||K7
-nvme7|/dev/nvme7n1||K8

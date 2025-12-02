@@ -1,2 +1,0 @@
-/Linux_x64/DRIVER/iqvlinux/src/linux/driver/nalioctldrv.o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/linuxnaldriver.o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/linuxdriveros_i.o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/linuxdriverpci_i.o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/linuxdriverdevice_i.o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/linuxdrivermemory_i.o
-

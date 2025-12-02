@@ -1,6 +1,0 @@
-I2C_detect.py start to run in: 2025-06-04 05:49:52  +0800
-ff ff ff ff ff
-[1;32mi2c bus 14 signal SMB_SMC_FRU_SCL_LVC3 detect slave chipset UFU1 ------ [ PASS ][0m
-[1;32mi2c detect ------------------------------------------------------------ [ PASS ][0m
-/TestAP/BMC/I2C_detect.py test pass in: 2025-06-04 05:49:52 CST
-----------------------------------------------------------------------

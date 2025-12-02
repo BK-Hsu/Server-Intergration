@@ -1,7 +1,0 @@
-{
-  "i2c_list" : [{"i2c_port":"3", "slave_list": ["23", "4d"], "slave_avl": []}	  
-  ],
-  "memsize" : "827",
-  "emmc_model": "MMC 8GTF4R",
-  "emmc_size": 7800
-}

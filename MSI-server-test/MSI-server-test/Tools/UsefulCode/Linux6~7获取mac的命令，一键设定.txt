@@ -1,6 +1,0 @@
-get device--应该剔除vir开头的设备：grep -iv "^vir"
-ifconfig -a 2>/dev/null | grep -v "inet" | grep -iPB3 "([\dA-F]{2}:){5}[\dA-F]{2}" | grep -iE "^e[nt]" | awk '{print $1}' | tr -d ':'
-Get MAC
-ifconfig ${NetcardName[$e]} 2>/dev/null | sed 's/ /\n/g'  | grep -iP "([\dA-F]{2}:){5}[\dA-F]{2}"  | tr -d ':' | tr '[a-z]' '[A-Z]'
-Get all mac
-ifconfig -a 2>/dev/null | sed 's/ /\n/g'  | grep -iP "([\dA-F]{2}:){5}[\dA-F]{2}"  | tr -d ':' | tr '[a-z]' '[A-Z]'

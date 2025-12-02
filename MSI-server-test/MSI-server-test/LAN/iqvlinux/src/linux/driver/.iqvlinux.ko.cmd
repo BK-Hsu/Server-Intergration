@@ -1,1 +1,0 @@
-cmd_/Linux_x64/DRIVER/iqvlinux/src/linux/driver/iqvlinux.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/iqvlinux.ko /Linux_x64/DRIVER/iqvlinux/src/linux/driver/iqvlinux.o /Linux_x64/DRIVER/iqvlinux/src/linux/driver/iqvlinux.mod.o;  true
