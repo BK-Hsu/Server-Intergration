@@ -1,0 +1,36 @@
+		<USB>	
+			<TestCase>
+				<ProgramName>usb2030</ProgramName>
+				<ErrorCode>TXUS2|USB test fail</ErrorCode>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber>4</ParallelNumber>
+				<!--測試模式TestMode: Read(R)/RW/Detect-->
+				<TestMode>Detect</TestMode>
+				<!--延時多少秒後測試，對全部為USB3.0的主板預移除鍵盤掃碼槍和U盤等的切換時間-->
+				<DelayTime>1</DelayTime>
+				<!--讀寫單位均是MB/s-->
+				<USB20>
+					<MinReadSpeed>20</MinReadSpeed>
+					<MinWriteSpeed>20</MinWriteSpeed>
+				</USB20>
+				<USB30>
+					<MinReadSpeed>40</MinReadSpeed>
+					<MinWriteSpeed>40</MinWriteSpeed>
+				</USB30>
+				
+				<!--解析FW信息-->
+				<ParseInfo>enable</ParseInfo>
+				<!--使用TL587-03S/04S小卡測試-->
+				<!--某接口僅沒有USB2.0/USB3.0功能的時候，其address置NULL-->
+				<!--usb2030.sh USB2.0 & USB3.0 detect test together-->
+				<!-- usb2.0 address | usb3.0 address | pcb marking -->
+				<!--PortID>3-2|null|JUSB2_1</PortID-->	
+				<PortID>1-1|2-1|USB1_DOWN</PortID>
+				<PortID>1-2|2-2|USB1_UP</PortID>			
+				<PortID>1-4|2-4|MLAN_USB1_UP</PortID>
+				<PortID>1-3.4|2-3.4|MLAN_USB1_DOWN</PortID>
+				<PortID>1-5|2-5|JUSB1</PortID>
+				<PortID>1-8|2-9|JUSB2_LEFT</PortID>
+				<PortID>1-9|2-10|JUSB2_RIGHT</PortID>
+			</TestCase>
+		</USB>

@@ -1,0 +1,6 @@
+{
+  "sd_dict" : [{"name": "SD1", "shell_cmd": "ipmitool raw 0x38 0x13 0x09 0x00 0x01"}, 
+    {"name": "SD2", "shell_cmd": "ipmitool raw 0x38 0x13 0x09 0x00 0x02"}
+  ],
+  "errorcode" : "TXS1U|BMC sdcard test fail"
+}

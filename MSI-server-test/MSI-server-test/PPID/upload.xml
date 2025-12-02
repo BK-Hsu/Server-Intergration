@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<root>
+  <TestStation>505</TestStation>
+  <TestMachine>S381</TestMachine>
+  <Tester>10019242</Tester>
+  <BarcodeNo>S381-A202560300013</BarcodeNo>
+  <TestStatus>P</TestStatus>
+  <Customer/>
+  <TestTime>2025/06/04 06:55:25</TestTime>
+  <TestInfo>
+    <TestItem Key="BIOS_V">ES381ARB.202,04/17/2025,2</TestItem>
+    <TestItem Key="BMC_REV1">1.26</TestItem>
+  </TestInfo>
+</root>

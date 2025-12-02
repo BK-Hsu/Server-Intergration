@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MSITEST>
+	<!-- Test In EFI shell -->
+	<!-- LogPath: log所在的位置 -->
+	<Firmware>
+		<TestCase>
+			<ProgramName>ChkTXE</ProgramName>
+			<ErrorCode>TXP15|PSU FIRMWARE CHECK NG</ErrorCode>
+			<LogPath>/dev/sda1</LogPath>
+			<Version>3.1.50.2222</Version>
+		</TestCase>
+	</Firmware>
+	
+	<TPM>
+		<TestCase>
+			<ProgramName>ChkTPM</ProgramName>
+			<ErrorCode>TXS37|TPM test fail</ErrorCode>
+			<LogPath>/dev/sda1</LogPath>
+			<Version>5.62</Version>
+		</TestCase>
+	</TPM>	
+</MSITEST>

@@ -1,0 +1,8 @@
+********************************************** 
+*** AST2500 SLT Utility v.0.80.03 Test Log *** 
+********************************************** 
+[Info] VRAM Size: 16 MB 
+[Info] VRAM CLK: 360 MHz 
+[Info] VRAM Bus Width: 16 Bits 
+[PASS] Bounding Check Pass!! 
+[Error] NCSI Test FAILED 

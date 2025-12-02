@@ -1,0 +1,16 @@
+S381A_ChkPcie.sh start to run in: 2025-06-04 05:49:52  +0800
+[1;33m本程式将測試 4 PCS PCIe slots...[0m
+Checking the PCIE device(s), please wait .....
+[1m             PCIe devices detection test, version: 1.2.3[0m
+Location          BusID   VendorID    CurSpd    StdSpd  CurWth  StdWth
+----------------------------------------------------------------------
+JMCIO3_1         c1:00.0  144d:a900   [32m32GT/s    [0m32GT/s   [32mx4       [0mx4  
+JMCIO3_2         c2:00.0  144d:a900   [32m32GT/s    [0m32GT/s   [32mx4       [0mx4  
+JMCIO4_1         c3:00.0  144d:a900   [32m32GT/s    [0m32GT/s   [32mx4       [0mx4  
+JMCIO4_2         c4:00.0  144d:a900   [32m32GT/s    [0m32GT/s   [32mx4       [0mx4  
+----------------------------------------------------------------------
+
+[1;32m PCIe cards/devices detection check[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+/TestAP/PCIE/S381A_ChkPcie.sh test pass in: 2025-06-04 05:49:52 CST
+----------------------------------------------------------------------

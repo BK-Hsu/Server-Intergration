@@ -1,0 +1,26 @@
+[H[2J[3J
+[1m          Multithreading test tool for linux, version: 4.1.1[0m
+Real Time: 2025-06-04 05:50:11              Start: 2025-06-04 05:49:52 
+  Elapsed: [33m00:00:19   [0mTotal: 00:06:00   Remaining: [1;33m00:05:41           [0m
+   Items#: 13     Test Mode: byitem  Dispaly Mode: Commandline        
+   Config: /TestAP/MT/Config/MT.conf                                  
+      XML: /TestAP/Config/MS-S381.xml                                 
+[1mNo.     Test Items                         Cycle(OK/NG)        Result [0m
+----------------------------------------------------------------------
+[1] /TestAP/PCIE/S381A_ChkPcie.sh            1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[2] /TestAP/PCIE/chk_pcie_ver.py             1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[3] /TestAP/BMC/I2C_detect.py                1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[4] /TestAP/SwitchDP/EDID.sh                 1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[5] /TestAP/HW/CPLD_ver_check.py             1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[6] /TestAP/Bios/ChkBios.sh                  1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[7] /TestAP/BMC/ChkBmcVer.sh                 1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[8] //TestAP/Stream/Stream.sh                1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[9] /TestAP/HW/ChkCPU.sh                     1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[a] /TestAP/HW/ChkMemory.sh                  1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[b] /TestAP/TPM/TPM.sh                       1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[c] /TestAP/BMC/GetBmcIP.sh                  1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+[d] /TestAP/Storage/S381A_NVMESSD.sh         1([1;32m  1[0m/[1;31m0  [0m)        [1;32mPass   [0m
+----------------------------------------------------------------------
+[1;33mWarning !! Please do not interrupt these processing ...[0m
+[1;33mPress the key [X/x] to interrupt if necessary.[0m
+[1;33mPress the key [1-d] to view the test log.[0m

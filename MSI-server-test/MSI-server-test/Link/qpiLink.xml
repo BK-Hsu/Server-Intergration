@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Link>
+  <TestCase>
+    <ProgramName>qpiLink</ProgramName>
+    <ErrorCode/>
+    <BusID>00:05.0</BusID>
+    <!--enable/disable-->
+    <CheckRxTx>enable</CheckRxTx>
+    <QpiDevice>08 09</QpiDevice>
+    <Status>6</Status>
+    <!--Unit: GT/s-->
+    <Speed>8.0</Speed>
+    <RX>FFFFF</RX>
+    <TX>FFFFF</TX>
+  </TestCase>
+</Link>

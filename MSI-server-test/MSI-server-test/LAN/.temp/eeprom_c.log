@@ -1,0 +1,13 @@
+
+Using: Intel (R) PRO Network Connections SDK v2.38.10
+EEUPDATE v5.38.10.00 
+Copyright (C) 1995 - 2022 Intel Corporation
+Intel (R) Confidential and not for general distribution.
+
+Warning: No Adapter Selected
+
+NIC Bus Dev Fun Vendor-Device  Branding string
+=== === === === ============= =================================================
+  1 107  00  00   8086-1521    Intel(R) I350 Gigabit Network Connection
+  2 107  00  01   8086-1521    Intel(R) I350 Gigabit Network Connection
+

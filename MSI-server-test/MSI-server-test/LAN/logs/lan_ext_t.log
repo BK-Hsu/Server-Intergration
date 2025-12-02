@@ -1,0 +1,61 @@
+[3;J[H[2J
+[1m      Multithreading tool for LAN loopback test, version: 1.1.0[0m
+Real Time: 2019-01-01 03:16:04              Start: 2019-01-01 03:14:18 
+  Elapsed: [33m00:01:46   [0mTotal: 00:06:00   Remaining: [1;33m00:04:14           [0m
+   Items#: 1      Test Mode: byitem  Dispaly Mode: Commandline        
+   Config: ./Config/lan_ext_t.conf                                    
+      XML: /TestAP/Config/MS-S2581.xml                                
+[1mNo.     Test Items                         Cycle(OK/NG)        Result [0m
+----------------------------------------------------------------------
+[1] /TestAP/LAN/lan_ext_t12.sh               0([1;32m  0[0m/[1;31m0  [0m)        [1;30mCycling[0m
+----------------------------------------------------------------------
+[1;33mWarning !! Please do not interrupt these processing ...[0m
+[1;33mPress the key [X/x] to interrupt if necessary.[0m
+[1;33mPress the key [1-1] to view the test log.[0m
+=======================================================================================================================
+
+Multithreading test tool for LAN interal loopback test, all test logs
+==========================================
+ 1/1 /TestAP/LAN/lan_ext_t12.sh
+==========================================
+lan_ext_t12.sh start to run in: 2019-01-01 03:14:18  +0800
+
+Using: Intel (R) PRO Network Connections SDK v2.32.6
+Intel (R) PRO Adapter End of Line Diagnostic Utility  v1.32.06.06 
+Copyright (C) 2002 - 2018 by Intel (R) Corporation.
+Intel (R) Confidential and not for general distribution.
+Using timeout value of 60 seconds for tests that support timeout.
+
+Found Intel(R) I350 Gigabit Network Connection
+Card 1: Bus=75 Dev=0 Function=0 MAC Address=00D8617EC3EE IRQ=255
+
+Testing adapter...hit <ESC> to abort.
+Peer Sender/Responder Test
+ Linking At 10 mbit.... Transmitting And Receiving...
+ Linking At 100 mbit... Transmitting And Receiving...
+ Linking At 1 gbit..... Transmitting And Receiving...
+ Linking At 2.5 gbit..... Transmitting And Receiving...
+PASSED!
+Testing completed.
+
+Using: Intel (R) PRO Network Connections SDK v2.32.6
+Intel (R) PRO Adapter End of Line Diagnostic Utility  v1.32.06.06 
+Copyright (C) 2002 - 2018 by Intel (R) Corporation.
+Intel (R) Confidential and not for general distribution.
+Using timeout value of 60 seconds for tests that support timeout.
+
+Found Intel(R) I350 Gigabit Network Connection
+Card 2: Bus=75 Dev=0 Function=1 MAC Address=00D8617EC3EF IRQ=255
+
+Testing adapter...hit <ESC> to abort.
+Peer Sender/Responder Test
+ Linking At 10 mbit.... Transmitting And Receiving...
+ Linking At 100 mbit... Transmitting And Receiving...
+ Linking At 1 gbit..... Transmitting And Receiving...
+ Linking At 2.5 gbit..... Transmitting And Receiving...
+PASSED!
+Testing completed.
+[1;32m LAN1 2 external loopback test[0m[60G [[1;32m  PASS  [0;39m]
+[1;32m----------------------------------------------------------------------[0m
+/TestAP/LAN/lan_ext_t12.sh test pass in: 2019-01-01 03:16:04 CST
+----------------------------------------------------------------------

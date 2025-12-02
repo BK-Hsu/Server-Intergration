@@ -1,0 +1,257 @@
+From,TopoMap,CC_location,status,raw_ber,fec_hist,mlxlink
+switch_tray,Rack0_SW3_acp37,CC0_C9_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp38,CC1_C9_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp39,CC2_C9_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp40,CC3_C9_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp49,CC0_C12_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp50,CC1_C12_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp51,CC2_C12_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp52,CC3_C12_Lane_6, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp109,CC0_C9_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp110,CC1_C9_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp111,CC2_C9_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp112,CC3_C9_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp121,CC0_C12_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp122,CC1_C12_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp123,CC2_C12_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW3_acp124,CC3_C12_Lane_7, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp37,CC0_C9_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp38,CC1_C9_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp39,CC2_C9_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp40,CC3_C9_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp49,CC0_C12_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp50,CC1_C12_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp51,CC2_C12_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp52,CC3_C12_Lane_0, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp109,CC0_C9_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp110,CC1_C9_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp111,CC2_C9_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp112,CC3_C9_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp121,CC0_C12_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp122,CC1_C12_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp123,CC2_C12_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW0_acp124,CC3_C12_Lane_1, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp37,CC0_C9_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp38,CC1_C9_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp39,CC2_C9_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp40,CC3_C9_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp49,CC0_C12_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp50,CC1_C12_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp51,CC2_C12_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp52,CC3_C12_Lane_2, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp109,CC0_C9_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp110,CC1_C9_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp111,CC2_C9_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp112,CC3_C9_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp121,CC0_C12_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp122,CC1_C12_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp123,CC2_C12_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW1_acp124,CC3_C12_Lane_3, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp37,CC0_C9_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp38,CC1_C9_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp39,CC2_C9_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp40,CC3_C9_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp49,CC0_C12_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp50,CC1_C12_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp51,CC2_C12_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp52,CC3_C12_Lane_8, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp109,CC0_C9_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp110,CC1_C9_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp111,CC2_C9_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp112,CC3_C9_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp121,CC0_C12_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp122,CC1_C12_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp123,CC2_C12_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW4_acp124,CC3_C12_Lane_9, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp37,CC0_C9_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp38,CC1_C9_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp39,CC2_C9_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp40,CC3_C9_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp49,CC0_C12_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp50,CC1_C12_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp51,CC2_C12_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp52,CC3_C12_Lane_14, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp109,CC0_C9_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp110,CC1_C9_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp111,CC2_C9_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp112,CC3_C9_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp121,CC0_C12_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp122,CC1_C12_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp123,CC2_C12_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW7_acp124,CC3_C12_Lane_15, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp37,CC0_C9_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp38,CC1_C9_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp39,CC2_C9_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp40,CC3_C9_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp49,CC0_C12_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp50,CC1_C12_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp51,CC2_C12_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp52,CC3_C12_Lane_16, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp109,CC0_C9_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp110,CC1_C9_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp111,CC2_C9_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp112,CC3_C9_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp121,CC0_C12_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp122,CC1_C12_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp123,CC2_C12_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW8_acp124,CC3_C12_Lane_17, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp37,CC0_C9_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp38,CC1_C9_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp39,CC2_C9_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp40,CC3_C9_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp49,CC0_C12_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp50,CC1_C12_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp51,CC2_C12_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp52,CC3_C12_Lane_10, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp109,CC0_C9_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp110,CC1_C9_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp111,CC2_C9_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp112,CC3_C9_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp121,CC0_C12_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp122,CC1_C12_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp123,CC2_C12_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW5_acp124,CC3_C12_Lane_11, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp37,CC0_C9_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp38,CC1_C9_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp39,CC2_C9_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp40,CC3_C9_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp49,CC0_C12_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp50,CC1_C12_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp51,CC2_C12_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp52,CC3_C12_Lane_12, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr0  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp109,CC0_C9_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp110,CC1_C9_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp111,CC2_C9_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp112,CC3_C9_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 10/2/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp121,CC0_C12_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp122,CC1_C12_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/1/2 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp123,CC2_C12_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/1 -c --rx_fec_histogram --show_histogram -json 
+switch_tray,Rack0_SW6_acp124,CC3_C12_Lane_13, link_none,0, 0, sudo mlxlink -d /dev/mst/mt54004_pci_cr1  -p 13/2/2 -c --rx_fec_histogram --show_histogram -json 
+comp_tray,Rack0_SW2_acp5,CC0_C1_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp77,CC0_C1_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp6,CC1_C1_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp78,CC1_C1_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp7,CC2_C1_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp79,CC2_C1_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp8,CC3_C1_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp80,CC3_C1_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp29,CC0_C7_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp101,CC0_C7_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp30,CC1_C7_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp102,CC1_C7_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp31,CC2_C7_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp103,CC2_C7_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp32,CC3_C7_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp104,CC3_C7_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp41,CC0_C10_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp113,CC0_C10_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp42,CC1_C10_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp114,CC1_C10_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp43,CC2_C10_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp115,CC2_C10_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp44,CC3_C10_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp116,CC3_C10_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp61,CC0_C15_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp133,CC0_C15_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp62,CC1_C15_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp134,CC1_C15_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp63,CC2_C15_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp135,CC2_C15_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp64,CC3_C15_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp136,CC3_C15_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp25,CC0_C6_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp97,CC0_C6_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp26,CC1_C6_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp98,CC1_C6_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp27,CC2_C6_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp99,CC2_C6_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp28,CC3_C6_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp100,CC3_C6_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp57,CC0_C14_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp129,CC0_C14_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp58,CC1_C14_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp130,CC1_C14_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp59,CC2_C14_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp131,CC2_C14_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp60,CC3_C14_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp132,CC3_C14_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp13,CC0_C3_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp85,CC0_C3_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp14,CC1_C3_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp86,CC1_C3_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp15,CC2_C3_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp87,CC2_C3_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp16,CC3_C3_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp88,CC3_C3_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp45,CC0_C11_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp117,CC0_C11_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp46,CC1_C11_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp118,CC1_C11_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp47,CC2_C11_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp119,CC2_C11_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp48,CC3_C11_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp120,CC3_C11_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp69,CC0_C17_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp141,CC0_C17_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp70,CC1_C17_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp142,CC1_C17_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp71,CC2_C17_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp143,CC2_C17_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp72,CC3_C17_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp144,CC3_C17_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp17,CC0_C4_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp89,CC0_C4_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp18,CC1_C4_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp90,CC1_C4_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp19,CC2_C4_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp91,CC2_C4_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp20,CC3_C4_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp92,CC3_C4_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp21,CC0_C5_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp93,CC0_C5_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp22,CC1_C5_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp94,CC1_C5_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp23,CC2_C5_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp95,CC2_C5_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp24,CC3_C5_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp96,CC3_C5_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp9,CC0_C2_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp81,CC0_C2_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp10,CC1_C2_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp82,CC1_C2_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp11,CC2_C2_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp83,CC2_C2_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp12,CC3_C2_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp84,CC3_C2_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp33,CC0_C8_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp105,CC0_C8_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp34,CC1_C8_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp106,CC1_C8_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp35,CC2_C8_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp107,CC2_C8_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp36,CC3_C8_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp108,CC3_C8_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp1,CC0_C0_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp73,CC0_C0_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp2,CC1_C0_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp74,CC1_C0_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp3,CC2_C0_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp75,CC2_C0_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp4,CC3_C0_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp76,CC3_C0_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp53,CC0_C13_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp125,CC0_C13_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp54,CC1_C13_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp126,CC1_C13_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp55,CC2_C13_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp127,CC2_C13_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp56,CC3_C13_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp128,CC3_C13_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp65,CC0_C16_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp137,CC0_C16_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp66,CC1_C16_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp138,CC1_C16_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp67,CC2_C16_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp139,CC2_C16_Lane_5, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp68,CC3_C16_Lane_4, link_none,0, 0,  
+comp_tray,Rack0_SW2_acp140,CC3_C16_Lane_5, link_none,0, 0,  

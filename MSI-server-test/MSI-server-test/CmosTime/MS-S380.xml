@@ -1,0 +1,2793 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MSITEST version="v1.2.1" update="2020-10-21"> <!--version和TestAP.sh的InternalVersion對應,格式更新則更新;非作者本人請謹慎更新-->
+	<!--For Linux programs  -->
+	<!--實體內容中包含"&"符號的，請使用"&amp;"代替-->
+	<!--index: 程式按值從小到大依序運行,值必須是大於零的連續自然數; 值相同的情況自動調用Multithreading.sh執行多線程-->
+	<!--model: 程式適用哪個機種，多個機種使用逗號","分開,所有機種填寫 all或置空，這個功能是為給合併測試使用-->
+	<!--例如:
+		...
+		<Item index="3" model="">Shell-1</Item>      所有機種都會執行
+		<Item index="4" model="all">Shell-2</Item>   所有機種都會執行
+		<Item index="5" model="S2581,S258A">Shell-3</Item>  S2581,S258A機種會執行
+		<Item index="6" model="S258A,S258B">Shell-4</Item>  S258A,S258B機種會執行
+		<Item index="7" model="S258C">Shell-5</Item> S258C機種會執行
+		<Item index="8" model="S2581">Shell-6</Item> S2581機種會執行
+		...
+	-->
+	<!--多線程: 必須是對適用所有機種的程式，否則會全部執行-->
+	<!--xml&log上傳程式Pass.sh不需要添加在如下清單內-->
+	
+	<Programs>
+		<Item index="1" model="">/TestAP/Scan/ScanOPID.sh</Item>
+		<!--Item index="2" model="">/TestAP/Scan/ScanFixID.sh</Item--> 
+		<!--Item index="3" model="S368D">/TestAP/Scan/ScanMAC.sh</Item-->
+		<Item index="4" model="">/TestAP/CmosTime/SetTime.sh</Item>
+		<!--Item index="5" model="">/TestAP/GetPrdctInfo/GetMDL.sh</Item-->  # T1 TEST NG
+		<!--Item index="6" model="S380">/TestAP/GetPrdctInfo/GetPrdctInfo.sh</Item--> for BB
+		<!--Item index="30" model="S3801">/TestAP/HW/hwmon.sh</Item-->
+		<!--Item index="7" model="">/TestAP/BMC/board_check.py</Item--> # T1 TEST NG
+		<!--Item index="7" model="S368D,S3801">/TestAP/HW/hwmon_S368D.sh</Item>  
+		<Item index="7" model="S380A,S380B">/TestAP/HW/hwmon_S380A.py</Item-->
+		<!-- <Item index="7" model="S380C">/TestAP/HW/Sensors_S380C.sh</Item> -->
+		<!--Item index="8" model="S368D">/TestAP/BMC/scm_fru_w.py</Item-->
+		<!--Item index="10" model="S380D">/TestAP/BMC/ssdled_test_S380D.py</Item>
+		<Item index="10" model="S380C">/TestAP/BMC/ssdled_test_S380C.py</Item-->
+		<!--Item index="11" model="S3801">/TestAP/PCIE/chk_pcie_addr.py</Item-->		
+		<Item index="10" model="">/TestAP/LED/fanled.py</Item>
+		<Item index="11" model="">/TestAP/LED/syserr_led.py</Item>
+		<!--Item index="12" model="">/TestAP/BMC/BMC_check.py</Item-->
+		<Item index="13" model="">/TestAP/LED/CountLEDs.py</Item>
+		<Item index="14" model="">/TestAP/BMC/ID_BTN.sh</Item> 
+		<!--Item index="20" model="S3801">/TestAP/usb/usb2030.sh</Item-->
+		<!--Item index="16" model="S381">/TestAP/FRU/fru_w_test.py</Item--> # T1 TEST NG
+		<Item index="17" model="S381">/TestAP/Shutdown/ShutdownOS.sh</Item> #mark 
+		<!--Item index="18" model="">/TestAP/HW/hwmon_bb.sh</Item-->  # reboot try again
+		<!--Item index="20" model="S381">/TestAP/LED/ssdled_test_S381A.py</Item--> # T1 TEST NG
+		<Item index="21" model="">/TestAP/BMC/SmartFan.sh</Item> 
+		<!--Item index="23" model="S381">/TestAP/PCIE/S381A_ChkPcie.sh</Item--> # T1 TEST NG
+		<!--Item index="23" model="S3801,S380D,S368M">/TestAP/PCIE/ChkPcie.sh</Item-->
+		<Item index="23" model="">/TestAP/PCIE/chk_pcie_ver.py</Item>
+		<Item index="23" model="">/TestAP/BMC/I2C_detect.py</Item>
+		<Item index="23" model="">/TestAP/SwitchDP/EDID.sh</Item>
+		<Item index="23" model="">/TestAP/HW/CPLD_ver_check.py</Item>       
+		<!--Item index="23" model="S380C,S380">/TestAP/PCIE/ChkPcie_S380C.sh</Item-->
+		
+		  
+		<!--Item index="25" model="S380C,S380">/TestAP/Storage/PCIESSD_S380C.sh</Item-->   
+		<!-- <Item index="26" model="S3801,S380D">/TestAP/Storage/NVMESSD.sh</Item> -->
+		<Item index="23" model="">/TestAP/Bios/ChkBios.sh</Item> 
+		<Item index="23" model="">/TestAP/BMC/ChkBmcVer.sh</Item> 
+		<Item index="23" model="">//TestAP/Stream/Stream.sh</Item>
+		<!--Item index="23" model="S3801,S380">/TestAP/HW/chkcpu.py</Item-->
+		<Item index="23" model="">/TestAP/HW/ChkMemory.sh</Item>
+		<!-- <Item index="30" model="S378C">/TestAP/PCIE/ChkPcie_S378C.sh</Item>
+		<Item index="30" model="S378C,S380,S3801">/TestAP/BMC/fru_check_S378C.py</Item>
+		<Item index="30" model="S3801,S380,S368D">/TestAP/TPM/TPM.sh</Item> -->
+		<!--Item index="30" model="S380,S368D">/TestAP/COM/usb_console_check.py</Item--> 
+		<!-- <Item index="30" model="S3801,S368D">/TestAP/LAN/checkncsi.py</Item>  -->
+		<Item index="23" model="">/TestAP/BMC/GetBmcIP.sh</Item>  
+		<!--Item index="24" model="S378C,S380">/TestAP/BMC/mcu_check_S378C.py</Item-->
+		<!-- <Item index="32" model="S368D">/TestAP/BMC/BMCMAC_w.sh</Item>  
+		<Item index="34" model="S380,S368D">/TestAP/BMC/BMCMAC_c.sh</Item>   -->
+		<!--Item index="23" model="S381">/TestAP/Storage/S381A_NVMESSD.sh</Item--> #T1 TEST NG
+		<Item index="35" model="">/TestAP/BMC/elist_check.py</Item>
+		
+		<!--Item index="36" model="">/TestAP/BMC/fru_check_S380A.py</Item-->  
+		<!-- <Item index="37" model="S380D">/TestAP/BMC/backpanel_check_S380D.py</Item>
+		<Item index="37" model="S380C">/TestAP/BMC/backpanel_check_S380C.py</Item> -->
+		<!-- <Item index="38" model="S380D">/TestAP/BMC/mg9200_check_S380D.py</Item>
+		<Item index="38" model="S380C">/TestAP/BMC/mg9200_check_S380C.py</Item> -->
+		<!--Item index="39" model="S381">/TestAP/BMC/mg9200_check_S381A.py</Item--> # Test NG 
+		<!--Item index="40" model="S381">/TestAP/BMC/backpanel_check_S381A.py</Item-->        
+		<!--Item index="xx" model="">/TestAP/Audio/beep.sh</Item-->	
+		<Item index="42" model="">/TestAP/CmosTime/CmosTime.sh</Item>
+	</Programs>	
+	
+	<!-- These are all test arguments --> 
+	<Argument>
+		<MainProg>
+			<!-- For TestAP.sh -->
+			<ProgramName>TestAP</ProgramName>
+			<!--測試完成後 Shutdown關機/exit退出不關機-->
+			<AfterTestComplete>Shutdown</AfterTestComplete>
+			
+			<ModelInfo>
+				<!--機種測試信息-->
+				<!--AMD组装机种，因为CPU取下后，时间会还原，故设置组装机种时，不要设定成709-S380，直接测试成S380-->
+				<ModelName>S381</ModelName>
+				<BiosFile></BiosFile>
+				<BmcFile></BmcFile>
+				<EepromFile></EepromFile>
+				<MpsFW></MpsFW>
+			</ModelInfo>
+	
+			<ReleaseInfo>
+				<!--PTE和PE信息,程式版本信息-->
+				<PTEName>Kingsley</PTEName>
+				<ReleaseDate>2024/07/10</ReleaseDate>
+				
+				<PEName>LW</PEName>
+				<Update>2024/07/11</Update>
+				
+				<APVersion>V1.0.0.0</APVersion>
+			</ReleaseInfo>
+			
+			<ErrorsOccurredType>	
+				<InUse>Enable</InUse>
+				<!--按一定的週期檢查是否有如下報錯 -->
+				<Item>PCIe BUS Error</Item>
+				<!-- <Item>ATA BUS Error</Item> -->
+				<!--Item>mce</Item-->
+				<!--Item>Hardware Error</Item-->
+			</ErrorsOccurredType>
+			
+			<Pretest>
+				<Encrypt>
+					<!-- Enable/Disable -->
+					<InUse>Enable</InUse>
+					<Password>abcf314e470e139bf3c06c859761d560</Password>
+				</Encrypt>
+				<!-- 如果无需打开并行测试模式，请将EndIndex 设置为0-->
+				<!-- StartParalle 表示启动并行测试的项目index，如果填4表示主程式从index为4的项目开始并行测试-->
+				<!-- StartIndex 表示并行项目开始的index，如果填12表示从第12项开始并行测试（包含第12项）-->
+				<!-- EndIndex 表示并行运行项目结束的项目，如果填17表示并行测试运行到17项停止（不包含第17项）-->
+				<!-- 如上设定说明：当主程式运行到index为4时，开启并行测试，并行测试项目从index 12～16 项-->
+				<StartParalle>8</StartParalle>
+				<StartIndex>29</StartIndex>
+				<EndIndex>0</EndIndex>
+				
+				
+				<!-- Enable/Disable -->
+				<CheckLogic>disable</CheckLogic>
+				
+				<FailLockAndUpload>
+					<!--如下三個參數依次是：fail鎖定開關，fail上傳MES開關(FAIL 鎖定和上傳只能任選其一)，程式運行前完整性檢查-->
+					<!-- While some item(s) fail more than 3/4/5 time ,the test status will be locked, -->
+					<!-- enable: import the locking status, -->
+					<!-- disable: don't import anything,normal mode -->
+					<!-- FAIL鎖定Enable/Disable 超過4次fail鎖定-->
+					<FailLocking>disable</FailLocking>
+					<MaximumFailures>4</MaximumFailures>
+					<!-- Fail上傳Enable/Disable，超過4次fail上傳MES -->
+					<FailUpload>disable</FailUpload>
+					<UrlAddress>
+						<IndexInUse>1</IndexInUse>
+						<NgLock index="1">http://20.40.1.40/EPS-Web/TestFail/GetInfo.ashx</NgLock>
+						<NgLock index="2">http://172.17.7.101/EPS-Web/TestFail/GetInfo.ashx</NgLock>
+						<MesWeb index="1">http://20.40.1.40/eps-web/upload/uploadservice.asmx</MesWeb>
+						<MesWeb index="2">http://172.17.7.101/eps-web/upload/uploadservice.asmx</MesWeb>
+					</UrlAddress>
+			
+					<!--如果你不瞭解以下內容，請不要擅自修改-->
+					<!--ChkStatus.sh/FailLocking.sh; Warning: For Failure locking or upload , do not modify this content-->
+					<Components>
+						<!-- For Fail 鎖定和上傳，不需要修改-->
+						<KeyWord>FAIL TPVER</KeyWord>
+						<FileList>FAILITEM.TXT TPVER.TXT</FileList>
+					</Components>
+				</FailLockAndUpload>
+					
+				<PowerOnSelfTest>	
+					<InUse>enable</InUse>
+					<!-- POST.sh: 開機自檢是否有如下報錯 -->
+					<Item>PCIe BUS Error</Item>
+					<Item>ATA BUS Error</Item>
+					<Item>Hardware Error</Item>
+					<Item>MCE Error</Item>
+				</PowerOnSelfTest>
+			</Pretest>
+			
+			<Multithreading>
+				<TestCase>
+					<ProgramName>Multithreading</ProgramName>
+					
+					<!--Multithreading.sh: 多線程測試配置信息-->
+					<!--OSDisplayMode: Commandline(C)/Xserver(G)-->
+					<OSDisplayMode>Commandline</OSDisplayMode>
+					
+					<!--TestMethod: ByItem/ByCT(default: 360s)-->
+					<TestMethod>ByItem</TestMethod>
+					
+					<!--List of shell file指定同時測試的程式清單-->			
+					<ConfigFile>/TestAP/MT/Config/MT.conf</ConfigFile>
+				</TestCase>
+			</Multithreading>
+			
+			<UpLoad>
+				<ProgramName>Pass</ProgramName>
+				<ProgramName>upload</ProgramName>
+				<!--測試記錄資料的存放路徑，無特別就不需要修改-->
+				<FileListPath>/TestAP/PPID</FileListPath>
+				<SlotNum>2</SlotNum>
+				
+				<!--測試log上傳路徑設置-->
+				<UpLoadLog>				
+					<FtpAddress>
+						<FtpIP>20.40.1.41</FtpIP>		
+						<FtpDir>Testlog/SI</FtpDir>		
+					</FtpAddress>
+
+					<FtpSlotAddress>
+						<SlotFtpIP>20.40.1.41</SlotFtpIP>
+						<SlotSCMFile>/TestAP/PPID/BMCMAC1.TXT</SlotSCMFile>
+						<SlotFtpDir>eps-pe/SlotTestLog</SlotFtpDir>
+						<SlotUsername>epspe</SlotUsername>
+						<SlotPassword>epsips</SlotPassword>
+						<SlotBoardFile>/TestAP/PPID/mb_ppid.txt</SlotBoardFile>
+						<SlotNodeFile>/TestAP/PPID/Node_ID.TXT</SlotNodeFile>
+					</FtpSlotAddress>
+						
+					<LoginInfo>
+						<Username>test</Username>
+						<Password>test</Password>
+					</LoginInfo>	
+				</UpLoadLog>
+				
+				<UrlAddress>
+					<!-- 上傳網址和Fail鎖定網址 -->
+					<IndexInUse>1</IndexInUse>
+					<MesWeb index="1">http://20.40.1.40/eps-web/upload/uploadservice.asmx</MesWeb>
+					<MesWeb index="2">http://172.17.7.101/eps-web/upload/uploadservice.asmx</MesWeb>		
+				</UrlAddress>
+				<!-- for Pass.sh and upload.sh --> 
+				<!-- Test Station code --> 
+				<!--	 1528 : Function Test --> 
+				<!--	 2415 : EBT,Burn in in Test after function test --> 
+				<!--	 2597 : SCSI,AC OFF/ON,DC OFF/ON --> 
+				<!--	 2937 : FT2,Function Test2 --> 
+				<!--	 2015 : High Voltage Test --> 
+				<!--	 1543 : Pretest --> 
+				<!--	 1547 : Burn In Test --> 
+				<!--	 1545 : After test --> 
+				<!--	 1655 : OQA CHECK --> 
+				<!--	 1855 : ASSY OQA --> 
+				<!--	 2515 : Pack Test -->
+				<!-- 站別代碼，請參考以上註釋，以上代碼外的程式已經設置限制無法上傳 -->			
+				<StationCode>1545</StationCode>		
+
+				<!-- FT service commonly used key words,match case!! --> 
+				<!-- MAC		 : LAN MAC --> 
+				<!-- BMC		 : BMC MAC --> 
+				<!-- MODEL		 : Model name,e.g.: 609-S1681-010 --> 
+				<!-- BIOS		 : BIOS version,e.g.:ES168IMS.100 --> 
+				<!-- BMC_REV1	 : Revision of BMC,e.g.: S165K131.ima --> 
+				<!-- BMC_REV2	 : Revision of BMC --> 
+				<!-- TPVER		 : TestAP version,e.g.:V4.1.0.0sl --> 
+				<!-- SSID		 : Service Set Identifier --> 
+				<!-- SVID		 : Subsystem Vendor ID --> 
+				<!-- SAS		 : SAS Address --> 
+				<!-- REV		 : Revision of others --> 
+				<!-- IFB_MAC	 : UID MAC address,like S125B --> 
+				<!-- MBPPID		 : Mother Board PPID --> 
+				<!-- SYS_REV	 : Revision of System  --> 
+				<!-- SDR_REV	 : Revision of SDR -->
+				<!-- EMM_GROUPNO : Equipment group number -->
+				<!--  上傳節點名稱（關鍵字）請參考上述註釋，未定義的節點名稱無法通過程式檢查 -->
+				<!--  文件名稱要準確，忽略大小寫，文件順序要和上傳節點順序相一致 -->
+				<!--ForModel: 程式通過此值檢索上傳內容,此部份必須填寫和MES相一致的機種名稱-->	
+				<Model>
+                    <ForModel>709-S381-04S</ForModel>
+                    <ForModel>709-S381-05S</ForModel>
+                    <ForModel>709-S381-03S</ForModel>
+					<KeyWord>TPVER MODEL BMC_REV1 BIOS</KeyWord>
+					<FileList>TPVER.TXT MODEL.TXT BMCVER.TXT BIOSVER.TXT</FileList>
+				</Model>			
+				
+			</UpLoad>
+		</MainProg>
+		
+		<Scan>
+			<!--掃描程式配置文件-->	
+			<TestCase>
+				<ProgramName>ScanSNs</ProgramName>
+				
+				<!--ScanSNs.sh: 批量測試時-->
+				<ModelName>S381</ModelName>
+				<!-- While the value file $pcb.proc are great than AutoScanProcVal,the PPID will auto scan in -->
+				<!-- AutoScanProcVal == 0 ,scan PPID by manual, you can also input a shell name instead,eg.: lan_c.sh -->
+				<!--設置自動掃描開始項目，可以填寫數字或測試項目-->
+				<AutoScanProcVal>0</AutoScanProcVal>
+				
+				<!-- ScanPPID.sh: Length=0表示no limited -->
+				<Length>10</Length>
+				<FormatType>BB</FormatType>
+				<SavePath>/TestAP/PPID</SavePath>				
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>ScanOPID</ProgramName>
+				
+				<!-- ScanOPID.sh: Length=0表示no limited -->
+				<Length>8</Length>
+				<SavePath>/TestAP/PPID</SavePath>
+				<!--每測試多少PCS主板掃描一次? 1：每次都掃描，n：每n次掃描一次-->
+				<ScanCycle>30</ScanCycle>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>ScanFixID</ProgramName>
+				<!-- ScanFixID.sh: Length=0表示no limited -->
+				<Length>6</Length>
+				<SavePath>/TestAP/PPID</SavePath>
+				
+				<!-- A: 20Bit,EPS_Bur_b33_01-01-01 -->
+				<!-- B: 6Bit,B3Dxxx,B3Cxxx,B3xxxx,Sxxxxx,e.g.:B3D001,B33001 -->
+				<!-- C: 6bit,B3D001,123123 -->
+				<!-- D: no-limited,auto input HDD SN -->
+				<FormatType>B</FormatType>
+				<!--每測試多少PCS主板掃描一次? 1：每次都掃描，n：每n次掃描一次-->
+				<ScanCycle>30</ScanCycle>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>ScanMAC</ProgramName>
+				
+				<!-- ScanMAC.sh: LAN 和BMC MAC的掃描程式 -->
+				<!--可以用於批量測試，設置不同的ProgramName="ScanMAC"即可,例如S1401+S140A-->
+				<!-- Compare: enable表示掃描后再次掃描首尾MAC比對; disable：僅掃描一次，不做比對 -->
+				<Compare>disable</Compare>
+				<SavePath>/TestAP/Scan</SavePath>
+				
+				<!-- ProgramName="ScanMAC" 對應的程式是: ScanMAC.sh -->
+				<!-- BMC2LAN is the relation between BMC MAC and LAN MAC -->
+				<!-- GT: BMC MAC great than LAN MACs-->
+				<!-- LT: BMC MAC less than LAN MACs -->
+				<!-- NA: BMC MAC not the same as LAN MACs-->
+				<BMC2LAN>NA</BMC2LAN>
+				
+				<WhichModel>S368D</WhichModel>	
+				<ScanPriority>BMC</ScanPriority>>	
+				
+				<LAN>
+					<!--MAC的數量,沒有則填0-->
+					<Amount>2</Amount>
+					<!--起始號，默認1，即MAC1.txt-->
+					<StartNumber>1</StartNumber>
+					<!-- Define the first MAC address is  ODD (1), Even (0), Un-limit(U) --> 
+					<FirstMAC>0</FirstMAC>
+					<!-- First 6 digits of MAC address. If is 'FFFFFF', ignore to check. -->
+					<First6Bit>FFFFFF</First6Bit>
+					
+					<!--范圍控制,無需控制範圍則置空,格式是 309C82000000-309C82FFFFFF-->
+					<Range></Range>
+				</LAN>
+
+				<BMC>
+					<!--BMC MAC的數量,沒有則填0-->
+					<Amount>0</Amount>
+					<!--起始號，默認1，即BMCMAC1.txt-->
+					<StartNumber>1</StartNumber>
+					<!-- Define the first MAC address is  ODD (1), Even (0), Un-limit(U) --> 
+					<FirstMAC>0</FirstMAC>
+					<!--  First 6 digits of MAC address. If is 'FFFFFF', ignore to check. -->
+					<First6Bit>FFFFFF</First6Bit>
+					
+					<!--范圍控制,無需控制範圍則置空,格式是 309C82000000-309C82FFFFFF-->
+					<Range></Range>
+				</BMC>
+			</TestCase>
+
+		</Scan>
+		
+		<BIOS>
+			<TestCase>
+				<ProgramName>ChkBios</ProgramName>
+				<ErrorCode>NXF02|Check BIOS version fail</ErrorCode>
+				
+				<Pretest>
+					<!--Dual BIOS的時候用,需要滿足DetectCommand執行的結果等於PassCriterion,單BIOS則置空DetectCommand -->
+					<Prompt>Set BIOS_SW1 jumper at Pin2-3</Prompt>
+					<Location>BIOS_SW1,BIOS_LC</Location>
+					<!--執行的指令返回值和PassCriterion指定的值完全一致則通過測試-->
+					<DetectCommand PassCriterion="01"></DetectCommand>
+					<!--<DetectCommand PassCriterion="01">ipmitool raw 0x28 0x12 0x21</DetectCommand>-->
+				</Pretest>
+
+				<!-- ChkBios.sh: for Check BIOS版本和發行日期 --> 
+				<Version>ES381AMS.201</Version>
+				<ReleaseDate PassCriterion="Match">01/02/2025</ReleaseDate>
+				<!-- 置空DST則不再測試,但會顯示在屏幕上 --> 
+				<DST>2</DST>
+				
+				<!--文件存檔如下-->
+				<SaveData>/TestAP/PPID/BIOSVER.TXT</SaveData>
+			</TestCase>
+		</BIOS>
+		
+		<Firmware>
+
+			<ME>
+				<TestCase>
+					<ProgramName>ChkMEVer</ProgramName>
+					<ErrorCode>TXP15|PSU FIRMWARE CHECK NG</ErrorCode>
+					<!-- ChkMEVer.sh: ME firmware -->
+					<Tool>spsInfoLinux64</Tool>
+					<Version>6.0.3.159</Version>
+					<Register1>0355</Register1>
+				</TestCase>
+			</ME>
+		</Firmware>
+		
+		<Sleep>
+			<TestCase>
+				<ProgramName>Sleep</ProgramName>
+				<ErrorCode>NXP07|System Cant Enter Sleep Mode,S3/S4</ErrorCode>
+				<!--待制作-->
+			</TestCase>
+		</Sleep>
+		
+		<NetCard>		
+			<!-- for Network module --> 
+			<!--	eeprom_w.sh		: eeprom燒錄程式          -->   
+			<!--	eeprom_c.sh		: eeprom版本比對程式      -->
+			<!--	lan_w.sh		: 網絡號燒錄程式          -->
+			<!--	lan_c.sh		: 網絡號比對程式          -->
+			<!--	lan_int_t.sh	: 網卡內部回路測試        -->
+			<!--	lan_ext_t.sh	: 網卡外部回路測試        -->
+			<!--	PingServer.sh	: Ping丟包率測試          -->
+			<!--	ChkPXE.sh		: PXE功能確認 		      -->
+			<TestCase>			
+				<!--並行測試Parallel or 串行測試Serial-->			
+				<ProgramName TestMode="Serial">eeprom_w</ProgramName>
+				<ProgramName TestMode="Parallel">eeprom_c</ProgramName>
+				<ProgramName TestMode="Serial">lan_w</ProgramName>
+				<ProgramName TestMode="Parallel">lan_c</ProgramName>
+				<ProgramName TestMode="Parallel">ssidsvid_c</ProgramName>
+				<ProgramName TestMode="Serial">PxeWoL</ProgramName>
+				<ErrorCode>EXF17|LAN function test fail</ErrorCode>
+				<!--範例說明
+					此部份配置信息for eeprom_w.sh/eeprom_c.sh/lan_w.sh/lan_c.sh/ChkPXE.sh
+					<NicIndex>1:不接任何網卡時其Nic號</NicIndex>
+					<Chipset>I354</Chipset>
+					<EepromFile>I3540101.eep：在線燒錄時填寫，無則一定要填寫NULL</EepromFile>
+					<CheckSum>0cd0 ChkSum值</CheckSum>
+					<EepromVer>1.8</EepromVer>
+					<SSIDSVID>FFFF-0000,忽略請填寫NULL</SSIDSVID>
+					<MacAddrFile>/TestAP/Scan/MAC1.TXT</MacAddrFile>
+					<PXE>Enable或disable</PXE>
+					<WoL>Yes或No</WoL>
+				-->
+				
+
+				<!-- enable: EEPROM file/MAC address can flash more than twice if necessary; disable: Only flash one time -->
+				<DoubleFlash>disable</DoubleFlash>
+				<Password>abcf314e470e139bf3c06c859761d560</Password>
+				
+				<!-- Define the first MAC address is ODD , Even , Un-limit --> 
+				<FirstMAC></FirstMAC>
+
+				<!--  First 6 digits of MAC address. If is 'FFFFFF', ignore to check. -->
+				<First6Bit></First6Bit>
+	
+				<Card>
+					<NicIndex>1</NicIndex>
+					<Chipset>I350</Chipset>
+					<EepromFile>I350020A.bin</EepromFile>
+					<CheckSum>8270</CheckSum>
+					<EepromVer>1.59</EepromVer>
+					<SSIDSVID>FFFF-0000</SSIDSVID>
+					<MacAddrFile>/TestAP/Scan/MAC1.TXT</MacAddrFile>
+					<PXE>Enable</PXE>
+					<WoL>Yes</WoL>
+				</Card>
+
+				<Card>
+					<NicIndex>2</NicIndex>
+					<Chipset>I350</Chipset>
+					<EepromFile>I350020A.bin</EepromFile>
+					<CheckSum>8270</CheckSum>
+					<EepromVer>1.59</EepromVer>
+					<SSIDSVID>FFFF-0000</SSIDSVID>
+					<MacAddrFile>/TestAP/Scan/MAC2.TXT</MacAddrFile>
+					<PXE>Enable</PXE>
+					<WoL>Yes</WoL>
+				</Card>
+
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName TestMode="Serial">lan_int_t</ProgramName>
+				<ProgramName TestMode="Serial">lan_ext_t</ProgramName>
+				<ErrorCode>EXF05|LAN test fail</ErrorCode>
+				<!--內部、外部回路測試的配置信息-->
+				<!-- Type 1: ./celo64e /sendresp 1 2 -->
+				<!-- Type 2: ./celo64e /nic=index /extlb 10 100 1000 10000-->			
+				<!-- 程式根據Loopback內網卡的數量來確認使用哪種方式做回路測試 -->
+				<!-- BmcShareLan: BMC和LAN共用,Y-共用且測試前需要load default; N-不需要做任何檢測，直接回路測試  -->
+				
+				<BmcShareLan>N</BmcShareLan>
+				
+				<Loopback>
+					<Pair>1</Pair>
+					<Card>
+						<NicIndex>1</NicIndex>
+						<Chipset>I350</Chipset>
+					</Card>
+				        <Card>
+						<NicIndex>2</NicIndex>
+						<Chipset>I350</Chipset>
+					</Card>
+				</Loopback>
+			</TestCase>
+		</NetCard>
+		
+		<Storage>
+			<!--除U盤外所有的儲存功能接口讀寫測試程式-->
+			<!-- Amount			: 接口/設備數量                   -->
+			<!-- LowBoundSpeed	: 最低速率                        -->
+			<!-- Location		: 絲印名稱                        -->
+			<!-- Generation		: 第n代硬盤,Gen1.0,Gen2.0,Gen3.0  -->
+			
+			<!--DRDY ERROR 檢查開關-->
+			<CheckDrdyBus>disable</CheckDrdyBus>		
+
+			<TestCase>
+				<ProgramName>S381A_NVMESSD</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByAddr</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>R</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber></ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>40</Case>
+						<Case>60</Case>
+						<Case>80</Case>
+						<Case>128</Case>
+						<Case>160</Case>
+						<Case>320</Case>
+						<Case>500</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>MSIK-TL39610-001</Case>
+						<Case>ST[3,5][0-5]0.*</Case>
+						<Case>WD.*</Case>
+						<Case>HGST.*</Case>
+						<Case>ADATA*</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+				<!--Port>0000:4b:00.0||800|M2_1</Port>
+				<Port>0000:4c:00.0||800|M2_2</Port>
+				<Port>0000:ca:00.0||800|JMCIO1</Port>
+				<Port>0000:cb:00.0||800|JMCIO2</Port-->
+				<!--Port>nvme0n1||800|M2_1</Port>
+				<Port>nvme1n1||800|M2_2</Port-->
+				<Port>0000:e1:00.0||500|JMCIO6_1</Port>
+				<Port>0000:e2:00.0||500|JMCIO6_2</Port>
+				<Port>0000:e3:00.0||500|JMCIO5_1</Port>	
+				<Port>0000:e4:00.0||500|JMCIO5_1</Port>	
+				<Port>0000:c1:00.0||500|JMCIO3_1</Port>	
+				<Port>0000:c2:00.0||500|JMCIO3_2</Port>	
+				<Port>0000:c3:00.0||500|JMCIO3_1</Port>	
+				<Port>0000:c4:00.0||500|JMCIO3_2</Port>	
+			
+					
+			</TestCase>
+			<TestCase>
+				<ProgramName>NVMESSD</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByAddr</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>R</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber></ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>40</Case>
+						<Case>60</Case>
+						<Case>80</Case>
+						<Case>128</Case>
+						<Case>160</Case>
+						<Case>320</Case>
+						<Case>500</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>MSIK-TL39610-001</Case>
+						<Case>ST[3,5][0-5]0.*</Case>
+						<Case>WD.*</Case>
+						<Case>HGST.*</Case>
+						<Case>ADATA*</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+				<!--Port>0000:4b:00.0||800|M2_1</Port>
+				<Port>0000:4c:00.0||800|M2_2</Port>
+				<Port>0000:ca:00.0||800|JMCIO1</Port>
+				<Port>0000:cb:00.0||800|JMCIO2</Port-->
+				<!--Port>nvme0n1||800|M2_1</Port>
+				<Port>nvme1n1||800|M2_2</Port-->
+				<Port>0000:01:00.0||500|JMCIO6_1</Port>
+				<Port>0000:02:00.0||500|JMCIO6_2</Port>
+				<Port>0000:03:00.0||500|JMCIO5_1</Port>	
+				<Port>0000:04:00.0||500|JMCIO5_1</Port>	
+				<Port>0000:c1:00.0||500|JMCIO3_1</Port>	
+				<Port>0000:c2:00.0||500|JMCIO3_2</Port>	
+				<Port>0000:c3:00.0||500|JMCIO4_1</Port>	
+				<Port>0000:c4:00.0||500|JMCIO4_2</Port>	
+				<Port>0000:a3:00.0||500|JMCIO7_1</Port>	
+				<Port>0000:a4:00.0||500|JMCIO7_2</Port>	
+				<Port>0000:a1:00.0||500|JMCIO8_1</Port>	
+				<Port>0000:a2:00.0||500|JMCIO8_2</Port>	
+				<Port>0000:41:00.0||500|JMCIO9_1</Port>	
+				<Port>0000:42:00.0||500|JMCIO9_2</Port>	
+				<Port>0000:43:00.0||500|JMCIO10_1</Port>	
+				<Port>0000:44:00.0||500|JMCIO10_2</Port>
+				<Port>0000:a5:00.0||500|M2_1</Port>
+				<Port>0000:a6:00.0||500|M2_2</Port>				
+			</TestCase>
+			<TestCase>
+		        <ProgramName>backpanel_check_S381A</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="01"/-->
+		        </switch_fru>
+		        <!--config1 smbus_type="pwrsmbus" addr="80" command="2 01" location="U80"  stand_value="32000"/-->
+		        <config1 smbus_type="fru" addr="a0" command="0x05 0x00 0x52" location="U23" stand_value="ff ff ff ff ff"/>
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="u21" stand_value="15 50"/>
+		        <!--config1 smbus_type="temp" addr="92" command="0x01 0x00" location="u22" stand_value="15 50"/-->
+		        <nvmesmbus mux_addr="ea" location="U20" channel_list="0 1 2 4 8 10 20 40 80" stand_value="06"/>
+		    </TestCase>
+
+            <TestCase>
+		        <ProgramName>mg9200_check_S381A</ProgramName>
+		        <config name="ErrorCode" value="EXF13|MG9200 function fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="02"/--> 
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="01"/>
+		        </switch_fru>
+		        <portlist>
+		            <port bus="c0" sata_list="00000000" nvme_list="11111111" strap_register="fc 21 07" mg9200_fw= "00 00 3c f0 23 02 b0 17" fru_fw="01 03" e6_register="ff" GPIO_VPP_status="00 00 0f f0 ff" cfru_checksum="45 c9 16 b9"/>
+		            <!--port bus="c2" sata_list="00000000" nvme_list="11111111" HW_strap="3c" soft_strap_0="27" soft_strap_1="03" mg9200_fw= "00 2e f0 23 02 b0 14 00 ff" fru_fw="01 02" e6_register="11111111" GPIO0_status="00" GPIO1_status="00" VPP0_status="0f" VPP1_status="f0" UBM_status="00"/-->
+		        </portlist>
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>mg9200_check_S380C</ProgramName>
+		        <config name="ErrorCode" value="EXF13|MG9200 function fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="02"/--> 
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="01"/>
+		        </switch_fru>
+		        <portlist>
+		            <port bus="c0" sata_list="00000000" nvme_list="00000111" strap_register="fc 21 03" mg9200_fw= "00 00 3c f0 23 02 b0 17" fru_fw="01 03" e6_register="ff" GPIO_VPP_status="00 00 07 00 00" cfru_checksum="91 d3 d0 82"/>
+		            <!--port bus="c2" sata_list="00000000" nvme_list="11111111" HW_strap="3c" soft_strap_0="27" soft_strap_1="03" mg9200_fw= "00 2e f0 23 02 b0 14 00 ff" fru_fw="01 02" e6_register="11111111" GPIO0_status="00" GPIO1_status="00" VPP0_status="0f" VPP1_status="f0" UBM_status="00"/-->
+		        </portlist>
+		    </TestCase>
+
+			<TestCase>
+				<ProgramName>PCIESSD_S380C</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByAddr</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>R</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber></ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>40</Case>
+						<Case>60</Case>
+						<Case>80</Case>
+						<Case>128</Case>
+						<Case>160</Case>
+						<Case>320</Case>
+						<Case>500</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>MSIK-TL39610-001</Case>
+						<Case>ST[3,5][0-5]0.*</Case>
+						<Case>WD.*</Case>
+						<Case>HGST.*</Case>
+						<Case>ADATA*</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+				<!--Port>0000:4b:00.0||800|M2_1</Port>
+				<Port>0000:4c:00.0||800|M2_2</Port>
+				<Port>0000:ca:00.0||800|JMCIO1</Port>
+				<Port>0000:cb:00.0||800|JMCIO2</Port-->
+				<!--Port>nvme0n1||800|M2_1</Port>
+				<Port>nvme1n1||800|M2_2</Port-->
+
+				<Port>0000:41:00.0||500|JNEARSTACKP0_6</Port>
+				<Port>0000:42:00.0||500|JNEARSTACKP0_5</Port>
+				<Port>0000:43:00.0||500|JNEARSTACKP0_5_2</Port>
+
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>Storage</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				<!--  ByAddr來測試可以準確的將硬盤和位置（PCB 絲印）關係對應得上，其他模式的方式對應關係不一定準確-->
+				<!-- BySize:按容量大小測試, ByModel:按名稱測試, ByAddr:按設備位置測試 -->
+				<TestMethod>ByAddr</TestMethod>
+				
+				<!--R: read only, RW: Read and write-->
+				<ReadWrite>RW</ReadWrite>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber>2</ParallelNumber>
+				
+				<!--Module:模塊描述,請不要修改此此參數-->
+				<Module>SATA</Module>			
+				<ModelData>
+					<!--存儲設備型號和容量數據，by 型號測試時會使用到此數據-->
+					<!--一般情形不需要修改此數據，當有新型號且使用按容量/型號測試時才使用此數據做參數-->
+					<Capacity>
+						<!--Unit: MB/GB-->
+						<Case>40</Case>
+						<Case>60</Case>
+						<Case>80</Case>
+						<Case>128</Case>
+						<Case>160</Case>
+						<Case>320</Case>
+						<Case>500</Case>
+					</Capacity>
+					
+					<Model>
+						<Case>MSIK-TL39610-001</Case>
+						<Case>ST[3,5][0-5]0.*</Case>
+						<Case>WD.*</Case>
+						<Case>HGST.*</Case>
+						<Case>ADATA*</Case>
+					</Model>
+				</ModelData>
+				
+				<!-- Define the relationship of location and lable -->
+				<!-- Gen3.0(6.0Gbps),Gen2.0(3.0Gbps),Gen1.0(1.5Gbps) -->
+				<!-- 	   address | Generation | LowBoundSpeed  Unit: MB/s| PCB marking -->
+				<!-- ls -l /sys/block 即可查看當前設備的對應關係；調試方法：先單獨插一個硬盤，使用指令打印出來  -->
+			    <Port>nvme1n1|Gen3.0|1000|M2-2</Port>
+				<Port>nvme0n1|Gen3.0|1000|M2-1</Port> 
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>StorageStress</ProgramName>
+				<ErrorCode>TXS1U|SATA port test fail</ErrorCode>
+				
+				<!--超時提前退出,單位: 秒-->
+				<TimeOut>180</TimeOut>
+				
+				<FioParameter>
+					<!--global-->
+					<!--IO引擎: 異步libaio， 同步psync/sync-->
+					<ioengine>psync</ioengine>
+					<!--文件上I/O模块的数量，注意大于1的iodepth对于同步io来说是没用的的-->
+					<iodepth>1</iodepth>
+					<!--1:測試過程繞過機器自帶的buffer,使測試結果更真實-->
+					<direct>1</direct>
+					<!--只对异步I/O引擎有用-->
+					<thread>16</thread>
+					<!--本次測試線程,置空則為2的CPU的核心數量次方-->
+					<numjobs>4</numjobs>
+					<!--預運行時間-->
+					<ramp_time>1</ramp_time>
+					<!--rw: 讀寫模式請填寫: randwread|randwrite, randrw, read|write, rw-->
+					<rw>read|write</rw>
+					<!--單次IO的塊文件大小: 4k/16k/32k-->
+					<bs>4k</bs>
+					
+					<!--測試時間,和size不能同時設置,同时设置以runtime為準-->
+					<runtime>2</runtime>			
+					<!--本次測試文件的大小,和runtime不能同時設置-->
+					<size>1G</size>
+				</FioParameter>
+				
+				<Test>
+					<!--Speed:填写1.5/3.0/6.0，单位为Gbps，不需要填写单位-->
+					<!--ReadBW/WriteBW讀寫帶寬: 單位是MB/s,測試過程讀到KB/s級別的判fail;不測試則填寫null-->
+					<!--Address|Speed|ReadBW|WriteBW|Location-->
+					<Port>2:0:0:0|0.0|100|80|SATA1</Port>
+					<Port>2:0:1:0|0.0|100|80|SATA2</Port>
+					<Port>2:0:2:0|0.0|100|80|SATA3</Port>
+					<Port>2:0:3:0|0.0|100|80|SATA4</Port>
+					<Port>2:0:4:0|0.0|100|80|SATA5</Port>
+					<Port>2:0:5:0|0.0|100|80|SATA6</Port>
+					<Port>2:0:6:0|0.0|100|80|SATA7</Port>
+				</Test>
+			</TestCase>				
+		</Storage>
+
+		<USB>
+			<TestCase>
+				<ProgramName>ChkUsbKMS</ProgramName>
+				<ErrorCode>TXUS2|USB test fail</ErrorCode>
+				<!--ChkUsbKMS.sh,指定USB接口接鍵盤和掃碼或鼠標-->
+				<!--PortID/PCB Marking-->
+				<PortID>Port1|USB1-A</PortID>
+				<PortID>Port2|USB1-B</PortID>
+				<VendorName>Mouse keyboard SiGma Dell Metrologic Symbol</VendorName>
+			</TestCase>
+						
+			<TestCase>
+				<ProgramName>usb2030</ProgramName>
+				<ErrorCode>TXUS2|USB test fail</ErrorCode>
+				<!--ParallelNumber: 并行測試硬盤數量，填1為逐個測試；不填則按CPU的核心數量並行測試-->
+				<ParallelNumber>4</ParallelNumber>
+				<!--測試模式TestMode: Read(R)/RW/Detect-->
+				<TestMode>Detect</TestMode>
+				<!--延時多少秒後測試，對全部為USB3.0的主板預移除鍵盤掃碼槍和U盤等的切換時間-->
+				<DelayTime>0</DelayTime>
+				<!--讀寫單位均是MB/s-->
+				<USB20>
+					<MinReadSpeed>20</MinReadSpeed>
+					<MinWriteSpeed>20</MinWriteSpeed>
+				</USB20>
+				<USB30>
+					<MinReadSpeed>40</MinReadSpeed>
+					<MinWriteSpeed>40</MinWriteSpeed>
+				</USB30>
+				
+				<!--解析FW信息-->
+				<ParseInfo>enable</ParseInfo>
+				<!--使用TL587-03S/04S小卡測試-->
+				<!--某接口僅沒有USB2.0/USB3.0功能的時候，其address置NULL-->
+				<!--usb2030.sh USB2.0 & USB3.0 detect test together-->
+				<!-- usb2.0 address | usb3.0 address | pcb marking -->
+				<PortID>3-2|null|S368D_USB</PortID>	
+				<PortID>1-1|2-1|JUSB1_1</PortID>
+				<PortID>1-2|2-2|JUSB1_2</PortID>	
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>usbDevices</ProgramName>
+				<ErrorCode>TXUS2|USB test fail</ErrorCode>
+				<!--1.0: 1.5Mbps(low-speed)/1.1: 12Mbps(full-speed) / 2.x: 480Mbps(high-speed)/3.x: 5000Mbps(SuperSpeed)-->
+				<Port>
+					<Location>M2_B2-key</Location>
+					<PortID>1-1</PortID>
+					<UsbSpd>high-speed</UsbSpd>
+					<!--none：設備沒有SN; yes：設備帶有SN-->
+					<DeviceSN>none</DeviceSN>
+				</Port>
+
+				<Port>
+					<Location>M2_B2-key</Location>
+					<PortID>1-2</PortID>
+					<UsbSpd>high-speed</UsbSpd>
+					<!--none：設備沒有SN; yes：設備帶有SN-->
+					<DeviceSN>none</DeviceSN>
+				</Port>
+			</TestCase>
+
+		</USB>
+		
+		<COM>
+			<!--COM RS23/RS422/RS485測試程式，程式依據ProgramName="COMRS232"定位配置檔-->
+			<!--COM RS232中部份信號沒有接出來，因此需要分為不同的情形,可以分步（按不同的程式）測試-->
+			<TestCase>
+		        <ProgramName>usb_console_check</ProgramName>
+		        <config name="ErrorCode" value="TXC11|COM function fail"/>
+		        <config name="ComName" value="COM1"/>
+		        <config name="DevName" value="/dev/ttyS0"/>
+		        <config name="ComBase" value="0x3F8"/>
+		        <config name="ComChipset" value="cp210x"/>
+		    </TestCase>
+
+			<TestCase>
+				<ProgramName>COMRS232</ProgramName>
+				<ErrorCode>TXC11|COM function fail</ErrorCode>
+				<TestMode>IO</TestMode>
+				<TestCard>Legacy</TestCard>
+				<TestItems>
+				<!-- 1: ŽúžÕžÓ«Hž¹, other: €£ŽúžÕžÓ«Hž¹ -->
+				<DCD>1</DCD>
+				<RI>1</RI>
+				<DSR>1</DSR>
+				<CTS>1</CTS>
+				</TestItems>
+				<Port>COM1|/dev/ttyS0|0x3F8</Port>
+				<Port>JCOM1|/dev/ttyS1|0x2F8</Port>
+			</TestCase>
+		</COM>
+		
+		<HW>
+			<TestCase>
+		        <ProgramName>chkcpu</ProgramName>
+		        <config name="ErrorCode" value="TXCP2|Check the speed of CPU fail"/>
+		        <!--ChkCPU.sh: CPU型號信息等檢測-->
+		        <!--Frequency: 當前最小頻率-->
+		        <!--Stepping(僅針對SOC有效)/L#Cache缺省時不測試-->
+		        <config name="PhysicalNumber" value="1"/>
+		        <!--CPU_SOC 设定为SOC stepping调用lspci来读取，并且必须要检查, CPU时当stepping位置有维护值时才检查-->
+		        <config name="CPU_SOC" value="CPU"/>
+		        <!--Model: 用於區分板載不同的CPU測試,以防錯料-->
+		        <!--Model: SOC 板载CPU 通过Model 来查找对应的config来比对，所以需要确认GetMDL先运行-->
+		        <!--Model: 如果不想通过MODEL来管控，将CPU_SOC 项目设定为CPU，将直接search 型号-->
+		        <Case Model="">
+		            <Name>AMD Eng sample: 100-000000674-05</Name>
+		            <Cores>128</Cores>
+		            <Frequency>2400</Frequency>
+		            <Stepping></Stepping>
+		            <L1Cache>10 MiB</L1Cache>
+		            <L2Cache>128 MiB</L2Cache>
+		            <L3Cache>512 MiB</L3Cache>
+		        </Case>
+		    </TestCase>
+
+			<TestCase>
+				<ProgramName>CpuStress</ProgramName>
+				<ErrorCode>TXCP2|Check the speed of CPU fail</ErrorCode>
+
+				<!--计算到2的多少次方位数,需填写不大于26的正整数-->
+				<NumBitsPI>10</NumBitsPI>
+				<!--最大耗时,单位为秒-->
+				<MaxRealTime>300</MaxRealTime>
+				<!--超過這個時間(秒)則終止計算-->
+				<TimeOut>2000</TimeOut>
+				<!--运行多少个程式-->
+				<Copies>32</Copies>
+			</TestCase>
+		  
+			<TestCase>
+				<ProgramName>ChkMemory</ProgramName>
+				<ErrorCode>TXVIC|memory test fail</ErrorCode>
+				<!-- ChkMemory.sh: 內存槽功能測試-->
+				<!-- 填寫DDR2~4 -->
+				<Generation>DDR5</Generation>
+				
+				<!--Single-bit ECC, Multi-bit ECC為ECC內存，None為non-ECC；其他值：Reserve/Other/Unknown/Parity/CRC-->
+				<ErrorCorrectionType>Multi-bit ECC</ErrorCorrectionType>
+				<Specify>
+					<!--以下定義後,程式將檢測實際所用的是否和定義的一致,不一致的判Fail;多種規格的使用空格分開-->
+					<!--Capacity單位是GB;Frequency單位是MHz.不需要填寫單位-->
+					<Capacity>96</Capacity>
+					<Frequency>6400</Frequency>
+					<Manufacturer></Manufacturer>
+					<!--TotalWidth/DataWidth一般為8的倍數,寬度可被3整除的一般為ECC內存,反之為non-ECC;能被3整除的填0，否則填非0數值-->
+					<TotalWidth>80</TotalWidth> 
+					<DataWidth>64</DataWidth>
+				</Specify>
+				<LocatorItem>Locator</LocatorItem>
+				<!--Locator=BIOS或dmidecode設置的名稱, PCB Marking=[PCB絲印名稱]缺省的時候顯示dmidecode設置的名稱-->
+				<!--Locator|PcbMarking-->
+				<DimmSlot>
+					<LocatorPcbMarking>P0_DIM_A1</LocatorPcbMarking>		
+					<LocatorPcbMarking>P0_DIM_B1</LocatorPcbMarking>				
+					<LocatorPcbMarking>P0_DIM_C1</LocatorPcbMarking>				
+					<LocatorPcbMarking>P0_DIM_D1</LocatorPcbMarking>				
+					<LocatorPcbMarking>P0_DIM_E1</LocatorPcbMarking>					
+					<LocatorPcbMarking>P0_DIM_F1</LocatorPcbMarking>					
+					<LocatorPcbMarking>P0_DIM_G1</LocatorPcbMarking>					
+					<LocatorPcbMarking>P0_DIM_H1</LocatorPcbMarking>				
+					<LocatorPcbMarking>P0_DIM_I1</LocatorPcbMarking>
+					<LocatorPcbMarking>P0_DIM_J1</LocatorPcbMarking>
+					<LocatorPcbMarking>P0_DIM_K1</LocatorPcbMarking>
+					<LocatorPcbMarking>P0_DIM_L1</LocatorPcbMarking>
+					
+
+                </DimmSlot>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>MemStress</ProgramName>
+				<ErrorCode>TXVIC|memory test fail</ErrorCode>
+				
+				<!--測試內存的容量大小,單位M或G,請勿使用全部內存測試否則可能造成宕機或FAIL；也可以填寫百分比如60%-->
+				<Size>50%</Size>
+				<!--測試循環次數，Loop和CycleTime只能任選其一，同時填寫Loop有效；置空CycleTime有效-->
+				<Loop>1</Loop>
+				<!--CycleTime:測試時間，h/m/s: 小時/分鐘/秒，Loop和CycleTime只能任選其一，同時填寫Loop有效-->
+				<CycleTime>1m</CycleTime>
+				
+				<!--運行多少個memtester,建議填寫為CPU核心個數值的約數值,置空則自動使用CPU最大核心數量-->
+				<Copies></Copies>
+				<FunctionList>
+					<!--memtester自定義功能測試列表; 1:表示該項目測試; 0: 不測試-->
+					<StuckAddress>0</StuckAddress>
+					<RandomValue>1</RandomValue>
+					<CompareXOR>1</CompareXOR>
+					<CompareSUB>1</CompareSUB>
+					<CompareMUL>1</CompareMUL>
+					<CompareDIV>1</CompareDIV>
+					<CompareOR>1</CompareOR>
+					<CompareAND>1</CompareAND>
+					<SequentialIncrement>0</SequentialIncrement>
+					<SolidBits>0</SolidBits>
+					<BlockSequential>0</BlockSequential>
+					<Checkerboard>0</Checkerboard>
+					<BitSpread>0</BitSpread>
+					<BitFlip>0</BitFlip>
+					<WalkingOnes>0</WalkingOnes>
+					<WalkingZeroes>0</WalkingZeroes>
+					<_8bitWrites>1</_8bitWrites>
+					<_16bitWrites>1</_16bitWrites>
+				</FunctionList>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>hwmon</ProgramName>
+				<ErrorCode>CXSAF|Hardware Monitor test fail</ErrorCode>				
+				<!--hwmon.sh： HardWareMonitor 測試-->
+				<!-- 支持SuperIO/AST1300/AST1400,ipmitool(AST2300/AST2400/AST2500) -->
+				<!-- TestTool is the tool read the Fan speed ,temperature,and voltage from registers -->
+				<!--測試工具從如下選項中選擇TestTool=AST1300FW/AST1400FW/HWM/ipmitool(internal command) and so on -->
+				<TestTool>ipmitool</TestTool>
+				
+				<!--忽略的測試選項清單-->
+
+				<!--TestTool選擇ipmitool的時候如下配置內容被忽略-->
+				<!-- # DO NOT MODIFY THIS HEADER -->
+				<!-- # First line: chip_name, address -->
+				<!-- # Others: sensor_name, pin, par1, par2, min, max, multiplier -->
+				<ChipsetAddress></ChipsetAddress>
+				<TestItem>CPU0_Temp, J18, 0, 0, 20, 100, 0</TestItem>
+				<TestItem>SYS_TEMP, J18, 0, 0, 20, 100, 0</TestItem>
+				<TestItem>SYS_FAN1, V6, 0, 0, 100, 10000, 0</TestItem>
+				<TestItem>SYS_FAN2, Y5, 0, 0, 100, 10000, 0</TestItem>
+				<TestItem>P5V_STBY, L5, 28, 0, 4.75, 5.25, 0</TestItem>
+				<TestItem>P3V3_STBY, L4, 20, 0, 3.135, 3.465, 0</TestItem>
+				<TestItem>P5V_ATX, L3, 28, 0, 4.75, 5.25, 0</TestItem>
+				<TestItem>P3V3, L2, 20, 0, 3.135, 3.465, 0</TestItem>
+				<TestItem>P12V, L1, 66, 0, 11.4, 12.6, 0</TestItem>
+				<TestItem>VBAT, M5, 30, 0, 2, 3.6, 0</TestItem>
+				<TestItem>PVCCP,M4, 10, 0, 0.70, 1.0, 0</TestItem>
+				<TestItem>P1V0, M3, 10, 0, 0.95, 1.05, 0</TestItem>
+				<TestItem>PVNN, M2, 10, 0, 0.95, 1.05, 0</TestItem>
+				<TestItem>P1V1, M1, 10, 0, 1.045, 1.155, 0</TestItem>
+				<TestItem>PVDDRA, N5, 10, 0, 1.425, 1.575, 0</TestItem>
+				<TestItem>PVTT_A, N4, 10, 0, 0.675, 0.825, 0</TestItem>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>hwmon_bb</ProgramName>
+				<ErrorCode>CXSAF|Hardware Monitor test fail</ErrorCode>				
+				<!--hwmon.sh： HardWareMonitor 測試-->
+				<!-- 支持SuperIO/AST1300/AST1400,ipmitool(AST2300/AST2400/AST2500) -->
+				<!-- TestTool is the tool read the Fan speed ,temperature,and voltage from registers -->
+				<!--測試工具從如下選項中選擇TestTool=AST1300FW/AST1400FW/HWM/ipmitool(internal command) and so on -->
+				<TestTool>ipmitool</TestTool>
+				
+				<!--忽略的測試選項清單-->
+				<IgnoreItem>M2_1_Temp</IgnoreItem>
+				<IgnoreItem>M2_2_Temp</IgnoreItem>
+				<IgnoreItem>OCP_Amb_Temp</IgnoreItem>
+				<IgnoreItem>OCP_Chip_Temp</IgnoreItem>
+				<!--IgnoreItem>SYS_FAN_0</IgnoreItem>
+				<IgnoreItem>SYS_FAN_1</IgnoreItem>
+				<IgnoreItem>SYS_FAN_2</IgnoreItem>
+				<IgnoreItem>SYS_FAN_3</IgnoreItem>
+				<IgnoreItem>SYS_FAN_4</IgnoreItem>
+				<IgnoreItem>SYS_FAN_5</IgnoreItem>
+				<IgnoreItem>SYS_FAN_6</IgnoreItem>
+				<IgnoreItem>SYS_FAN_7</IgnoreItem>
+				<IgnoreItem>U2_1_Temp</IgnoreItem>
+				<IgnoreItem>U2_2_Temp</IgnoreItem>
+				<IgnoreItem>U2_3_Temp</IgnoreItem-->
+
+				<!--TestTool選擇ipmitool的時候如下配置內容被忽略-->
+				<!-- # DO NOT MODIFY THIS HEADER -->
+				<!-- # First line: chip_name, address -->
+				<!-- # Others: sensor_name, pin, par1, par2, min, max, multiplier -->
+				<ChipsetAddress></ChipsetAddress>
+				<TestItem>CPU0_Temp, J18, 0, 0, 20, 100, 0</TestItem>
+				<TestItem>SYS_TEMP, J18, 0, 0, 20, 100, 0</TestItem>
+				<TestItem>SYS_FAN1, V6, 0, 0, 100, 10000, 0</TestItem>
+				<TestItem>SYS_FAN2, Y5, 0, 0, 100, 10000, 0</TestItem>
+				<TestItem>P5V_STBY, L5, 28, 0, 4.75, 5.25, 0</TestItem>
+				<TestItem>P3V3_STBY, L4, 20, 0, 3.135, 3.465, 0</TestItem>
+				<TestItem>P5V_ATX, L3, 28, 0, 4.75, 5.25, 0</TestItem>
+				<TestItem>P3V3, L2, 20, 0, 3.135, 3.465, 0</TestItem>
+				<TestItem>P12V, L1, 66, 0, 11.4, 12.6, 0</TestItem>
+				<TestItem>VBAT, M5, 30, 0, 2, 3.6, 0</TestItem>
+				<TestItem>PVCCP,M4, 10, 0, 0.70, 1.0, 0</TestItem>
+				<TestItem>P1V0, M3, 10, 0, 0.95, 1.05, 0</TestItem>
+				<TestItem>PVNN, M2, 10, 0, 0.95, 1.05, 0</TestItem>
+				<TestItem>P1V1, M1, 10, 0, 1.045, 1.155, 0</TestItem>
+				<TestItem>PVDDRA, N5, 10, 0, 1.425, 1.575, 0</TestItem>
+				<TestItem>PVTT_A, N4, 10, 0, 0.675, 0.825, 0</TestItem>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>hwmon_S368D</ProgramName>
+				<ErrorCode>CXSAF|Hardware Monitor test fail</ErrorCode>				
+				<!--hwmon.sh： HardWareMonitor 測試-->
+				<!-- 支持SuperIO/AST1300/AST1400,ipmitool(AST2300/AST2400/AST2500) -->
+				<!-- TestTool is the tool read the Fan speed ,temperature,and voltage from registers -->
+				<!--測試工具從如下選項中選擇TestTool=AST1300FW/AST1400FW/HWM/ipmitool(internal command) and so on -->
+				<TestTool>ipmitool</TestTool>
+				
+				<!--忽略的測試選項清單-->
+				<!--IgnoreItem>PSU1_Fan</IgnoreItem>
+				<IgnoreItem>PSU1_Vin</IgnoreItem>
+				<IgnoreItem>PSU1_Vout</IgnoreItem>
+				<IgnoreItem>PSU1_Iout</IgnoreItem>
+				<IgnoreItem>PSU1_Pin</IgnoreItem>
+				<IgnoreItem>PSU1_Pout</IgnoreItem>
+				<IgnoreItem>PSU0_Vin</IgnoreItem>
+				<IgnoreItem>PSU0_Vout</IgnoreItem>
+				<IgnoreItem>PSU0_Temp</IgnoreItem>
+				<IgnoreItem>PSU0_Fan</IgnoreItem-->
+				<IgnoreItem>SYS_FAN_1F</IgnoreItem>
+				<IgnoreItem>SYS_FAN_1R</IgnoreItem>
+				<IgnoreItem>SYS_FAN_2F</IgnoreItem>
+				<IgnoreItem>SYS_FAN_2R</IgnoreItem>
+				<IgnoreItem>SYS_FAN_3F</IgnoreItem>
+				<IgnoreItem>SYS_FAN_3R</IgnoreItem>
+				<IgnoreItem>SYS_FAN_4F</IgnoreItem>
+				<IgnoreItem>SYS_FAN_4R</IgnoreItem>
+				<IgnoreItem>U2_1_Temp</IgnoreItem>
+				<IgnoreItem>U2_2_Temp</IgnoreItem>
+				<IgnoreItem>U2_3_Temp</IgnoreItem>
+				<IgnoreItem>M2_1_Temp</IgnoreItem>
+				<IgnoreItem>U2_4_Temp</IgnoreItem>
+				<IgnoreItem>U2_5_Temp</IgnoreItem>
+				<IgnoreItem>U2_6_Temp</IgnoreItem>
+				<IgnoreItem>U2_7_Temp</IgnoreItem>
+				<IgnoreItem>U2_8_Temp</IgnoreItem>
+				<IgnoreItem>U2_9_Temp</IgnoreItem>
+				<IgnoreItem>U2_10_Temp</IgnoreItem>
+				<IgnoreItem>U2_11_Temp</IgnoreItem>
+				<IgnoreItem>U2_12_Temp</IgnoreItem>
+				<IgnoreItem>M2_2_Temp</IgnoreItem>
+				<IgnoreItem>OCP_Chip_Temp</IgnoreItem>
+				<IgnoreItem>PDB_Temp</IgnoreItem>
+				<IgnoreItem>HDD_BP_Temp1</IgnoreItem>
+				<IgnoreItem>HDD_BP_Temp2</IgnoreItem>
+				<IgnoreItem>HDD_BP_Temp3</IgnoreItem>
+				<IgnoreItem>HDD_BP_Temp4</IgnoreItem>
+				<IgnoreItem>HDD_BP_Temp</IgnoreItem>
+				<IgnoreItem>PSU0_SR_Temp</IgnoreItem>
+				<IgnoreItem>PSU1_SR_Temp</IgnoreItem>
+
+				<!--TestTool選擇ipmitool的時候如下配置內容被忽略-->
+				<!-- # DO NOT MODIFY THIS HEADER -->
+				<!-- # First line: chip_name, address -->
+				<!-- # Others: sensor_name, pin, par1, par2, min, max, multiplier -->
+				<ChipsetAddress></ChipsetAddress>
+				<TestItem>CPU0_Temp, J18, 0, 0, 20, 100, 0</TestItem>
+				<TestItem>SYS_TEMP, J18, 0, 0, 20, 100, 0</TestItem>
+				<TestItem>SYS_FAN1, V6, 0, 0, 100, 10000, 0</TestItem>
+				<TestItem>SYS_FAN2, Y5, 0, 0, 100, 10000, 0</TestItem>
+				<TestItem>P5V_STBY, L5, 28, 0, 4.75, 5.25, 0</TestItem>
+				<TestItem>P3V3_STBY, L4, 20, 0, 3.135, 3.465, 0</TestItem>
+				<TestItem>P5V_ATX, L3, 28, 0, 4.75, 5.25, 0</TestItem>
+				<TestItem>P3V3, L2, 20, 0, 3.135, 3.465, 0</TestItem>
+				<TestItem>P12V, L1, 66, 0, 11.4, 12.6, 0</TestItem>
+				<TestItem>VBAT, M5, 30, 0, 2, 3.6, 0</TestItem>
+				<TestItem>PVCCP,M4, 10, 0, 0.70, 1.0, 0</TestItem>
+				<TestItem>P1V0, M3, 10, 0, 0.95, 1.05, 0</TestItem>
+				<TestItem>PVNN, M2, 10, 0, 0.95, 1.05, 0</TestItem>
+				<TestItem>P1V1, M1, 10, 0, 1.045, 1.155, 0</TestItem>
+				<TestItem>PVDDRA, N5, 10, 0, 1.425, 1.575, 0</TestItem>
+				<TestItem>PVTT_A, N4, 10, 0, 0.675, 0.825, 0</TestItem>
+				
+
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>hwmon_S380A</ProgramName>
+		        <ErrorCode>CXSAF|Hardware Monitor test fail</ErrorCode>
+		        <!-- hwmon.sh： HardWareMonitor 測試 -->
+		        <!--  支持SuperIO/AST1300/AST1400,ipmitool(AST2300/AST2400/AST2500)  -->
+		        <!--  TestTool is the tool read the Fan speed ,temperature,and voltage from registers  -->
+		        <!-- 測試工具從如下選項中選擇TestTool=AST1300FW/AST1400FW/HWM/ipmitool(internal command) and so on  -->
+		        <TestTool>ipmitool</TestTool>
+		        <specified_sensor>
+		            <CheckItem>PSU0_AMB_Temp</CheckItem>
+		            <CheckItem>PSU0_SR_Temp</CheckItem>
+		            <CheckItem>PSU0_PFC_Temp</CheckItem>
+		            <CheckItem>PSU0_Fan</CheckItem>
+		            <CheckItem>PSU0_Vin</CheckItem>
+		            <CheckItem>PSU0_Vout</CheckItem>
+		            <CheckItem>PSU0_Iin</CheckItem>
+		            <CheckItem>PSU0_Iout</CheckItem>
+		            <CheckItem>PSU0_Pin</CheckItem>
+		            <CheckItem>PSU0_Pout</CheckItem>
+		            <CheckItem>PSU1_AMB_Temp</CheckItem>
+		            <CheckItem>PSU1_SR_Temp</CheckItem>
+		            <CheckItem>PSU1_PFC_Temp</CheckItem>
+		            <CheckItem>PSU1_Fan</CheckItem>
+		            <CheckItem>PSU1_Vin</CheckItem>
+		            <CheckItem>PSU1_Vout</CheckItem>
+		            <CheckItem>PSU1_Iin</CheckItem>
+		            <CheckItem>PSU1_Iout</CheckItem>
+		            <CheckItem>PSU1_Pin</CheckItem>
+		            <CheckItem>PSU1_Pout</CheckItem>
+		            <CheckItem>MID_BP_Temp1</CheckItem>
+		            <CheckItem>MID_BP_Temp2</CheckItem>
+		        </specified_sensor>
+		        <range_check>
+		            <sensor_item name="FANTACH1" range_value="500 1800"/>
+		            <sensor_item name="FANTACH2" range_value="500 1800"/>
+		            <sensor_item name="FANTACH3" range_value="500 1800"/>
+		        </range_check>
+		    </TestCase>
+
+			<TestCase>
+		        <ProgramName>CPLD_ver_check</ProgramName>
+		        <config name="ErrorCode" value="TXC83|CPLD version check fail"/>
+		        <config name="CPLD_ver_cmd" value="ipmitool raw 0x32 0xd6 0"/>
+		        <config name="scm_ver" value="16 00 8d 36"/>
+		        <config name="hpm_ver" value="13 00 01 38"/>
+		        <config name="pwr_ver" value="11 00 0a 38"/>
+		    </TestCase>
+
+			<TestCase>
+				<ProgramName>Sensors</ProgramName>
+				<ErrorCode>CXSAF|Sensor test fail</ErrorCode>
+				
+				<!--測試Sensor選項清單-->
+				<Sensors>
+					<TestItem>PSU0_Fan</TestItem>
+					<TestItem>PSU0_Vin</TestItem>
+					<TestItem>PSU0_Vout</TestItem>
+					<TestItem>PSU0_Iout</TestItem>
+					<TestItem>PSU0_Pin</TestItem>
+					<TestItem>PSU0_Pout</TestItem>
+					<TestItem>PSU0_Temp</TestItem>
+					<TestItem>PSU1_Fan</TestItem>
+					<TestItem>PSU1_Vin</TestItem>
+					<TestItem>PSU1_Vout</TestItem>
+					<TestItem>PSU1_Iout</TestItem>
+					<TestItem>PSU1_Pin</TestItem>
+					<TestItem>PSU1_Pout</TestItem>
+					<TestItem>PSU1_Temp</TestItem>
+
+				</Sensors>
+				<!--如果使用ipmitool sensor读取，TestMethod 设定为Sensors-->
+				<!--如果使用ipmitool raw读取，TestMethod 设定为raw_command-->
+				<!--不设定默认使用Sensors作为选项-->
+				<TestMethod></TestMethod>
+				<raw_comand>
+					<ReadCommand>0x06 0x52 0x03 0x92 0x01 0x00</ReadCommand>
+					<SwitchCommand>0x06 0x52 0x03 0xe2 0x00 0x04</SwitchCommand>
+					<i2cbus>6</i2cbus>
+					<location>S321A_Temp</location>
+					<minTemp>15</minTemp>
+					<maxTemp>45</maxTemp>
+				</raw_comand>
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>mcu_check_S378C</ProgramName>
+		        <config name="ErrorCode" value="EXF13|mcu check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="mcu_command" value="0xc2 0x01"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="i2c_bus" value="4"/>
+		        <!--如果插PCIE_SLOT0 channel=01, SLOT1 channel=40, SLOT2 channel=04-->
+		        <switch_mcu>
+		            <step mux_addr="e0" mux_channel="08"/>
+		            <step mux_addr="e2" mux_channel="01"/>
+		            <step mux_addr="e8" mux_channel="04"/>
+		        </switch_mcu>
+		        <mcu_config mcu_addr="0xc2">
+		            <config1 mcu_reg="0x60" reg_name="APROM Major version"  stand_value="ff"/>
+		            <config1 mcu_reg="0x61" reg_name="APROM Minor version"  stand_value="ff"/>
+		            <config1 mcu_reg="0x62" reg_name="PDID_1"  stand_value="90"/>
+		            <config1 mcu_reg="0x63" reg_name="PDID_2"  stand_value="10"/>
+		            <config1 mcu_reg="0x64" reg_name="PDID_3"  stand_value="05"/>
+		            <config1 mcu_reg="0x65" reg_name="PDID_4"  stand_value="0c"/>
+		            <config1 mcu_reg="0x66" reg_name="LDROM Major version"  stand_value="ff"/>
+		            <config1 mcu_reg="0x67" reg_name="LDROM Minor version"  stand_value="ff"/>
+		            <config1 mcu_reg="0x68" reg_name="APROM Checksum low byte"  stand_value="e4"/>
+		            <config1 mcu_reg="0x69" reg_name="APROM Checksum high byte"  stand_value="92"/>
+		            <config1 mcu_reg="0x6A" reg_name="MCU Temp"  stand_value="10 60"/>
+		            <config1 mcu_reg="0x6B" reg_name="LDROM Checksum low byte"  stand_value="db"/>
+		            <config1 mcu_reg="0x6C" reg_name="LDROM Checksum high byte"  stand_value="bd"/>
+		            <config1 mcu_reg="0x6D" reg_name="System ID"  stand_value="05"/>
+		            <config1 mcu_reg="0x6E" reg_name="MCU Version"  stand_value="05"/>
+		            <config1 mcu_reg="0x70" reg_name="Wake_N"  stand_value="03"/>
+		        </mcu_config>
+		    </TestCase>
+
+			<TestCase>
+				<ProgramName>Sensors_S380C</ProgramName>
+				<ErrorCode>CXSAF|Sensor test fail</ErrorCode>
+				
+				<!--測試Sensor選項清單-->
+				<Sensors>
+					<TestItem>U2_1_Temp</TestItem>
+					<TestItem>U2_2_Temp</TestItem>
+					<TestItem>U2_3_Temp</TestItem>
+				</Sensors>
+				<!--如果使用ipmitool sensor读取，TestMethod 设定为Sensors-->
+				<!--如果使用ipmitool raw读取，TestMethod 设定为raw_command-->
+				<!--不设定默认使用Sensors作为选项-->
+				<TestMethod></TestMethod>
+				<raw_comand>
+					<ReadCommand>0x06 0x52 0x03 0x92 0x01 0x00</ReadCommand>
+					<SwitchCommand>0x06 0x52 0x03 0xe2 0x00 0x04</SwitchCommand>
+					<i2cbus>6</i2cbus>
+					<location>S321A_Temp</location>
+					<minTemp>15</minTemp>
+					<maxTemp>45</maxTemp>
+				</raw_comand>
+			</TestCase>
+
+		</HW>
+		
+		<PCIE>
+			<!-- CheckPcie.sh: PCIE Slot 功能測試-->
+			<!-- 程式依據ShellName="CheckOcuLink"定位配置檔-->
+			<!-- 支持多個配置檔測試（多種情形）-->
+			<!--	Bus, Dev.Fun ID of PCI Card -->
+			<!--	Vendor, Device ID of PCI Card -->
+			<!--	PCI Express Speed of PCI-e Card -->
+			<!--	PCI Express Width of PCI-e Card -->
+			<!--	PCI-E_Num|Bus|Vendor|Speed|Width -->
+			<!--	Vendor填寫 Unlimited 則不限定VenderID -->
+			
+			<!--依據下面的索引值填寫，index索引不能重複，否則不能正確的檢索到-->
+
+			<TestCase>
+		        <ProgramName>chk_pcie_addr</ProgramName>
+		        <config name="ErrorCode" value="TXS1T|PCIe function fail"/>
+		        <Case index="1">
+		            <Card>JMCIO5_1|03:00.0|unlimited|8GT/s|x4|00-01.3</Card>
+		            <Card>JMCIO5_2|04:00.0|unlimited|8GT/s|x4|00-01.4</Card>
+		            <Card>JMCIO6_1|01:00.0|unlimited|8GT/s|x4|00-01.1</Card>
+		            <Card>JMCIO6_2|02:00.0|unlimited|8GT/s|x4|00-01.2</Card>
+		            <Card>JMCIO7_1|a3:00.0|unlimited|8GT/s|x4|a0-01.3</Card>
+					<Card>JMCIO7_2|a4:00.0|unlimited|8GT/s|x4|a0-01.4</Card>
+					<Card>JMCIO8_1|a1:00.0|unlimited|8GT/s|x4|a0-01.1</Card>
+					<Card>JMCIO8_2|a2:00.0|unlimited|8GT/s|x4|a0-01.2</Card>
+					<Card>JMCIO3_1|c1:00.0|unlimited|8GT/s|x4|c0-01.1</Card>
+					<Card>JMCIO3_2|c2:00.0|unlimited|8GT/s|x4|c0-01.2</Card>
+					<Card>JMCIO4_1|c3:00.0|unlimited|8GT/s|x4|c0-01.3</Card>
+					<Card>JMCIO4_2|c4:00.0|unlimited|8GT/s|x4|c0-01.4</Card>
+		            <Card>JMCIO9_1|41:00.0|unlimited|8GT/s|x4|40-01.1</Card>
+		            <Card>JMCIO9_2|42:00.0|unlimited|8GT/s|x4|40-01.2</Card>
+		            <Card>JMCIO10_1|43:00.0|unlimited|8GT/s|x4|40-01.3</Card>
+		            <Card>JMCIO10_2|44:00.0|unlimited|8GT/s|x4|40-01.4</Card>
+		            <Card>M2-1|a5:00.0|144d:a808|8GT/s|x2|a0-03.2</Card>
+		            <Card>M2-2|a6:00.0|144d:a808|8GT/s|x2|a0-03.3</Card>
+		            <Card>OCP1|21:00.0|8086:1572|8GT/s|x8|20-01.1</Card>
+		            <Card>OCP1|21:00.1|8086:1572|8GT/s|x8|20-01.1</Card>
+		            <Card>OCP1|21:00.2|8086:1572|8GT/s|x8|20-01.1</Card>
+		            <Card>OCP1|21:00.3|8086:1572|8GT/s|x8|20-01.1</Card>
+		            <Card>JMCIO12|e1:00.0|8086:1592|16GT/s|x16|e0-01.1</Card>
+					<Card>JMCIO12|e1:00.1|8086:1592|16GT/s|x16|e0-01.1</Card>	
+		            <Card>AST2600|a7:00.0|1a03:1150|5GT/s|x1|a0-03.4</Card>
+		        </Case>
+		    </TestCase>
+
+			<TestCase>
+				<ProgramName>S380D_ChkPcie</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<Case index="1">
+				<!-- 	<Card>JMCIO6_1|01:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO6_2|02:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO5_1|03:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO5_2|04:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO3_1|c1:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO3_2|c2:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO4_1|c3:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO4_2|c4:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO7_1|a3:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO7_2|a4:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO8_1|a1:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO8_2|a2:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO9_1|41:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO9_2|42:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO10_1|43:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO10_2|44:00.0|144d:a808|8GT/s|x4</Card> -->
+					<Card>JMCIO6_1|01:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO6_2|02:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO5_1|03:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO5_2|04:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO3_1|c1:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO3_2|c2:00.0|unlimited|8GT/s|x4</Card>
+					
+						
+				</Case>	
+			</TestCase>
+			<TestCase>
+				<ProgramName>S381A_ChkPcie</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<Case index="1">
+				<!-- 	<Card>JMCIO6_1|01:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO6_2|02:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO5_1|03:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO5_2|04:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO3_1|c1:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO3_2|c2:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO4_1|c3:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO4_2|c4:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO7_1|a3:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO7_2|a4:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO8_1|a1:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO8_2|a2:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO9_1|41:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO9_2|42:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO10_1|43:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO10_2|44:00.0|144d:a808|8GT/s|x4</Card> -->
+					<Card>JMCIO6_1|e1:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO6_2|e2:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO5_1|e3:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO5_2|e4:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO3_1|c1:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO3_2|c2:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO4_1|c3:00.0|unlimited|16GT/s|x4</Card>
+					<Card>JMCIO4_2|c4:00.0|unlimited|16GT/s|x4</Card>
+					<!--Card>JMCIO7_1|a3:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO7_2|a4:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO8_1|a1:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO8_2|a2:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO9_1|41:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO9_2|42:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO10_1|43:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO10_2|44:00.0|unlimited|8GT/s|x4</Card>
+					<Card>M2-1|a5:00.0|144d:a808|8GT/s|x2</Card>
+					<Card>M2-2|a6:00.0|144d:a808|8GT/s|x2</Card>
+					<Card>OCP1|21:00.0|8086:1572|8GT/s|x8</Card>
+		            <Card>OCP1|21:00.1|8086:1572|8GT/s|x8</Card>
+		            <Card>OCP1|21:00.2|8086:1572|8GT/s|x8</Card>
+		            <Card>OCP1|21:00.3|8086:1572|8GT/s|x8</Card>
+					<Card>AST2600|a7:00.0|1a03:1150|2.5GT/s|x1</Card>
+					<Card>JMCIO12|e1:00.0|8086:1592|16GT/s|x16</Card>
+					<Card>JMCIO12|e1:00.1|8086:1592|16GT/s|x16</Card-->	
+				</Case>	
+			</TestCase>
+            <TestCase>
+				<ProgramName>ChkPcie</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<Case index="1">
+				<!-- 	<Card>JMCIO6_1|01:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO6_2|02:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO5_1|03:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO5_2|04:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO3_1|c1:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO3_2|c2:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO4_1|c3:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO4_2|c4:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO7_1|a3:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO7_2|a4:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO8_1|a1:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO8_2|a2:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO9_1|41:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO9_2|42:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO10_1|43:00.0|144d:a808|8GT/s|x4</Card>
+					<Card>JMCIO10_2|44:00.0|144d:a808|8GT/s|x4</Card> -->
+					<Card>JMCIO6_1|01:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO6_2|02:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO5_1|03:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO5_2|04:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO3_1|c1:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO3_2|c2:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO4_1|c3:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO4_2|c4:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO7_1|a3:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO7_2|a4:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO8_1|a1:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO8_2|a2:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO9_1|41:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO9_2|42:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO10_1|43:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO10_2|44:00.0|unlimited|8GT/s|x4</Card>
+					<Card>M2-1|a5:00.0|144d:a808|8GT/s|x2</Card>
+					<Card>M2-2|a6:00.0|144d:a808|8GT/s|x2</Card>
+					<Card>OCP1|21:00.0|8086:1572|8GT/s|x8</Card>
+		            <Card>OCP1|21:00.1|8086:1572|8GT/s|x8</Card>
+		            <Card>OCP1|21:00.2|8086:1572|8GT/s|x8</Card>
+		            <Card>OCP1|21:00.3|8086:1572|8GT/s|x8</Card>
+					<Card>AST2600|a7:00.0|1a03:1150|5GT/s|x1</Card>
+					<Card>JMCIO12|e1:00.0|8086:1592|16GT/s|x16</Card>
+					<Card>JMCIO12|e1:00.1|8086:1592|16GT/s|x16</Card>	
+				</Case>	
+			</TestCase>
+			<TestCase>
+				<ProgramName>ChkPcie_S378C</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<Case index="1">
+					<Card>JMCIO12|e1:00.0|8086:1592|16GT/s|x16</Card>
+					<Card>JMCIO12|e1:00.1|8086:1592|16GT/s|x16</Card>	
+				</Case>	
+			</TestCase>	
+
+			<TestCase>
+				<ProgramName>ChkPcie_S380C</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<Case index="1">
+					<Card>JMCIO9_1|41:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO9_2|42:00.0|unlimited|8GT/s|x4</Card>
+					<Card>JMCIO10_1|43:00.0|unlimited|8GT/s|x4</Card>		
+				</Case>	
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>chk_pcie_ver</ProgramName>
+		        <config name="ErrorCode" value="TXS1T|PCIe function fail"/>
+		        <device>AST2600|1a03:1150|06</device>
+		        <device>AST2600_1|1a03:2000|52</device>
+		    </TestCase>	
+
+			<TestCase>
+				<ProgramName>ChkPciBus</ProgramName>
+				<ErrorCode>TXS1T|PCIe function fail</ErrorCode>
+				<!--ErrorCode>TXS2H|PCI TEST FAIL</ErrorCode-->	
+				<!--此程式和上述有區別，無PCB Marking-->
+				<!--CheckPciBus.sh: 主板所有的PCIE設備校驗-->
+				<!--	Vendor填寫 Unlimited 則不限定VenderID -->
+				<!--	PCIE BusID|VerndorID|Speed|Width|Stepping -->			
+				<Case index="1">
+					<Card>15:00.0|8086:1592|16GT/s|x16|02</Card>
+					<Card>95:00.1|8086:1592|16GT/s|x16|02</Card>
+					<Card>3b:00.0|8086:1592|16GT/s|x16|01</Card>
+					<Card>b8:00.1|8086:1592|16GT/s|x16|01</Card>
+					<Card>c9:00.0|8086:1592|16GT/s|x16|02</Card>
+					<Card>90:00.1|8086:1592|16GT/s|x16|02</Card>
+					<Card>49:00.0|8086:1572|16GT/s|x16|02</Card>
+					<Card>49:00.1|8086:1572|16GT/s|x16|02</Card>
+					<Card>49:00.2|8086:1572|16GT/s|x16|02</Card>
+					<Card>49:00.3|8086:1592|16GT/s|x16|02</Card>
+				</Case>
+			</TestCase>			
+		</PCIE>
+
+		<BMC>	
+			<!--	ClrBmcMac.sh: 初始化BMC MAC address -->
+			<!--	ChkBmcVer.sh: 檢查BMC版本           -->
+			<!--	NCSITest.sh	: NCSI 測試             -->
+			<!--	BMCMAC_w.sh	: 燒錄BMC MAC address   -->
+			<!--	BMCMAC_c.sh	: 比對BMC MAC地址       -->
+			<!--	GetBmcIP.sh	: 獲取BMC IP address    -->
+			
+			<TestCase>
+				<ProgramName>ChkBmcVer</ProgramName>
+				<ErrorCode></ErrorCode>	
+
+				<!-- ClrBmcMac.sh: for Clear BMC MAC -->
+				<File></File>
+				<!--FirmwareFile的CheckSum后4位，務必填寫準確-->
+				<CheckSum>8E70</CheckSum>
+				<ClearType>
+      				<!-- Do not modify the type code -->
+      				<!--ClearTypeIndex為1,2或3，選擇初始化的方式-->
+      				<!--
+				1==> socflash_x64 if=S143K120.ima count=0x40000 cs=0 flashtype=2
+				2==> socflash_x64 if=S135K101.ima option=f
+				3==> socflash_x64 if=S165K131.ima count=0x50000
+				-->
+      				<!-- 關鍵指令;ChooseType has two options,you can choose any one only -->
+      				<ClearCommand>socflash_x64 if=S258K116.ima count=0x50000</ClearCommand>
+    				</ClearType>
+				<!--ChkBmcVer.sh: BMC Firmware version -->
+				<!--PassCriterion: Newer(更新於)/Older(更舊於)/Match(完全配備),如果版本號不是有理數則需要完全Match -->
+				<Version PassCriterion="Match">1.19</Version>
+				<ReadVersionTool>ipmitool</ReadVersionTool>
+				<SaveData>/TestAP/PPID/BMCVER.TXT</SaveData>
+
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>elist_check</ProgramName>
+		        <config name="ErrorCode" value="TXS97|Check sel list fail"/>
+		        <!--action选项为logging时,将找到的对应的log记录并打印出来, check时将会根据定义的状态来进行比对,此项目在后续将会关闭logging-->
+        		<config name="action" value="logging"/>
+		        <check_list>
+		        <!--type中 warning仅表示此信息为警告信息，记录在log当中，exist 表示需要判断此信息是否有出现在list中如果未出现，判断FAIL -->
+		        <!--type中 critical表示如果出现此信息，则将对应信息记录下来，并且判断此为FAIL -->
+		        <!--limit 为预设出现的次数限制，detail 表示在string 出现的同时还要判断detail中的内容是否出现-->
+		        	<target string="memory" type="critical" limit="" detail=""/>
+		            <target string="Timestamp Clock Sync" type="exist" limit="" detail=""/>
+		            <target string="cpu" type="critical" limit="" detail=""/>
+		            <target string="Critical" type="warning" limit="" detail=""/>
+		            <target string="Chassis" type="warning" limit="" detail=""/>
+		        </check_list>
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>fru_w_test</ProgramName>
+		        <config name="ErrorCode" value="TXS97|fru info check fail"/>
+		        <config name="flash_cmd" value="ipmitool fru edit 0 field"/>
+		        <config name="WebSite" value="http://20.40.1.40/eps-web/upload/uploadservice.asmx"/>
+		        <!--如果不需要烧录bin档，请置空,其他则填上需要烧录的档案名-->
+		        <config name="fru_bin_file" value="fru_512_msi.bin"/>
+		        <config name="fru_bin_checksum" value="3231"/>
+		        <!--bin_flash_flag 的状态设定为flash 或者skip, flash表示需要烧录，skip 表示跳过bin档烧录-->
+		        <config name="bin_flash_flag" value="skip"/>
+		        <config name="double_flash" value="disable"/>
+		        <fru_list>
+		            <!--string 表示直接烧录value内容，file从文件中读取内容烧录，write_date 表示需要烧录时间，mes_PCBA 表示PCB时，从mes 获取机种信息-->
+		            <!--mes_BB 表示从mes 获取组装机种信息，单板条码，单板机种信息，scan表示直接提示扫码，将扫码内容烧录进去-->
+		            <!--Node 表示此参数是多模块模式, 此时动作是将原始FRU 对应的值, 检查是否为正确匹配此系统的值, 同时将此值作为将要烧录的值-->
+		            <!--action 参数表明此项参数，在测试时的动作，目前设定如果为check的话，只执行比对，跳过烧录动作，如果不设定或者其他，则正常烧录-->
+		            <fru type="Board Part Number" param1="b 3" value="" value_type="mes_BB" default_value="" action="check"/>
+		            <fru type="Board Serial" param1="b 2" value="" value_type="Node" default_value="" action="check"/>
+		            <fru type="Board Product" param1="b 1" value="D4051" value_type="string" default_value="" action="check"/>
+		            <fru type="Product Name" param1="p 1" value="CD270-S4051-X2" value_type="string" default_value="D4051" action=""/>
+		            <fru type="Product Part Number" param1="p 2" value="S4051D270RAE8-X2-RBX" value_type="string" default_value="D4051" action=""/>
+		            <fru type="Product Version" param1="p 3" value="" value_type="mes_BB" default_value="Board Part Number" action="check_pcba"/>
+		            <fru type="Product Serial" param1="p 4" value="/TestAP/PPID/PPID.TXT" value_type="file" default_value="Board Serial" action="check_pcba"/>
+		            <fru type="Chassis Part Number" param1="c 0" value="309-S381101-H76" value_type="string" default_value="" action=""/>
+		            <!--fru type="Chassis Serial" param1="c 1" value="/TestAP/Scan/chassis_sn.txt" value_type="file" default_value="" action=""/-->
+		            <fru type="Chassis Extra" param1="c 2" value="2U" value_type="string" default_value="" action=""/>
+		            <fru type="Board Mfg Date" param1="./FRUSH MDT" value="" value_type="write_date"/>
+		        </fru_list>
+		    </TestCase>
+
+			<TestCase>
+		        <ProgramName>I2C_detect</ProgramName>
+		        <config name="ErrorCode" value="EXF13|I2C device detect fail"/>
+		        <config name="raw1" value="ipmitool raw 0x28 0x52"/>
+		        <portlist>
+		        	<!--port bus="3" slave_addr="9a" slave_chipset="JFP1_sensor" respond="00" i2c_signal="I3C_PCIE_BMC_LVC18" raw_command="raw1" query_args="1 0"/>
+		            <port bus="4" slave_addr="e0" slave_chipset="U168" respond="00" i2c_signal="SMB_HSBP_STBY_LVC3" raw_command="raw1" query_args="1 0"/>
+		            <port bus="5" slave_addr="c0" slave_chipset="CPU0 VRM" respond="00" i2c_signal="SMB_PMBUS2_BMC_LVC3" raw_command="raw1" query_args="1 0"/>
+		            <port bus="8" slave_addr="e0" slave_chipset="U148" respond="00" i2c_signal="SMB_HOST_SCM_SCL_LVC3" raw_command="raw1" query_args="1 0"/>
+		            <port bus="9" slave_addr="e2" slave_chipset="U142" respond="00" i2c_signal="SMB_PCIE_SCM_SCL_LVC3" raw_command="raw1" query_args="1 0"/>
+		            <port bus="13" slave_addr="a0" slave_chipset="IPMB" respond="00" i2c_signal="SMB_IPMB_SCM_SCL_LVC3" raw_command="raw1" query_args="1 0"/>
+		            <port bus="14" slave_addr="e0" slave_chipset="U181" respond="00" i2c_signal="SMB_SMC_FRU_SCL_LVC3" raw_command="raw1" query_args="1 0"/-->
+		            <port bus="14" slave_addr="a4" slave_chipset="UFU1" respond="ff ff ff ff ff" i2c_signal="SMB_SMC_FRU_SCL_LVC3" raw_command="raw1" query_args="0x05 0x00 0x5d"/>
+		            <!--port bus="14" slave_addr="a0" slave_chipset="U14" respond="53 34 30 35 31" i2c_signal="SMB_SMC_FRU_SCL_LVC3" raw_command="raw1" query_args="0x05 0x00 0xd5"/-->
+		        </portlist>
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>mg9200_check_S380D</ProgramName>
+		        <config name="ErrorCode" value="EXF13|MG9200 function fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+        		<config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="02"/--> 
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="01"/>
+		        </switch_fru>
+		        <portlist>
+		            <port bus="c0" sata_list="00000000" nvme_list="00111111" strap_register="fc 21 03" mg9200_fw= "00 00 3c f0 23 02 b0 17" fru_fw="01 03" e6_register="ff" GPIO_VPP_status="00 00 0f 30 3f" cfru_checksum="61 6a 27 2b"/>
+		            <!--port bus="c2" sata_list="00000000" nvme_list="11111111" HW_strap="3c" soft_strap_0="27" soft_strap_1="03" mg9200_fw= "00 2e f0 23 02 b0 14 00 ff" fru_fw="01 02" e6_register="11111111" GPIO0_status="00" GPIO1_status="00" VPP0_status="0f" VPP1_status="f0" UBM_status="00"/-->
+		        </portlist>
+		    </TestCase>
+
+		    <TestCase>
+			    <ProgramName>ssdled_test_S380D</ProgramName>
+			    <config name="ErrorCode" value="NXRD4|Backplane LED fail"/>
+			    <config name="command_type" value="raw_type"/>
+			    <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+			    <!--raw_bus_convert 设定为enable 计算bus*2+1 设定disable 使用设定值-->
+        		<config name="raw_bus_convert" value="disable"/>
+			    <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+        		<config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+			    <config name="i2c_bus" value="4"/>
+			    <switch_mg9200>
+			        <step mux_addr="e0" mux_channel="02"/>
+			        <!--step mux_addr="e8" mux_channel="02"/-->
+			    </switch_mg9200>
+			    <switch_fru>
+			        <step mux_addr="e0" mux_channel="02"/>
+			        <step mux_addr="e8" mux_channel="01"/>
+			    </switch_fru>
+			    <portlist>
+			        <port bus="c0" led_num="6"/>
+			        <!--port bus="c2" led_num="4"/-->
+			    </portlist>
+			</TestCase>
+
+			<TestCase>
+			    <ProgramName>ssdled_test_S380C</ProgramName>
+			    <config name="ErrorCode" value="NXRD4|Backplane LED fail"/>
+			    <config name="command_type" value="raw_type"/>
+			    <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+			    <!--raw_bus_convert 设定为enable 计算bus*2+1 设定disable 使用设定值-->
+        		<config name="raw_bus_convert" value="disable"/>
+			    <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+        		<config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+			    <config name="i2c_bus" value="4"/>
+			    <switch_mg9200>
+			        <step mux_addr="e0" mux_channel="02"/>
+			        <!--step mux_addr="e8" mux_channel="02"/-->
+			    </switch_mg9200>
+			    <switch_fru>
+			        <step mux_addr="e0" mux_channel="02"/>
+			        <step mux_addr="e8" mux_channel="01"/>
+			    </switch_fru>
+			    <portlist>
+			        <port bus="c0" led_num="3"/>
+			        <!--port bus="c2" led_num="4"/-->
+			    </portlist>
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>ssdled_test_S381A</ProgramName>
+		        <config name="ErrorCode" value="NXRD4|Backplane LED fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_bus_convert" value="disable"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="02"/-->
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="01"/>
+		        </switch_fru>
+		        <portlist>
+		            <port bus="c0" led_num="8"/>
+		        </portlist>
+		    </TestCase>
+
+			<TestCase>
+		        <ProgramName>OCP_temp</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="9"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e2" mux_channel="40"/>
+		            <!--step mux_addr="e8" mux_channel="01"/-->
+		        </switch_fru>
+		        <!--config1 smbus_type="pwrsmbus" addr="80" command="2 01" location="U80"  stand_value="32000"/>
+		        <config1 smbus_type="fru" addr="a0" command="0x05 0x00 0x51" location="U23" stand_value="53 33 36 38 4d"/>
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="u21" stand_value="15 50"/-->
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="OCP1" stand_value="15 50"/>
+		         <!--EVT e8 改为EA-->
+		        <!--nvmesmbus mux_addr="e8" location="U20" channel_list="0 1 2 4 8 10 20 40 80" stand_value="06"/-->
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>backpanel_check_S380D</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="01"/-->
+		        </switch_fru>
+		        <config1 smbus_type="pwrsmbus" addr="80" command="2 01" location="U80"  stand_value="32000"/>
+		        <!--config1 smbus_type="fru" addr="a0" command="0x05 0x00 0x52" location="U23" stand_value="53 33 38 30 4d"/-->
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="u21" stand_value="15 50"/>
+		        <config1 smbus_type="temp" addr="92" command="0x01 0x00" location="u22" stand_value="15 50"/>
+		        <nvmesmbus mux_addr="ea" location="U20" channel_list="0 1 2 4 8 10 20 40 80" stand_value="06"/>
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>backpanel_check_S380C</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <!--step mux_addr="e8" mux_channel="01"/-->
+		        </switch_fru>
+		        <config1 smbus_type="pwrsmbus" addr="80" command="2 01" location="U80"  stand_value="32000"/>
+		        <config1 smbus_type="fru" addr="a0" command="0x05 0x00 0x52" location="U23" stand_value="ff ff ff ff ff"/>
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="u21" stand_value="15 50"/>
+		        <!--config1 smbus_type="temp" addr="92" command="0x01 0x00" location="u22" stand_value="15 50"/-->
+		        <nvmesmbus mux_addr="ea" location="U20" channel_list="0 1 2 4 8 10 20 40 80" stand_value="06"/>
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>fru_check_S380A</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="7"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="01"/>
+		        </switch_fru>
+		        <config1 smbus_type="fru" addr="aa" command="0x05 0x00 0x52" location="U23" stand_value="ff ff ff ff ff"/>
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="UCC1" stand_value="15 50"/>
+		        <config1 smbus_type="temp" addr="92" command="0x01 0x00" location="UCC2" stand_value="15 50"/>
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>fru_check_S378C</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="stop_scan" value="ipmitool raw 0x28 0x41 1 0 2>/dev/null"/>
+		        <config name="start_scan" value="ipmitool raw 0x28 0x41 1 1 2>/dev/null"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="4"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e0" mux_channel="08"/>
+		            <step mux_addr="e2" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="01"/>
+		        </switch_fru>
+		        <config1 smbus_type="fru" addr="a0" command="0x05 0x00 0x4d" location="U23" stand_value="53 33 37 38 43"/>
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="UCC1" stand_value="15 50"/>
+		        <!--config1 smbus_type="temp" addr="92" command="0x01 0x00" location="UCC2" stand_value="15 50"/-->
+		    </TestCase>
+
+		    <TestCase>
+		        <ProgramName>BMC_temp</ProgramName>
+		        <config name="ErrorCode" value="EXF13|Backplane smbus check fail"/>
+		        <config name="command_type" value="raw_type"/>
+		        <config name="raw_type" value="ipmitool raw 0x28 0x52"/>
+		        <config name="i2c_bus" value="6"/>
+		        <switch_mg9200>
+		            <step mux_addr="e0" mux_channel="02"/>
+		            <step mux_addr="e8" mux_channel="02"/>
+		        </switch_mg9200>
+		        <switch_fru>
+		            <step mux_addr="e2" mux_channel="40"/>
+		            <!--step mux_addr="e8" mux_channel="01"/-->
+		        </switch_fru>
+		        <!--config1 smbus_type="pwrsmbus" addr="80" command="2 01" location="U80"  stand_value="32000"/>
+		        <config1 smbus_type="fru" addr="a0" command="0x05 0x00 0x51" location="U23" stand_value="53 33 36 38 4d"/>
+		        <config1 smbus_type="temp" addr="90" command="0x01 0x00" location="u21" stand_value="15 50"/-->
+		        <config1 smbus_type="temp" addr="96" command="0x01 0x00" location="BMC_TEMP" stand_value="15 50"/>
+		         <!--EVT e8 改为EA-->
+		        <!--nvmesmbus mux_addr="e8" location="U20" channel_list="0 1 2 4 8 10 20 40 80" stand_value="06"/-->
+		    </TestCase>
+		  
+			
+			<TestCase>
+				<ProgramName>IpmbPmbus</ProgramName>
+				<ErrorCode>NULL</ErrorCode>
+
+				<Location>
+					<!-- bus一般由BMC RD提供此參數,以下哪個位置不為空就測試那一項-->
+					<PMBus bus=" ">JPMBUS1</PMBus>
+					<IPMB bus="0b">JIPMB1</IPMB>
+				</Location>
+			</TestCase>			
+			
+			<TestCase>				
+				<ProgramName>BMCMAC_w</ProgramName>
+				<ProgramName>BMCMAC_c</ProgramName>
+				<ErrorCode></ErrorCode>	
+				
+				<FlashMacAddr>
+					<!-- BMCMAC_w.sh/BMCMAC_c.sh -->
+					<!-- enable: 必要的時候可以二次燒錄; disable: 禁止二次燒錄 -->
+					<DoubleFlash>enable</DoubleFlash>
+					<Password>abcf314e470e139bf3c06c859761d560</Password>
+					<!--  Channel # | Path of BMC Mac address-->
+					<BmcMacAddr>
+						<Channel>8</Channel>
+						<Location>NCSI</Location>
+						<MacFile>/TestAP/Scan/MAC2.TXT</MacFile>
+					</BmcMacAddr>
+
+					<BmcMacAddr>
+						<Channel>1</Channel>
+						<Location>MLan1</Location>
+						<MacFile>/TestAP/Scan/MAC1.TXT</MacFile>
+					</BmcMacAddr>
+					
+					<!--兩個BMC燒錄的間隔時間（單位：秒） -->
+					<!--While the BMC channel amount is great than 2, Time Interval is needed. Unit: seconds,default: 100s -->
+					<TimeInterval>50</TimeInterval>
+					<SavePath>/TestAP/PPID</SavePath>
+				</FlashMacAddr>
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>board_check</ProgramName>
+		        <config name="ErrorCode" value="TXS97|fru info check fail"/>
+		        <config name="ftp_ip" value="20.40.1.41"/>
+		        <config name="ftp_dir" value="eps-pe/SlotTestLog"/>
+		        <config name="ftp_username" value="epspe"/>
+		        <config name="ftp_password" value="epsips"/>
+		        <config name="mount_local" value="/mnt/Slotlogs"/>
+		        <config name="ppid_file" value="/TestAP/PPID/PPID.TXT"/>
+		        <config name="node_id_file" value="/TestAP/PPID/Node_ID.TXT"/>
+		        <!--获取node的方式, 设定为bmc, 通过BMC读取获取node id,scan通过扫描获取id-->
+		        <config name="get_node" value="bmc"/>
+		        <config name="mac_save_path" value="/TestAP/PPID/"/>
+		        <config name="get_mb_barcode" value="fru"/>
+		        <config name="mb_barcode_path" value="/TestAP/PPID/mb_ppid.txt"/>
+		        <config name="WebSite" value="http://20.40.1.40/eps-web/upload/uploadservice.asmx"/>
+		    </TestCase>
+
+			<TestCase>				
+				<ProgramName>GetBmcIP</ProgramName>
+				<ErrorCode>NULL</ErrorCode>	
+				
+				<FlashMacAddr>
+					<!-- BMCMAC_w.sh/BMCMAC_c.sh -->
+					<!-- enable: 必要的時候可以二次燒錄; disable: 禁止二次燒錄 -->
+					<DoubleFlash>enable</DoubleFlash>
+					<Password>abcf314e470e139bf3c06c859761d560</Password>
+					<!--  Channel # | Path of BMC Mac address-->
+					<BmcMacAddr>
+						<Channel>1</Channel>
+						<Location>MLan1</Location>
+						<MacFile>/TestAP/Scan/MAC1.TXT</MacFile>
+					</BmcMacAddr>
+					
+					<!--兩個BMC燒錄的間隔時間（單位：秒） -->
+					<!--While the BMC channel amount is great than 2, Time Interval is needed. Unit: seconds,default: 100s -->
+					<TimeInterval>30</TimeInterval>
+					<SavePath>/TestAP/PPID</SavePath>
+				</FlashMacAddr>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>ChkFru</ProgramName>
+				<ErrorCode>NXF11|BIOS DMI TEST FAIL</ErrorCode>
+				
+				<!--BMC FRU比對程式-->
+				<!--Name: 作為程式的索引名稱-->
+				<!--StringOrFile: 填寫為字符串時直接比較，填寫文件(TXT)的絕對路徑則從文件從讀取-->
+				<Item>
+					<Name>Chassis Part Number</Name>
+					<StringOrFile>S258</StringOrFile>
+				</Item>
+				
+				<Item>
+					<Name>Board Part Number</Name>
+					<StringOrFile>MS-S2581</StringOrFile>
+				</Item>
+				
+				<Item>
+					<Name>Product Manufacturer</Name>
+					<StringOrFile>EPS</StringOrFile>
+				</Item>	
+				
+				<Item>
+					<Name>Product Part Number</Name>
+					<StringOrFile>/TestAP/PPID/MODEL.TXT</StringOrFile>
+				</Item>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>BmcSD</ProgramName>
+				<ErrorCode>TXC02|SD/MS/CF Card test fail</ErrorCode>
+				
+				<UserInfo>
+					<UserID>sysadmin</UserID>
+					<Password>superuser</Password>
+					<!--可指定主機的IP地址, 缺省則從BMC讀取-->
+					<HostIP>20.40.2.195</HostIP>
+				</UserInfo>
+				<SD>
+					<Device>/dev/mmcblk0</Device>
+					<Speed>
+						<!--SD 4K讀寫同時達到如下速度測試PASS,單位是MB/s-->
+						<Read>10</Read>
+						<Write>10</Write>
+					</Speed>				
+				</SD>
+			</TestCase>
+
+			<TestCase>
+				<!--BMC 按鈕測試程式-->
+				<ProgramName>ID_BTN</ProgramName>
+				<ErrorCode/>
+				<Button>
+				<DeteteCmd>ipmitool raw 0x28 0x2 0 132</DeteteCmd>
+				<Short>00 00</Short>
+				<Location>ID_BTN,J1_1(Set to Pin1-2)</Location>
+				</Button>
+			</TestCase>
+
+			<TestCase>
+				<!--BMC 按鈕測試程式-->
+				<ProgramName>JFP1_ID_BTN</ProgramName>
+				<ErrorCode/>
+				<Button>
+				<DeteteCmd>ipmitool raw 0x28 0x2 0x1 132 0x0</DeteteCmd>
+				<Short>00</Short>
+				<Location>JFP1_SWLED2</Location>
+				</Button>
+			</TestCase>
+
+			<TestCase>
+				<!--BMC 按鈕測試程式,可以用於NMI按鈕的測試-->
+				<ProgramName>NmiBTN</ProgramName>
+				<ErrorCode>NULL</ErrorCode>	
+				
+				<Button>
+					<!--通過以下指令獲取按鍵狀態,缺省的情況下可能無法重複測試-->
+					<!--DeteteCmd>ipmitool raw 0x28 0x12 0x84</DeteteCmd-->
+					<DeteteCmd>ipmitool raw 0x28 0x12 0xca</DeteteCmd>
+					<!--按鍵閉合狀態返回的值-->
+					<Short>00</Short>
+					<Location>NMI-Button</Location>
+				</Button>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>SmartFan</ProgramName>
+				<ErrorCode/>
+				<!--適用於BMC Smart FAN-->
+				<FansIndex>1 2 3 4</FansIndex>
+				<Locations>SYS_FAN_1F SYS_FAN_1R SYS_FAN_2F SYS_FAN_2R SYS_FAN_3F SYS_FAN_3R SYS_FAN_4F SYS_FAN_4R</Locations>
+				<!--最低半速,單位RPM-->
+				<HalfSpeed>8000 8000 8000 8000 8000 8000 8000 8000</HalfSpeed>
+				<!--最低全速,單位RPM-->
+				<FullSpeed>10000 10000 10000 10000 10000 10000 10000 10000</FullSpeed>
+			</TestCase>
+		</BMC>
+		
+		<Stream>
+			<TestCase>
+				<ProgramName>Stream</ProgramName>
+				<ErrorCode></ErrorCode>		
+				<!--stream.sh: Performance測試，注意內存和CPU會影響到-->
+				<!--MinBaseRate:最低分值；MaxBaseRate:最高分值-->
+				<MinBaseRate>40000</MinBaseRate>
+				<MaxBaseRate>50000</MaxBaseRate>
+			</TestCase>
+		</Stream>
+		
+		<TPM>
+			<TestCase>
+				<ProgramName>TPM</ProgramName>
+				<ErrorCode>TXS37|TPM test fail</ErrorCode>
+				<!-- TPM.sh -->
+				<!-- Version 1.0,1.2,or 2.0,S165F-->
+				<!-- If the version of TPM is newer than 2.0, the OS should newer than Linux 7.3-->
+				<Version>2.0</Version>
+				
+				<!--If the version of TPM is lower than 2.0, then set the TestTool null -->
+				<TestTool>eltt2</TestTool>
+			</TestCase>
+			
+			<TestCase>
+				<!--在UEFI下测试,OS下检查结果-->
+				<ProgramName>ChkTPM</ProgramName>
+				<ErrorCode>TXS37|TPM test fail</ErrorCode>
+				<!--log应该在根目录下-->
+				<LogPath>/dev/sda1</LogPath>
+				<Version>5.62</Version>
+			</TestCase>
+		</TPM>	
+	
+
+		
+		<Audio>
+			<TestCase>
+				<ProgramName>beep</ProgramName>
+				<ErrorCode>TXA29|beep test fail</ErrorCode>
+				<!--beep.sh: 蜂鳴器測試；Enable: 100/200/400Hz各測試一次，800/1600/3200Hz抽測1~3次; Disable: 僅默認頻率測試-->
+				<CoverFrequency>Disable</CoverFrequency>
+				<!-- pcb marking -->
+				<Location>BZ1</Location>
+				<!--機台自動測試，響5秒 -->			
+				<AutoTest>Disable</AutoTest>
+				<!--风扇调速是否打开-->
+				<FanControl>Disable</FanControl>
+				<!--切换风扇Manual Mode 指令-->
+				<ManulFanCommand>ipmitool raw 0x28 0x14 0x0b 0x00</ManulFanCommand>
+				<!--切换风扇speed 调整-->
+				<LowSpeed>ipmitool raw 0x28 0x14 0x0a 0x01</LowSpeed>
+				<!--切换风扇Auto Mode 指令-->
+				<AutoFanCommand>ipmitool raw 0x28 0x14 0x0b 0x01</AutoFanCommand>
+			</TestCase>
+		</Audio>
+
+		<GetPrdctInfo>
+			<UrlAddress>
+				<!--Web網的選擇: 1或2-->
+				<IndexInUse>1</IndexInUse>
+				<MesWeb index="1">http://20.40.1.40/eps-web/upload/uploadservice.asmx</MesWeb>
+				<MesWeb index="2">http://172.17.7.101/eps-web/upload/uploadservice.asmx</MesWeb>		
+			</UrlAddress>
+			
+			<TestCase>
+				<ProgramName>GetMDL</ProgramName>
+				<ErrorCode></ErrorCode>
+				<!--GetMDL.sh-->
+				<!--Get the infomation of PCBA board / BB system -->			
+				<!--Get: Model name|NestStation,并比對機種名稱-->
+				<!--需要依據以下文件（格式如上）內容才能獲取，SN_MODEL_TABLE.TXT由ScanSNs.sh創建-->
+				<MBSerialNumberPath>/TestAP/PPID/SN_MODEL_TABLE.TXT</MBSerialNumberPath>
+				
+				<!--獲取結果存在: /TestAP/PPID/PCBAProductInfo.TXT-->
+				<!--文件內容是: 主板條碼|MES的Model名稱|下一個工站代碼-->
+				<!--Station: 當前的工站代碼,如填寫則程式將檢測待測主板或小卡是否和設置的一致,多個站別使用逗號隔開;空白則不檢測-->
+				<Station>1545</Station>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>GetPrdctInfo</ProgramName>
+				<ErrorCode></ErrorCode>
+				<!--GetPrdctInfo.sh-->
+				
+				<!--BB SN: 以此為查詢條件查詢，BB SN將從如下路徑讀取，不設定的默認是 /TestAP/PPID/PPID.TXT -->
+				<BBSN>/TestAP/PPID/PPID.TXT</BBSN>
+				
+				
+				<!--Component: MB PPID or MAC address or card PPID-->
+				<!--Get: Model name|NestStation|MAC|MB Serial Number-->
+				<!--如下設定為空則不再從MES獲取信息-->
+				<Model>/TestAP/GetPrdctInfo/mes_MDL.TXT</Model>
+				<NextStation>/TestAP/GetPrdctInfo/mes_NextStation.TXT</NextStation>
+				<MAC>/TestAP/GetPrdctInfo/mes_MAC.TXT</MAC>
+				<MbSn>/TestAP/GetPrdctInfo/mes_MBSN.TXT</MbSn>
+			</TestCase>
+		</GetPrdctInfo>
+	
+		<LED>
+			<TestCase>
+				<ProgramName>DimmLEDs</ProgramName>
+				<ErrorCode>NXRD4|LED fail</ErrorCode>
+				<!--請自行編寫功能函數,本程式只提供隨機數據-->
+				<!--CountingOff/CountingOn函數返回格式如 點亮數量;2位數16進制;2位數16進制;...-->
+				<Features>
+					<!--1/0：讓LED點亮的高/低電平-->
+					<On>0</On>
+					<Off>1</Off>
+					<!--LED的數量數量不是2^n的按off補位高位-->
+					<Amount>32</Amount>
+					<Location>S258-DIMM-LEDs</Location>
+				</Features>
+				<TestMethod>
+					<CountRange>
+					<!--隨機亮/滅的個數-->
+					<Min>6</Min>
+					<Max>9</Max>
+					</CountRange>
+					<!--on: 數LED點亮的個數，所有LED最少被點亮過一次即完成測試,測試組（次）數不固定-->
+					<!--off: 數LED熄滅的個數，只需測試2組，先隨機滅1組，數個數；將熄滅的LED點亮，將原來點亮的隨機滅掉若干個，再數一次-->
+					<CountingStatus>on</CountingStatus>
+				</TestMethod>
+			</TestCase>
+
+			<!-- Color: 1=red紅色,2=green綠色,3=orange橙色和琥珀色,4=blue藍色 -->
+			<!--缺省時不測試顏色-->
+			
+			<TestCase>
+				<ProgramName>DebugLED</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				<!--DebugLED.sh-->
+				<Tool>DEBUGLED</Tool>
+				<Location>LED_H1/LED_L1/</Location>
+				<HighOrder>
+					<Code></Code>
+				</HighOrder>
+			</TestCase>
+	
+			<TestCase>
+				<ProgramName>FaultErrorLED</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				<!--FaultErrorLED.sh-->
+				<Location>LED3</Location>
+				<Color>1</Color>
+			</TestCase>
+	
+			<TestCase>
+				<ProgramName>IDLED</ProgramName>
+				<ErrorCode>TXLE9|Status LED NO Function</ErrorCode>
+				
+				<!--IDLED.sh-->				
+				<Location>ID_BTN_LED</Location>
+				<Color>4</Color>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>FANLED</ProgramName>
+				<ErrorCode>TXLE9|FAN LED NO Function</ErrorCode>
+							
+				<Location>FANLEDS</Location>
+				<Color>3</Color>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>HDDLED</ProgramName>
+				<ErrorCode>NXRD4|LED fail</ErrorCode>
+				
+				<!--HDDLED.sh,多種顏色的時候使用逗號分隔-->	
+				<Location>LED4</Location>
+				<Color>2,1</Color>
+				
+				<!-- TestByTimes: enable: Test by lighting on times, or disable: Check it light on only -->
+				<TestByTimes>enable</TestByTimes>
+				<!--程式負責點亮此LED-->
+				<AutoTest>disable</AutoTest>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>CountBoardLEDs</ProgramName>
+				<Error code="TXLE9" description="Status LED NO Function"/>
+				<!--程式將隨機點亮受控LEDs,然後和常亮LEDs計數測試-->
+				<!--使用該程式的時候,以下這些LEDs應該比較集中在一起,顏色測試不能100%防止錯料-->
+				<MarkedWords>請觀察JFP1面板上的以下LEDs,填入點亮的數量</MarkedWords>
+				<!--顏色數量確認測試,將所有的LED點亮後詢問各顏色數量是多少,全部置0不檢查顏色-->
+				<ColorVerify red="1" green="25" blue="1" orange="0"/>
+				<UncontrolledLEDs>
+					<!--status只能是 on 或 off 閃爍的按on計算,區分大小寫-->
+					<Loction status="on">BMC_LED</Loction>
+					<Loction status="on">BMC_HB_LED</Loction>
+					<Loction status="on">CPLD_VDD33_LED</Loction>
+					<Loction status="on">P0_PWROK_LED</Loction>
+					<Loction status="on">P1_PWROK_LED</Loction>
+					<Loction status="on">RST_BTN_LED</Loction>
+					<Loction status="on">PSU_LED1</Loction>
+				</UncontrolledLEDs>
+				<ControlledLEDs>
+					<!--受控的LED位置和程式-->
+					<Loction program="/TestAP/LED/JFP1_IDLED.sh">IDLED</Loction>
+					<Loction program="/TestAP/LED/JFP1_ERRLED.sh">SYS_ERR_LED</Loction>
+				</ControlledLEDs>		
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>CountS368DLEDs</ProgramName>
+				<Error code="TXLE9" description="Status LED NO Function"/>
+				<!--程式將隨機點亮受控LEDs,然後和常亮LEDs計數測試-->
+				<!--使用該程式的時候,以下這些LEDs應該比較集中在一起,顏色測試不能100%防止錯料-->
+				<MarkedWords>請觀察JFP1面板上的以下LEDs,填入點亮的數量</MarkedWords>
+				<!--顏色數量確認測試,將所有的LED點亮後詢問各顏色數量是多少,全部置0不檢查顏色-->
+				<ColorVerify red="0" green="1" blue="1" orange="0"/>
+				<UncontrolledLEDs>
+					<!--status只能是 on 或 off 閃爍的按on計算,區分大小寫-->
+					<Loction status="on">LED1</Loction>
+					<Loction status="on">PWR_BTN1_LED</Loction>
+				</UncontrolledLEDs>
+				<ControlledLEDs>
+					<!--受控的LED位置和程式-->
+					<!--Loction program="/TestAP/LED/JFP1_IDLED.sh">ID_BTN1_LED</Loction>
+					<Loction program="/TestAP/LED/JFP1_FLTLED.sh">U15_GREEN</Loction-->
+				</ControlledLEDs>		
+			</TestCase>
+
+			<TestCase>
+		        <ProgramName>CountLEDs</ProgramName>
+		        <ErrorCode>TXLE9|LED NO Function</ErrorCode>
+		        <!--程式將隨機點亮受控LEDs,然後和常亮LEDs計數測試-->
+		        <!--使用該程式的時候,以下這些LEDs應該比較集中在一起,顏色測試不能100%防止錯料-->
+		        <MarkedWords>請觀察S368D小卡上的以下LEDs,填入點亮的數量</MarkedWords>
+		        <!--顏色數量確認測試,將所有的LED點亮後詢問各顏色數量是多少,全部置0不檢查顏色-->
+		        <ColorVerify red="0" green="4" blue="1" orange="0"/>
+		        <led_list>
+		            <!--config location="LED1" control_way="" control_num="1"/-->
+		            <config location="MLan1" control_way="" control_num="2"/>
+		            <!--config location="U15_GREEN" control_way="/TestAP/LED/JFP1_FLTLED.sh" control_num="1"/-->
+		            <config location="ID_BTN_LED" control_way="/TestAP/LED/JFP1_IDLED.sh" control_num="1"/>
+		            <config location="PWR_BTN1" control_way="" control_num="1"/>
+		            <config location="U15_GREEN" control_way="/TestAP/LED/JFP1_FLTLED.sh" control_num="1"/>
+		        </led_list>
+		    </TestCase>
+						
+			<TestCase>
+				<ProgramName>UncontrollableLED</ProgramName>
+				<ErrorCode>NXRD4|LED fail</ErrorCode>
+				<!--該範圍內的不受控的LED將隨機測試: 顏色、順序隨機測試-->
+				<!--UncontrollableLED.sh-->	
+				<!-- UncontrollableLed: the LED can not be controllable by command不受控的LED測試-->
+				<!-- PTE/PE can define the lable name under "UncontrollableLed" -->
+				<!-- LEDRandomTest.sh will random test all below LEDs one by one by manual -->
+				<!--Color code不能缺省 -->
+				<Member>
+					<Location>LED2</Location>
+					<Color>2</Color>		
+				</Member>
+				
+				<Member>
+					<Location>LED4</Location>
+					<Color>2</Color>
+				</Member>
+				
+				<Member>
+					<Location>LED5</Location>
+					<Color>2</Color>
+				</Member>
+
+				<Member>
+					<Location>LED6</Location>
+					<Color>2</Color>
+				</Member>
+				
+				<Member>
+					<Location>JFP1_PWRLED</Location>
+					<Color>4</Color>
+				</Member>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>NetLEDs</ProgramName>
+				<ErrorCode>TXLAF|LAN led abnormal</ErrorCode>
+
+				<!--NetLEDs.sh計數測試法-->
+				<!--可選工具: ethtool/celo64e/bootutil64e,1G 網卡使用celo64e無效-->
+				<!--ethtool: 適用於1G及以下的網卡 網卡使用celo64e無效-->
+				<!--celo64e/bootutil64e: 適用於10G及以下的網卡-->
+				<SpeedControlTool>celo64e</SpeedControlTool>
+				<!-- LAN MAC is for getting location for LAN port，按MAC獲取Port-->
+				<LanMac>/TestAP/Scan/MAC1.TXT</LanMac>
+				<LanMac>/TestAP/Scan/MAC2.TXT</LanMac>
+				<LanMac>/TestAP/Scan/MAC3.TXT</LanMac>
+				<LanMac>/TestAP/Scan/MAC4.TXT</LanMac>
+				
+				<!--缺省或DHCP則程式自動獲取,ethtool控制的時候有有效-->
+				<IPaddress>192.168.1.10</IPaddress>
+				<SubnetMask>255.255.255.0</SubnetMask>
+				
+				<!--on/off: 設置網卡是否自動協商,ethtool控制的時候有有效-->
+				<Autoneg>on</Autoneg>
+				<!--half/full: 設置網卡半雙工/全雙工-->
+				<Duplex>full</Duplex>
+				
+				<!--Off/Dark:0; Orange/amber:1; Green:2 -->
+				<ActiveLED>2</ActiveLED>
+				<SpeedLED>
+					<Spd10Mbps>0</Spd10Mbps>
+					<Spd100Mbps>0</Spd100Mbps>
+					<Spd1000Mbps>1</Spd1000Mbps>
+					<Spd10000Mbps>2</Spd10000Mbps>
+				</SpeedLED>
+				
+				<AlwaysLightUp>
+					<!--常亮的LED位置,顏色代碼1/2有效-->
+					<Loction ColorCode="2">LED9</Loction>
+				</AlwaysLightUp>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>LED_Blnk</ProgramName>
+				<ErrorCode>NXRD4|LED fail</ErrorCode>
+				<Location>S258K</Location>
+			</TestCase>	
+		</LED>
+			
+		<Jumper>
+			<!--開關、跳帽測試-->
+			
+			<TestCase>
+				<!--只限于console/命令行模式-->
+				<ProgramName>UncontrollableJumper</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				
+				<!--Box: 交互式,更直觀,但是需要輸入更多, Command Line：命令行,輸入較少-->
+				<DisplayMode>Box</DisplayMode>
+				
+				<!--Option描述應該控制在50字內; index必須從1開始的連續自然數-->
+				<Member>
+					<Location>JECO_SW1</Location>
+					<CorrectlyOptionIndex>1</CorrectlyOptionIndex>
+					<Option index="1">Switch turn to ON side</Option>
+					<Option index="2">Switch turn to OFF side</Option>
+				</Member>
+				
+				<Member>
+					<Location>JPSU1</Location>
+					<CorrectlyOptionIndex>2</CorrectlyOptionIndex>
+					<Option index="1">No jumper on the JPSU1</Option>		
+					<Option index="2">There's a jumper hat on the JPSU1</Option>
+					<Option index="3">No header</Option>				
+				</Member>	
+				
+				<Member>
+					<Location>JPWR1</Location>
+					<CorrectlyOptionIndex>3</CorrectlyOptionIndex>
+					<Option index="1">No jumper on the JPWR1</Option>		
+					<Option index="2">There's a jumper hat on the JPWR1</Option>
+					<Option index="3">There's two jumper hat on the JPWR1</Option>
+				</Member>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>JBIOS_RCV</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				
+				<!--JBIOS_RCV.sh-->
+				<!--Location is the marking of the jumper -->
+				<Location>JBIOS_RVC</Location>
+				
+				<!--Command is command get the status of the jumper -->
+				<Command>getRecovery</Command>
+				
+				<!--Normal/Short is command execute result code -->
+				<NormalCode>1</NormalCode>
+				<ShortCode>0</ShortCode>
+				
+				<!--TestMode is test mode, it should be NormalCode or 'NormalCode,ShortCode'  -->
+				<TestMode>1,0</TestMode>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>JSCU_Disable</ProgramName>
+				<ProgramName>JSCU_enable</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				
+				<!--JSCU_Disable.sh/JSCU_enable.sh-->
+				<!-- security measures defined in the Flash Descriptor -->
+				<!--Location is the marking of the jumper -->
+				<Location>JSDO1</Location>
+				
+				<BusID>00:16.0</BusID>
+				<!--Command is command enable the device, if the system do not enable, set it NULL  -->
+				<Command>deviceEnable</Command>
+				
+				<!--Enable/Enable is command execute result code -->
+				<Enable>5</Enable>
+				<Disable>2</Disable>
+				
+				<!--TestMode is test mode, it should be Enable or 'Enable,Disable'  -->
+				<TestMode>2,5</TestMode>
+			</TestCase>
+
+			<TestCase>
+				<!--不能修改程式名稱-->
+				<ProgramName>ClearRTC</ProgramName>
+				<ErrorCode>TXS46|CMOS time fail</ErrorCode>
+				
+				<!--此條碼禁止在開機的時候跳到非默認位置-->
+				<!--條碼位置-->
+				<Location>JCMOS1</Location>
+				<!-- DefaultDate為Clear CMOS或RTC後的默認日期--> 
+				<DefaultDate>2020/01/01</DefaultDate>
+				
+				<!--SetDate設置測試pass後設置的日期，必須大於DefaultDate的日期-->
+				<SetDate>2020/09/01</SetDate>
+			</TestCase>
+		</Jumper>
+		
+		<Button>		
+			<TestCase>
+				<ProgramName>ChkCase</ProgramName>
+				<ErrorCode>TXT20|BUTTON FAIL</ErrorCode>
+				
+				<!--ChkCase.sh-->
+				<Tool>Case</Tool>
+				<!-- pcb marking -->
+				<Location>Jchassis</Location>
+				<!--check status-->
+				<Status>open</Status>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>PwrSwitch</ProgramName>
+				<ProgramName>ChkPwrSwitch</ProgramName>
+				<ErrorCode>TXT20|BUTTON FAIL</ErrorCode>
+				
+				<!--PwrSwitch.sh-->
+				<Location>JFP1</Location>
+				<MouseStatus>disable</MouseStatus>
+				<!--第幾個關鍵按鍵,缺省則全部應用-->
+				<WhichEvent></WhichEvent>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>RstSwitch</ProgramName>
+				<ProgramName>ChkRstSwitch</ProgramName>
+				<ErrorCode>TXT20|BUTTON FAIL</ErrorCode>
+				
+				<!--RstSwitch.sh-->
+				<Location>JFP1</Location>
+				<MouseStatus>enable</MouseStatus>
+			</TestCase>
+		</Button>
+
+		<RGBTest>
+			<TestCase>
+				<ProgramName>RgbTest</ProgramName>
+				<ErrorCode>NXL09|RGB abnormal</ErrorCode>
+				
+				<!--CameraDevice: 攝像頭設備-->
+				<CameraDevice>/dev/video0</CameraDevice>
+				<!--ScreenDevice: 屏幕設備-->
+				<ScreenDevice>/dev/fb0</ScreenDevice>
+				<RGB>
+					<!--讀取Red/Green/Bule圖片的時候，對應如下為RGB最小值-->
+					<Colour index="R">200,100,100</Colour>
+					<Colour index="G">100,200,125</Colour>
+					<Colour index="B">100,100,200</Colour>
+				</RGB>
+				
+				<Sampling>
+					<!--採樣密度-->
+					<WidthInterval>40</WidthInterval>
+					<HeightInterval>30</HeightInterval>
+				</Sampling>
+			</TestCase>
+		</RGBTest>
+		
+		<SwitchDP>
+			<TestCase>
+				<ProgramName>SwitchDP</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--For DisplaySW.sh-->
+				
+				<!--測試模式，Auto：自動切換，Manual:手動一拔一插切換，EdidOnly：只讀EDID-->
+				<TestMode>Auto</TestMode>
+				
+				<!--讀取顯示器的EDID，Enable / disable-->
+				<EdidTest>enable</EdidTest>
+				
+				<!--四則運算，Enable / disable-->
+				<ArithmeticTest>enable</ArithmeticTest>
+				
+
+				<!--Port address | Location -->
+				<DPPort>eDP-1|JVGA1</DPPort>
+				<DPPort>HDMI-1|HDMI1</DPPort>
+				<DPPort>HDMI-2|DP1</DPPort>
+			</TestCase>
+			
+			<TestCase>
+				<ProgramName>EDID</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--可同時顯示的顯示器數量-->
+				<PortsNumber>1</PortsNumber>
+				<!-- For server only, 單個顯示設置有效,多個顯示器時分開測試,如S1651/S2121-->
+				<MonitorModel></MonitorModel>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>ChkEDID_efi</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--測試PASS的條件是: 1.Manufacture Year介於1990~2099年-->
+				<!--                  2.Version和Revision必須不小於以下版本 -->
+				<EDIDTool>ShowEDID.efi</EDIDTool>
+				<EDIDVersion>0x01</EDIDVersion>
+				<EDIDRevision>0x03</EDIDRevision>
+				<LogPathFile>/mnt/edid_efi.log</LogPathFile>
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>RFVGA</ProgramName>
+				<ErrorCode>TXLAQ|Not Displayed</ErrorCode>
+				<!--同時接Rear和Front顯示接口的時候只有一個可以顯示,程式提示移除其中的一個顯示器-->
+				<!--再次讀到顯示器的相關規格的時間間隔不超過以下設定的時間則PASS-->
+				<!--測試過程需使用不同規格的顯示器-->
+				<TimeInterval>0.8</TimeInterval>
+				<VerifyEDID>enable</VerifyEDID>
+			</TestCase>			
+		</SwitchDP>
+
+		<Grub4EFI>
+			<!--Grub for EFI程式將逐個掛載分區並查找GrubMenu指定的文件，使用MenuFile覆蓋-->
+			<!--Grub for EFI程式將逐個掛載分區並查找GrubMenu指定的文件，使用MenuFile覆蓋-->
+			<TestCase>
+				<ProgramName>go2EFI</ProgramName>
+				<ErrorCode></ErrorCode>
+				<MenuFile>Menu/uefi.cfg</MenuFile>
+				<GrubMenu>/boot/efi/boot/grub/grub-efi-64.cfg</GrubMenu>
+				<CopyListing>
+					<!--程式將Source指定的文件拷貝覆蓋Target指定的文件,指定文件事先要存在-->
+					<File Source="Source/background.png" Target="/mnt/boot/grub/themes/Vimix/background.png"/>
+					<File Source="Source/startup.nsh" Target="/mnt/startup.nsh"/>
+					<File Source="Source/ShowEDID.efi" Target="/mnt/ShowEDID.efi"/>
+				</CopyListing>				
+			</TestCase>
+			<TestCase>
+				<ProgramName>go2Linux</ProgramName>
+				<ErrorCode></ErrorCode>
+				<MenuFile>Menu/linux.cfg</MenuFile>
+				<GrubMenu>/boot/efi/boot/grub/grub-efi-64.cfg</GrubMenu>
+				<CopyListing>
+					<!--程式將Source指定的文件拷貝覆蓋Target指定的文件,指定文件事先要存在-->
+					<File Source="Source/background.png" Target="/mnt/boot/grub/themes/Vimix/background.png"/>
+				</CopyListing>					
+			</TestCase>
+
+			<TestCase>
+				<ProgramName>go2TDL</ProgramName>
+				<ErrorCode></ErrorCode>
+				<!--Log文件的路徑/文件名稱，程式將遍歷所有的分區，確認有找到td.log即可，必須是/mnt下-->
+				<TedoliLog>/mnt/td_*.*log</TedoliLog>
+				<DeviceLog>/mnt/device_*.*log</DeviceLog>
+				<MenuFile>Menu/tedoli.cfg</MenuFile>
+				<GrubMenu>/boot/efi/boot/grub/grub-efi-64.cfg</GrubMenu>
+				<CopyListing>
+					<!--程式將Source指定的文件拷貝覆蓋Target指定的文件,指定文件事先要存在-->
+					<File Source="Source/background.png" Target="/mnt/boot/grub/themes/Vimix/background.png"/>
+					<File Source="Source/startup.nsh" Target="/mnt/startup.nsh"/>
+					<File Source="Source/ShowEDID.efi" Target="/mnt/ShowEDID.efi"/>
+				</CopyListing>	
+			</TestCase>				
+		</Grub4EFI>
+		
+		<CmosTime>
+			<TestCase>	
+				<ProgramName>CmosTime</ProgramName>
+				<ErrorCode>TXS46|CMOS time fail</ErrorCode>
+				<!--CmosTime.sh: CMOS日期時間設置、比對程式--> 
+				<!-- TimeZone is time zone --> 
+				<!-- UTC/GMT+0800 : HKT,CCT,CST(HongKong,China Standard Time) --> 
+				<!-- UTC/GMT+1000 : GST(Greenwich Sidereal Time) --> 
+				<!-- UTC/GMT+0900 : JST,KST(Japan,Korea Standard Time) --> 
+				<!-- UTC/GMT+0100 : DNT,NOR,SWT,BST,CET,FET,MET --> 
+				<!-- UTC/GMT+0000 : GMT,UT,UTC --> 
+				<!-- UTC/GMT-0400 : AST --> 
+				<!-- UTC/GMT-0500 : EST(Eastern Standard Time) --> 
+				<!-- UTC/GMT-0800 : PST(Pacific Standard Time) --> 
+				<TimeZone>+0800</TimeZone>
+				
+				<!-- NtpIpAddr: NTP server ip address -->
+				<NtpIpAddr>10.102.0.110</NtpIpAddr>
+				
+				<!-- The gap of NTP server and location time ,unit: second -->
+				<Gap>5</Gap>
+				
+				<!-- for Linux OS only -->
+				<OsDstStatus>disable</OsDstStatus>
+
+				<!-- enable: Set time function enable -->
+				<SetTime>disable</SetTime>
+			</TestCase>	
+			
+			<TestCase>	
+				<ProgramName>SetTime</ProgramName>
+				<ErrorCode>TXS46|CMOS time fail</ErrorCode>
+				<!--CmosTime.sh: CMOS日期時間設置、比對程式--> 
+				<!-- TimeZone is time zone --> 
+				<!-- UTC/GMT+0800 : HKT,CCT,CST(HongKong,China Standard Time) --> 
+				<!-- UTC/GMT+1000 : GST(Greenwich Sidereal Time) --> 
+				<!-- UTC/GMT+0900 : JST,KST(Japan,Korea Standard Time) --> 
+				<!-- UTC/GMT+0100 : DNT,NOR,SWT,BST,CET,FET,MET --> 
+				<!-- UTC/GMT+0000 : GMT,UT,UTC --> 
+				<!-- UTC/GMT-0400 : AST --> 
+				<!-- UTC/GMT-0500 : EST(Eastern Standard Time) --> 
+				<!-- UTC/GMT-0800 : PST(Pacific Standard Time) --> 
+				<TimeZone>+0800</TimeZone>
+				
+				<!-- NtpIpAddr: NTP server ip address -->
+				<NtpIpAddr>10.102.0.110</NtpIpAddr>
+				
+				<!-- The gap of NTP server and location time ,unit: second -->
+				<Gap>5</Gap>
+				
+				<!-- for Linux OS only -->
+				<OsDstStatus>disable</OsDstStatus>
+
+				<!-- enable: Set time function enable -->
+				<SetTime>enable</SetTime>
+			</TestCase>
+		</CmosTime>		
+
+		<LoadDefault>
+			<TestCase>			
+				<ProgramName>LoadDefault</ProgramName>
+				<ErrorCode></ErrorCode>
+				<!--LoadDefault.sh: CMOS和OS 初始化程式，不含日期時間在內的其他選項均會初始化 -->			
+				<!--系統的時區和UTC狀態初始化-->
+				<!-- # The time zone of the system is defined by the contents of /etc/localtime. -->
+				<!-- # This file is only for evaluation by system-config-date, do not rely on its -->
+				<!-- # contents elsewhere. -->
+				<!-- ZONE="Asia/Taipei" -->
+				<!-- UTC=false -->
+				<ClockZone>Asia/Taipei</ClockZone>
+				<UTC>false</UTC>
+			</TestCase>					
+		</LoadDefault>
+		
+		<Manual>
+			<TestCase>
+				<!--只限于console/命令行模式-->
+				<ProgramName>ManualChoose</ProgramName>
+				<ErrorCode>TXVC1|Cap Pin insert error location</ErrorCode>
+				
+				<!--Box: 交互式,更直觀,但是需要輸入更多, CommandLine：命令行,輸入較少-->
+				<DisplayMode>box</DisplayMode>
+				
+				<!--Option描述應該控制在50字內; index必須從1開始的連續自然數-->
+				<Member>
+					<Location>JECO_SW1</Location>
+					<Question>Which side is the switch on?</Question>
+					<CorrectlyOptionIndex>2</CorrectlyOptionIndex>
+					<Option index="1">ON side</Option>
+					<Option index="2">OFF side</Option>
+				</Member>
+
+				<Member>
+					<Location>JPW_ATX24</Location>
+					<Question>Which PIN is the jumping cap on?</Question>
+					<CorrectlyOptionIndex>2</CorrectlyOptionIndex>
+					<Option index="1">Pin1-2</Option>
+					<Option index="2">Pin2-3</Option>
+				</Member>			
+			</TestCase>
+		</Manual>		
+		
+		<DeleteLog>
+			<TestCase>
+				<ProgramName>DelLog</ProgramName>
+				<ErrorCode></ErrorCode>
+				
+				<!-- DelLog.sh, will delete all logs when 'DelayTime' equal to zero -->
+				<DelayTime>9</DelayTime>
+				<!--搜索路径深度-->
+				<MaxDepth>2</MaxDepth>
+				
+				<!-- /TestAP中如下格式的文件將全部被刪除 -->
+				<FileType>txt~ log~ sh~ sh.bak txt.bak swo swp log txt proc tmp</FileType>
+			</TestCase>
+		</DeleteLog>
+		
+		<Other>
+			<!--不需要參數的程式請列在在此處, 否則無法通過主程式的檢查-->
+			<TestCase>
+				<ProgramName>ShutdownOS</ProgramName>
+				<ProgramName>RebootOS</ProgramName>
+				<ErrorCode></ErrorCode>			
+			</TestCase>
+		</Other>			
+	</Argument>
+</MSITEST>

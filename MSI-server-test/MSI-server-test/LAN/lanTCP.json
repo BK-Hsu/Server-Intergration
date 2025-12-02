@@ -1,0 +1,26 @@
+{
+  "port" : [{
+    "name" : "server",
+    "MAC" : "/TestAP/Scan/MAC1.TXT",
+    "vdom" : "vdom1"
+  },
+    {
+      "name" : "client",
+      "MAC": "/TestAP/Scan/MAC2.TXT",
+      "vdom" : "vdom2"
+  }],
+
+  "bandwidth" : 9000,
+  "time" : 10,
+  "interval" : 2,
+  "parallel" : 10,
+  "reverse" : "enable",
+  "omit" : 2,
+  "ipv46" : "version4",
+  "title" : "S3311",
+  "format" : "m",
+  "errorcode" : "EXF05|iperf3 TCP test fail",
+  "errdescription" : "iperf3 TCP test fail",
+  "errdetect" : "error - the server has terminated",
+  "link_speed" : "10000M"
+}
