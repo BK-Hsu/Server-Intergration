@@ -1,0 +1,97 @@
+noecho                  #macro commands will not be printed to the screen
+#
+#  Binomial parameter: confidence interval and hypothesis test.
+#
+#  Written:  9/5/91  Cathy Akritas,  Minitab Inc.
+#
+#
+#  USER INPUT:
+#   k90 = p-naught, the hypothesized value of the population proportion
+#   k89 = p-hat, the observed value of p, the sample proportion
+#   k88 = n, the size of the sample that p-hat is based on
+#   k81 = indicator used to specify the type of hypothesis test, 1 = upper-
+#         tailed test, 2 = a lower-tailed test, and 3 = two-tailed test.
+#   c90 = confidence level of the confidence interval for p
+#
+#  SCRATCH:
+#   k82 = Normal cdf at absolute value of Z.
+#   k83 = Absolute value of Z.
+#   k84 = 2-tailed p-value.
+#   k85 = Upper-tail p-value.
+#   k86 = Lower-tail p-value.
+#   k87 = Z.
+#   c93 = For printing, "<", "not =", or ">".
+#  c100 = p-naught, for printing purposes
+#   c97 = value of the test statistic, z
+#   c96 = contains the p-value for the specified hypothesis test
+#   c89 = lower endpoint of the confidence interval
+#   c87 = upper endpoint of the confidence interval
+#      
+note
+note    At the "DATA>" prompt below, enter the following values:
+note    1.  p-naught, the hypothesized value of the population proportion; 
+note    2.  x, the observed number of successes; and 
+note    3.  n, the sample size.
+note
+set 'terminal'  c100;   #accepts input from user, p-naught, p-hat, and n
+nobs = 3.               #Minitab expects 3 pieces of information 
+name c100 'Input:'       #name the input data column
+print c100              #show the user the input values
+copy c100 k90 k89 k88   #copy input data into constants, used in calculations
+let k89 = k89 / k88
+note
+note    At the "DATA>" prompt below, enter a 
+note         1 to perform an upper-tailed test, or
+note         0 to perform a two-tailed test, or 
+note        -1 to perform a lower-tailed test.
+note
+set 'terminal' c100;    #accepts input from the user
+nobs = 1.               #waiting for 1 piece of information
+let k81 = c100(1) + 2   #k81 = type of hypothesis test to be performed
+
+# The z-test statistic = (phat - pnaught)/sqrt(phat(1-phat)/n)
+
+let k87 = (k89 - k90) / sqrt (k89*(1-k89)/k88)
+
+# Calculate p-value from z for all 3 alternatives
+
+cdf k87 k86             # cdf(z) = p-value for the lower-tailed test
+let k85 = 1- k86        #(1-cdf(z)) = p-value for upper-tailed test
+let k83 = absolute(k87) #k83 = absolute value of z, 
+cdf k83 k82             #2*(1-cdf(absolute(z)) = p-value for two-tailed test
+let k84 = 2*(1-k82)
+
+erase c100 c97 c96      #empty out future storage columns
+copy k90 c100           #copy p-naught into c100, use later in output
+copy k87 c97            #copy z into c97, use later in reporting reults
+copy k86 k84 k85 c96    #copy the p-values into c96
+set c93;                #c93 used in reporting the type of test selected 
+format (a6).
+  < 
+not =
+  > 
+end
+copy  c93 c96 c93 c96;  #copy the p-value column and the type of test column,
+use k81.                #but only use row that corresponds to specified test
+print c100 c93 c100 c97 c96; #print the results
+format ('                       Ho: p = ',f6.4,'  vs.  Ha: p ',a6,f6.4,//,&
+'                       z =',f8.5,'      p-value =', f8.5).
+note
+note    A confidence interval for the true population proportion will be 
+note    produced below.  At the "DATA>" prompt below, enter the confidence 
+note    level (95 for a 95% confidence interval) for the confidence interval.  
+note
+set 'terminal' c90;     #c90 = confidence level, specified by the user
+nobs = 1.               #waiting for one piece of information
+name c90 'CI Level'     
+print c90               #show the user the confidence level 
+# k90 is used in finding the critical value, Z(alpha/2) used in the confidence interval
+let k90 =  (c90(1)/100) + (1-c90(1)/100)/2 
+invcdf k90 k91         #k91 = critical value used in confidence interval
+let c89 = k89 - k91*sqrt(k89*(1-k89)/k88) #c89 is the lower endpoint
+let c87 = k89 + k91*sqrt(k89*(1-k89)/k88) #c87 is the upper endpoint 
+print c90 c89 c87;      #report the results
+format ('    The ',i2,'% confidence interval is (', f7.4,'  to  ',f6.4,')').
+
+erase k81-k90 c90 c93 c100
+echo                    #restore the screen echo feature

@@ -1,0 +1,10 @@
+Stat 200
+
+Section 22
+
+LastName  Initial  ID           HW1  HW2  Test1  Test2  Total
+Rose      A.       123-45-6789  8     7   20     23     58
+Fischer   W.       234-56-7890  9    10   23     21     63
+Peters    B.       345-67-8901  5     4   15     18     42
+Grayson   M.       456-78-9012  7     8   21
+Harris    L.       567-89-0123  4     6   13     18     41

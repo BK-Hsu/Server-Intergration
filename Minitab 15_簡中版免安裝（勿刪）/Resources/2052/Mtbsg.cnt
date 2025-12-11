@@ -1,0 +1,231 @@
+:Base Mtbsg.hlp>Main
+:Title Minitab StatGuide
+1 StatGuide 概要=IDH_Overview_How_to_Use_the_StatGuide
+1 基本统计量
+2 显示描述性统计=stbasics_summary_desc>Main
+2 图形化汇总=stbasics_summary_grph>Main
+2 单样本 Z=stbasics_summary_onez>Main
+2 单样本 t=stbasics_summary_onet>Main
+2 双样本 t=stbasics_summary_twot>Main
+2 配对 t=stbasics_summary_pair>Main
+2 单比率=stbasics_summary_onep>Main
+2 双比率=stbasics_summary_twop>Main
+2 单样本 Poisson 率=stbasics_summary_1poi
+2 双样本 Poisson 率=stbasics_summary_2poi
+2 单方差=stbasics_summary_1var
+2 双方差=stbasics_summary_2var>Main
+2 相关=stbasics_summary_corr>Main
+2 协方差=stbasics_summary_cova>Main
+2 正态性检验=stbasics_summary_norm>Main
+2 Poisson 拟合优度检验=stbasics_summary_gofp>Main
+1 回归
+2 回归=stregrsn_summary_regr>Main
+2 逐步=stregrsn_summary_step>Main
+2 最佳子集=stregrsn_summary_breg>Main
+2 拟合线图=stregrsn_summary_fitt>Main
+2 偏最小二乘=stregrsn_summary_plsr>Main
+2 二进制 Logistic 回归=stregrsn_summary_blog>Main
+2 顺序 Logistic 回归=stregrsn_summary_olog>Main
+2 名义 Logistic 回归=stregrsn_summary_nlog>Main
+1 方差分析
+2 单因子=stanovar_summary_aov1>Main
+2 单因子（未堆叠）=stanovar_summary_aovu>Main
+2 双因子=stanovar_summary_aov2>Main
+2 平均值分析=stanovar_summary_anom>Main
+2 平衡方差分析=stanovar_summary_anov>Main
+2 一般线性模型=stanovar_summary_glms>Main
+2 完全嵌套方差分析=stanovar_summary_nest>Main
+2 平衡多元方差分析=stanovar_summary_bman>Main
+2 一般多元方差分析=stanovar_summary_gman>Main
+2 等方差检验=stanovar_summary_vart>Main
+2 区间图=stanovar_summary_intp>Main
+2 主效应图=stanovar_summary_main>Main
+2 交互作用图=stanovar_summary_inte>Main
+1 DOE
+2 因子
+3 创建因子设计=dofacdes_summary_facc>Main
+3 分析因子设计=dofacdes_summary_faca>Main
+3 分析变异性=dofacdes_summary_facv>Main
+3 图示因子设计=dofacdes_summary_facp>Main
+2 响应曲面
+3 创建响应曲面设计=dorsfdes_summary_resc>Main
+3 分析响应曲面设计=dorsfdes_summary_resa>Main
+3 绘制响应曲面设计图=dorsfdes_summary_resp>Main
+2 混料
+3 创建混料设计=domixdes_summary_mixc>Main
+3 分析混料设计=domixdes_summary_mixa>Main
+3 绘制混料设计=domixdes_summary_mixp>Main
+2 田口
+3 创建田口设计=dorobdes_summary_tagc>Main
+3 分析田口设计=dorobdes_summary_taga>Main
+3 预测田口结果=dorobdes_summary_tagp>Main
+2 最优设计
+3 选择最优设计=dooptdes_summary_optd>Main
+2 响应优化
+3 响应优化器
+4 因子设计=domropti_summary_mrof>Main
+4 响应曲面设计=domropti_summary_mror>Main
+4 混料设计=domropti_summary_mrom>Main
+3 重叠等值线图
+4 因子设计=domropti_summary_ovrf>Main
+4 响应曲面设计=domropti_summary_ovrr>Main
+4 混料设计=domropti_summary_ovrm>Main
+1 控制图
+2 Box-Cox 变换
+3 Box-Cox 变换=qcboxcox_summary_boxc>Main
+2 子组的变量控制图
+3 Xbar-R=qccombin_summary_xrch>Main
+3 Xbar-S=qccombin_summary_xsch>Main
+3 I-MR-R/S（组间/组内）=qcspcial_summary_imrr>Main
+3 Xbar=qcvariab_summary_xbar>Main
+3 R=qcvariab_summary_rcha>Main
+3 S=qcvariab_summary_scha>Main
+3 区域=qcspcial_summary_zone>Main
+2 单值的变量控制图
+3 I-MR=qccombin_summary_imrc>Main
+3 Z-MR=qcspcial_summary_zmrc>Main
+3 单值=qcvariab_summary_icha>Main
+3 移动极差=qcvariab_summary_mrch>Main
+2 属性图表
+3 P=qcattrib_summary_pcha>Main
+3 NP=qcattrib_summary_npch>Main
+3 C=qcattrib_summary_ccha>Main
+3 U=qcattrib_summary_ucha>Main
+2 时间加权控制图
+3 移动平均=qctimewt_summary_mach>Main
+3 EWMA=qctimewt_summary_ewma>Main
+3 CUSUM=qctimewt_summary_cusu>Main
+2 多变量控制图
+3 T 方广义方差=qccombin_summary_tsgv>Main
+3 T 方=qcmultiv_summary_tsqc>Main
+3 广义方差=qcmultiv_summary_gvar>Main
+3 多变量 EWMA=qcmultiv_summary_mewma>Main
+1 质量工具
+2 质量规划工具
+3 运行图=qcqptool_summary_runc>Main
+3 Pareto 图=qcqptool_summary_pare>Main
+3 因果图=qcqptool_summary_fish>Main
+3 对称图=qcqptool_summary_symm>Main
+3 多变量图=qcqptool_summary_mult>Main
+2 单值分布识别
+3 单值分布识别=qcprcapa_summary_idid>Main
+2 Johnson 变换
+3 Johnson 变换=qcprcapa_summary_john>Main
+2 能力分析
+3 正态=qcprcapa_summary_capa>Main
+3 组间/组内=qcprcapa_summary_capbw>Main
+3 非正态=qcprcapa_summary_capn>Main
+3 多变量（正态）=qcprcapa_summary_capm>Main
+3 多变量（非正态）=qcprcapa_summary_capmn>Main
+3 二项=qcprcapa_summary_capb>Main
+3 Poisson=qcprcapa_summary_capp>Main
+2 Capability Sixpack
+3 正态=qcprcapa_summary_cap6>Main
+3 组间/组内=qcprcapa_summary_cap6b>Main
+3 非正态=qcprcapa_summary_cap6n>Main
+2 量具研究
+3 类型 1 量具研究=qcmeasys_summary_1gag
+3 量具运行图=qcmeasys_summary_gagr>Main
+3 量具线性和偏倚研究=qcmeasys_summary_gagl>Main
+3 量具 R&R 研究（交叉）=qcmeasys_summary_gagc>Main
+3 量具 R&R 研究（嵌套）=qcmeasys_summary_gagn>Main
+3 属性量具研究（分析法）=qcmeasys_summary_gaga>Main
+2 属性一致性分析
+3 属性一致性分析=qcmeasys_summary_atag>Main
+2 抽样验收
+3 按属性 - 创建=qcaccept_summary_aascr>Main
+3 按属性 - 比较=qcaccept_summary_aasco>Main
+3 按变量 - 创建=qcaccept_summary_vascr>Main
+3 按变量 - 比较=qcaccept_summary_vasco>Main
+3 按变量 - 接受/拒绝=qcaccept_summary_vasar>Main
+1 可靠性/生存
+2 检验计划
+3 展示检验计划=rststpln_summary_dpln>Main
+3 估计检验计划=rststpln_summary_epln>Main
+3 加速寿命试验计划=rststpln_summary_apln>Main
+2 分布分析（右删失）
+3 分布 ID 图=rsdistan_summary_dsir>Main
+3 分布概要图=rsdistan_summary_dsor>Main
+3 参数分布分析=rsdistan_summary_pdar>Main
+3 非参数分布分析=rsdistan_summary_ndar>Main
+2 分布分析（任意删失）
+3 分布 ID 图=rsdistan_summary_dsia>Main
+3 分布概要图=rsdistan_summary_dsoa>Main
+3 参数分布分析=rsdistan_summary_pdaa>Main
+3 非参数分布分析=rsdistan_summary_ndaa>Main
+2 增长曲线
+3 参数增长曲线=rsgrowth_summary_pgro>Main
+3 非参数增长曲线=rsgrowth_summary_ngro>Main
+2 加速寿命试验
+3 加速寿命试验=rsregrld_summary_accl>Main
+2 寿命数据回归
+3 寿命数据回归=rsregrld_summary_rgld>Main
+2 概率分析
+3 概率分析=rsprobit_summary_prob>Main
+2 保证预测
+3 保证预测=rsdistan_summary_warr>Main
+1 多元
+2 主成份=stmultan_summary_prin>Main
+2 因子分析=stmultan_summary_fact>Main
+2 项目分析=stmultan_summary_item
+2 聚类观测值=stmultan_summary_cobs>Main
+2 聚类变量=stmultan_summary_cvar>Main
+2 动态聚类法=stmultan_summary_kmea>Main
+2 判别分析=stmultan_summary_disc>Main
+1 时间序列
+2 时间序列图=sttserie_summary_time>Main
+2 趋势分析=sttserie_summary_tren>Main
+2 分解=sttserie_summary_deco>Main
+2 移动平均=sttserie_summary_mave>Main
+2 单指数修匀=sttserie_summary_sesm>Main
+2 双指数修匀=sttserie_summary_desm>Main
+2 Winters 方法（加法）=sttserie_summary_wina>Main
+2 Winters 方法（乘法）=sttserie_summary_winm>Main
+2 自相关=sttserie_summary_auto>Main
+2 偏自相关=sttserie_summary_pacf>Main
+2 互相关=sttserie_summary_ccor>Main
+2 ARIMA=sttserie_summary_arim>Main
+1 表格
+2 计数单独变量=sttables_summary_tall>Main
+2 交叉分组表和卡方=sttables_summary_tabl>Main
+2 卡方拟合优度检验（一个变量）=sttables_summary_tchi>Main
+2 卡方检验（工作表中的双向表）=sttables_summary_chis>Main
+2 描述性统计量=sttables_summary_dscr>Main
+1 非参数
+2 单样本符号=stnonpar_summary_sign>Main
+2 单样本 Wilcoxon=stnonpar_summary_wilc>Main
+2 Mann Whitney=stnonpar_summary_mann>Main
+2 Kruskal-Wallis=stnonpar_summary_krus>Main
+2 Mood 中位数检验=stnonpar_summary_mood>Main
+2 Friedman=stnonpar_summary_frie>Main
+2 游程检验=stnonpar_summary_runs>Main
+1 功效和样本数量
+2 单样本 Z=stsamsiz_summary_pw1z>Main
+2 单样本 t=stsamsiz_summary_pw1t>Main
+2 双样本 t=stsamsiz_summary_pw2t>Main
+2 单比率=stsamsiz_summary_pw1p>Main
+2 双比率=stsamsiz_summary_pw2p>Main
+2 单因子方差分析=stsamsiz_summary_pw1w>Main
+2 2 水平因子设计=stsamsiz_summary_pw2f>Main
+2 Plackett-Burman 设计=stsamsiz_summary_pwpb>Main
+1 图形
+2 散点图=graphs_summary_plot>Main
+2 矩阵图=graphs_summary_matrix>Main
+2 边际图=graphs_summary_marg>Main
+2 直方图=graphs_summary_hist>Main
+2 点图=graphs_summary_dotp>Main
+2 茎叶图=graphs_summary_stem>Main
+2 概率图=graphs_summary_pplot>Main
+2 经验累积分布函数=graphs_summary_ecdf>Main
+2 概率分布图=graphs_summary_pdis>Main
+2 箱线图=graphs_summary_boxp>Main
+2 区间图=graphs_summary_interval>Main
+2 单值图=graphs_summary_indp>Main
+2 线图=graphs_summary_line>Main
+2 条形图=graphs_summary_chart>Main
+2 饼图=graphs_summary_pie>Main
+2 时间序列图=sttserie_summary_time>Main
+2 区域图=graphs_summary_area>Main
+2 等值线图=graphs_summary_contour>Main
+2 3D 散点图=graphs_summary_3Dplot>Main
+2 3D 曲面图=graphs_summary_3Dsurf>Main
